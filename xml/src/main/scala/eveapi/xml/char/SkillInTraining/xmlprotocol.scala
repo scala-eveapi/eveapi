@@ -44,11 +44,13 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
                   p2, scalaxb.ElemName(node) :: stack),
               scalaxb.fromXML[String](p3, scalaxb.ElemName(node) :: stack),
               scala.collection.immutable.ListMap(List(
-                      (node \ "@version").headOption map { x =>
-                    scalaxb.DataRecord(x,
-                                       node,
-                                       scalaxb.fromXML[BigInt](
-                                           x, scalaxb.ElemName(node) :: stack))
+                      (node \ "@version").headOption map {
+                    x =>
+                      scalaxb.DataRecord(x,
+                                         node,
+                                         scalaxb.fromXML[BigInt](
+                                             x,
+                                             scalaxb.ElemName(node) :: stack))
                   } map { "@version" -> _ }
                   ).flatten[(String, scalaxb.DataRecord[Any])]: _*))
       })
@@ -171,11 +173,13 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
           eveapi.xml.char.SkillInTraining.CurrentTQTime(
               Seq.concat(p1.toList),
               scala.collection.immutable.ListMap(List(
-                      (node \ "@offset").headOption map { x =>
-                    scalaxb.DataRecord(x,
-                                       node,
-                                       scalaxb.fromXML[BigInt](
-                                           x, scalaxb.ElemName(node) :: stack))
+                      (node \ "@offset").headOption map {
+                    x =>
+                      scalaxb.DataRecord(x,
+                                         node,
+                                         scalaxb.fromXML[BigInt](
+                                             x,
+                                             scalaxb.ElemName(node) :: stack))
                   } map { "@offset" -> _ }
                   ).flatten[(String, scalaxb.DataRecord[Any])]: _*))
       })

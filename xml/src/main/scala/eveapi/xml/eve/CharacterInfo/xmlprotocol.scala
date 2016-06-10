@@ -46,11 +46,13 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
                   p2, scalaxb.ElemName(node) :: stack),
               scalaxb.fromXML[String](p3, scalaxb.ElemName(node) :: stack),
               scala.collection.immutable.ListMap(List(
-                      (node \ "@version").headOption map { x =>
-                    scalaxb.DataRecord(x,
-                                       node,
-                                       scalaxb.fromXML[BigInt](
-                                           x, scalaxb.ElemName(node) :: stack))
+                      (node \ "@version").headOption map {
+                    x =>
+                      scalaxb.DataRecord(x,
+                                         node,
+                                         scalaxb.fromXML[BigInt](
+                                             x,
+                                             scalaxb.ElemName(node) :: stack))
                   } map { "@version" -> _ }
                   ).flatten[(String, scalaxb.DataRecord[Any])]: _*))
       })
@@ -111,32 +113,33 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
           eveapi.xml.eve.CharacterInfo
             .Result(scalaxb
                       .fromXML[BigInt](p1, scalaxb.ElemName(node) :: stack),
-                    scalaxb.fromXML[String](
-                        p2, scalaxb.ElemName(node) :: stack),
-                    scalaxb.fromXML[String](
-                        p3, scalaxb.ElemName(node) :: stack),
                     scalaxb
-                      .fromXML[BigInt](p4, scalaxb.ElemName(node) :: stack),
+                      .fromXML[String](p2, scalaxb.ElemName(node) :: stack),
+                    scalaxb
+                      .fromXML[String](p3, scalaxb.ElemName(node) :: stack),
+                    scalaxb.fromXML[BigInt](
+                        p4, scalaxb.ElemName(node) :: stack),
                     scalaxb.fromXML[String](p5,
                                             scalaxb.ElemName(node) :: stack),
                     scalaxb.fromXML[BigInt](
                         p6, scalaxb.ElemName(node) :: stack),
-                    scalaxb
-                      .fromXML[String](p7, scalaxb.ElemName(node) :: stack),
+                    scalaxb.fromXML[String](
+                        p7, scalaxb.ElemName(node) :: stack),
                     scalaxb.fromXML[BigInt](
                         p8,
                         scalaxb.ElemName(node) :: stack),
-                    scalaxb.fromXML[String](p9, scalaxb.ElemName(node) :: stack),
-                    scalaxb.fromXML[String](
-                        p10, scalaxb.ElemName(node) :: stack),
+                    scalaxb.fromXML[String](p9,
+                                            scalaxb.ElemName(node) :: stack),
+                    scalaxb.fromXML[String](p10, scalaxb.ElemName(node) :: stack),
+                    scalaxb.fromXML[BigInt](
+                        p11, scalaxb.ElemName(node) :: stack),
                     scalaxb
-                      .fromXML[BigInt](p11, scalaxb.ElemName(node) :: stack),
-                    scalaxb.fromXML[String](
-                        p12,
-                        scalaxb.ElemName(node) :: stack),
-                    scalaxb.fromXML[String](p13, scalaxb.ElemName(node) :: stack),
-                    scalaxb.fromXML[BigDecimal](
-                        p14, scalaxb.ElemName(node) :: stack),
+                      .fromXML[String](p12,
+                                       scalaxb.ElemName(node) :: stack),
+                    scalaxb.fromXML[String](p13,
+                                            scalaxb.ElemName(node) :: stack),
+                    scalaxb.fromXML[BigDecimal](p14,
+                                                scalaxb.ElemName(node) :: stack),
                     scalaxb.fromXML[eveapi.xml.eve.CharacterInfo.Rowset](
                         p15, scalaxb.ElemName(node) :: stack))
       })
@@ -144,19 +147,21 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
     def writesChildNodes(
         __obj: eveapi.xml.eve.CharacterInfo.Result,
         __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
-      Seq
-        .concat(scalaxb
-                  .toXML[BigInt](__obj.characterID,
-                                 None,
-                                 Some("characterID"),
-                                 __scope,
-                                 false),
-                scalaxb.toXML[String](__obj.characterName,
-                                      None,
-                                      Some("characterName"),
-                                      __scope,
-                                      false),
-                scalaxb.toXML[String](__obj.race, None, Some("race"), __scope, false),
+      Seq.concat(
+          scalaxb.toXML[BigInt](
+              __obj.characterID,
+              None,
+              Some("characterID"),
+              __scope,
+              false),
+          scalaxb.toXML[String](
+              __obj.characterName,
+              None,
+              Some("characterName"),
+              __scope,
+              false),
+          scalaxb
+            .toXML[String](__obj.race, None, Some("race"), __scope, false),
                 scalaxb.toXML[BigInt](__obj.bloodlineID,
                                       None,
                                       Some("bloodlineID"),
@@ -225,23 +230,20 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
       extends scalaxb.ElemNameParser[eveapi.xml.eve.CharacterInfo.Rowset] {
     val targetNamespace: Option[String] = None
 
-    def parser(
-        node: scala.xml.Node,
-        stack: List[scalaxb.ElemName]): Parser[
-        eveapi.xml.eve.CharacterInfo.Rowset] =
-      phrase(
-          safeRep(scalaxb.ElemName(None, "row")) ^^ {
+    def parser(node: scala.xml.Node, stack: List[scalaxb.ElemName])
+      : Parser[eveapi.xml.eve.CharacterInfo.Rowset] =
+      phrase(safeRep(scalaxb.ElemName(None, "row")) ^^ {
         case p1 =>
           eveapi.xml.eve.CharacterInfo.Rowset(p1.toSeq map {
-            scalaxb
-              .fromXML[eveapi.xml.eve.CharacterInfo.Row](_, scalaxb.ElemName(node) :: stack) },
-        scala.collection.immutable.ListMap(List(
-        (node \ "@columns").headOption map { x =>
-                  scalaxb.DataRecord(x,
-                                     node,
-                                     scalaxb.fromXML[String](
-                                         x, scalaxb.ElemName(node) :: stack))
-              } map { "@columns" -> _ }, (node \ "@key").headOption map { x =>
+            scalaxb.fromXML[eveapi.xml.eve.CharacterInfo.Row](
+                _, scalaxb.ElemName(node) :: stack)
+          }, scala.collection.immutable.ListMap(List((node \ "@columns").headOption map {
+            x =>
+              scalaxb.DataRecord(
+                  x,
+                  node,
+                  scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack))
+          } map { "@columns" -> _ }, (node \ "@key").headOption map { x =>
             scalaxb.DataRecord(
                 x,
                 node,
@@ -301,23 +303,25 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
                         (node \ "@corporationID").headOption map { x =>
               scalaxb.DataRecord(x, node, scalaxb.fromXML[BigInt](x, scalaxb.ElemName(node) :: stack))
             } map { "@corporationID" -> _ },
-                        (node \ "@corporationName").headOption map { x =>
+                        (node \ "@corporationName").headOption map {
+              x =>
+                scalaxb.DataRecord(
+                    x,
+                    node,
+                    scalaxb.fromXML[String](x,
+                                            scalaxb.ElemName(node) :: stack))
+            } map { "@corporationName" -> _ },
+                        (node \ "@recordID").headOption map { x =>
+              scalaxb.DataRecord(x,
+                                 node,
+                                 scalaxb.fromXML[BigInt](
+                                     x, scalaxb.ElemName(node) :: stack))
+            } map { "@recordID" -> _ },
+                        (node \ "@startDate").headOption map { x =>
               scalaxb.DataRecord(x,
                                  node,
                                  scalaxb
-                                   .fromXML[String](
-                                     x,
-                                     scalaxb.ElemName(node) :: stack))
-            } map { "@corporationName" -> _ },
-                        (node \ "@recordID").headOption map { x =>
-              scalaxb
-                .DataRecord(x, node, scalaxb.fromXML[BigInt](x, scalaxb.ElemName(node) :: stack))
-            } map { "@recordID" -> _ },
-                        (node \ "@startDate").headOption map { x =>
-              scalaxb.DataRecord(
-                  x,
-                  node,
-                  scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack))
+                                   .fromXML[String](x, scalaxb.ElemName(node) :: stack))
             } map { "@startDate" -> _ }
                     ).flatten[(String, scalaxb.DataRecord[Any])]: _*)))
       case _ => Left("reads failed: seq must be scala.xml.Node")

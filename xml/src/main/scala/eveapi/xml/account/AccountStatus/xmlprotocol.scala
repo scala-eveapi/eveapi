@@ -44,11 +44,13 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
                   p2, scalaxb.ElemName(node) :: stack),
               scalaxb.fromXML[String](p3, scalaxb.ElemName(node) :: stack),
               scala.collection.immutable.ListMap(List(
-                      (node \ "@version").headOption map { x =>
-                    scalaxb.DataRecord(x,
-                                       node,
-                                       scalaxb.fromXML[BigInt](
-                                           x, scalaxb.ElemName(node) :: stack))
+                      (node \ "@version").headOption map {
+                    x =>
+                      scalaxb.DataRecord(x,
+                                         node,
+                                         scalaxb.fromXML[BigInt](
+                                             x,
+                                             scalaxb.ElemName(node) :: stack))
                   } map { "@version" -> _ }
                   ).flatten[(String, scalaxb.DataRecord[Any])]: _*))
       })
@@ -130,27 +132,26 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
     def reads(seq: scala.xml.NodeSeq, stack: List[scalaxb.ElemName])
       : Either[String, eveapi.xml.account.AccountStatus.Rowset] = seq match {
       case node: scala.xml.Node =>
-        Right(eveapi.xml.account.AccountStatus.Rowset(
-                scala.collection.immutable
-                  .ListMap(List(
+        Right(
+            eveapi.xml.account.AccountStatus
+              .Rowset(scala.collection.immutable.ListMap(List(
                         (node \ "@columns").headOption map { x =>
-              scalaxb
-                .DataRecord(x,
-                            node,
-                            scalaxb.fromXML[String](x,
-                                                    scalaxb.ElemName(node) :: stack))
+              scalaxb.DataRecord(
+                  x,
+                  node,
+                  scalaxb.fromXML[String](x,
+                                          scalaxb.ElemName(node) :: stack))
             } map { "@columns" -> _ },
                         (node \ "@key").headOption map { x =>
-              scalaxb.DataRecord(x,
-                                 node,
-                                 scalaxb
-                                   .fromXML[String](
-                                     x,
-                                     scalaxb.ElemName(node) :: stack))
+              scalaxb.DataRecord(
+                  x,
+                  node,
+                  scalaxb.fromXML[String](x,
+                                          scalaxb.ElemName(node) :: stack))
             } map { "@key" -> _ },
                         (node \ "@name").headOption map { x =>
-              scalaxb
-                .DataRecord(x, node, scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack))
+              scalaxb.DataRecord(
+                  x, node, scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack))
             } map { "@name" -> _ }
                     ).flatten[(String, scalaxb.DataRecord[Any])]: _*)))
       case _ => Left("reads failed: seq must be scala.xml.Node")
