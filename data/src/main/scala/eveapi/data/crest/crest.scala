@@ -1,16 +1,37 @@
 package eveapi.data.crest
 
-case class CallbackResponse(access_token: String,
-                            token_type: String,
-                            expires_in: Long,
-                            refresh_token: Option[String])
+case class Href(
+    href: String
+)
 
-case class VerifyResponse(
-    CharacterID: Long,
-    CharacterName: String,
-    ExpiresOn: String,
-    Scopes: String,
-    TokenType: String,
-    CharacterOwnerHash: String,
-    IntellectualProperty: String
+trait Identifier[T] {
+  def id: Long
+  def href: String
+}
+
+case class ShortIdentifier[T](
+    id: Long,
+    href: String
+)
+    extends Identifier[T]
+
+case class StandardIdentifier[T](
+    id: Long,
+    name: String,
+    href: String
+)
+    extends Identifier[T]
+
+case class ContactIdentifier[T](
+    id: Long,
+    name: String,
+    href: String,
+    isNPC: Boolean
+)
+    extends Identifier[T]
+
+case class Paginated[T](
+    items: List[T],
+    pageCount: Long,
+    totalCount: Long
 )

@@ -1,8 +1,4 @@
-package eveapi.data.crest.solarsystem
-
-case class Href(
-    href: String
-)
+package eveapi.data.crest
 
 case class Position(
     y: Double,
@@ -10,11 +6,8 @@ case class Position(
     z: Double
 )
 
-case class Constellation(
-    href: String,
-    id: Long,
-    id_str: String
-)
+case class Constellation()
+case class Station()
 
 case class SolarSystem(
     stats: Href,
@@ -22,9 +15,8 @@ case class SolarSystem(
     securityStatus: Double,
     securityClass: String,
     href: String,
-    id_str: String,
     planets: List[Href],
     position: Position,
-    constellation: Constellation,
+    constellation: ShortIdentifier[Constellation],
     id: Long
 )

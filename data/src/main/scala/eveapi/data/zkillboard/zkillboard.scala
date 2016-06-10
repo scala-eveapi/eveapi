@@ -51,7 +51,6 @@ case class Killmail(
 )
 
 case class SolarSystem(
-    id_str: String,
     href: String,
     id: Long,
     name: String
@@ -62,7 +61,6 @@ case class Icon(
 )
 
 case class Href(
-    id_str: String,
     href: String,
     id: Long,
     name: String,
@@ -77,8 +75,7 @@ case class Position(
 
 case class War(
     href: String,
-    id: Long,
-    id_str: String
+    id: Long
 )
 
 case class Zkb(
