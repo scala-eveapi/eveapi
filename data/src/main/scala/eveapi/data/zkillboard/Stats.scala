@@ -3,23 +3,23 @@ package eveapi.data.zkillboard
 object Stats {
 
   case class Group(
-                    groupID: Double,
-                    shipsLost: Option[Double],
-                    pointsLost: Option[Double],
+                    groupID: Long,
+                    shipsLost: Option[Long],
+                    pointsLost: Option[Long],
                     iskLost: Option[Double],
-                    shipsDestroyed: Double,
-                    pointsDestroyed: Double,
+                    shipsDestroyed: Long,
+                    pointsDestroyed: Long,
                     iskDestroyed: Double
                   )
 
   case class Month(
-                    year: Double,
-                    month: Double,
-                    shipsLost: Double,
-                    pointsLost: Double,
+                    year: Long,
+                    month: Long,
+                    shipsLost: Long,
+                    pointsLost: Long,
                     iskLost: Double,
-                    shipsDestroyed: Double,
-                    pointsDestroyed: Double,
+                    shipsDestroyed: Long,
+                    pointsDestroyed: Long,
                     iskDestroyed: Double
                   )
 
@@ -49,27 +49,27 @@ object Stats {
                           )
 
   case class AlliInfo(
-                       corpCount: Double,
+                       corpCount: Long,
                        deleted: Boolean,
-                       executorCorpID: Double,
-                       factionID: Double,
-                       id: Double,
-                       killID: Double,
+                       executorCorpID: Long,
+                       factionID: Long,
+                       id: Long,
+                       killID: Long,
                        lastApiUpdate: LastApiUpdate,
-                       memberCount: Double,
+                       memberCount: Long,
                        name: String,
                        ticker: String,
                        `type`: String
                      )
 
   case class CorpInfo(
-                       allianceID: Double,
-                       ceoID: Double,
-                       factionID: Double,
-                       id: Double,
-                       killID: Double,
+                       allianceID: Long,
+                       ceoID: Long,
+                       factionID: Long,
+                       id: Long,
+                       killID: Long,
                        lastApiUpdate: LastApiUpdate,
-                       memberCount: Double,
+                       memberCount: Long,
                        name: String,
                        ticker: String,
                        `type`: String
@@ -92,11 +92,11 @@ object Stats {
                            iskDestroyed: Double,
                            iskLost: Double,
                            months: Map[Long, Month],
-                           pointsDestroyed: Double,
-                           pointsLost: Double,
+                           pointsDestroyed: Long,
+                           pointsLost: Long,
                            sequence: Double,
-                           shipsDestroyed: Double,
-                           shipsLost: Double,
+                           shipsDestroyed: Long,
+                           shipsLost: Long,
                            `type`: String,
                            info: AlliInfo,
                            supers: Supers,
@@ -115,11 +115,11 @@ object Stats {
                               iskDestroyed: Double,
                               iskLost: Double,
                               months: Map[Long, Month],
-                              pointsDestroyed: Double,
-                              pointsLost: Double,
+                              pointsDestroyed: Long,
+                              pointsLost: Long,
                               sequence: Double,
-                              shipsDestroyed: Double,
-                              shipsLost: Double,
+                              shipsDestroyed: Long,
+                              shipsLost: Long,
                               `type`: String,
                               info: CorpInfo,
                               supers: Supers,

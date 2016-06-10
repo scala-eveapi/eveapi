@@ -14,4 +14,4 @@ lazy val blazeClient = (project in file("blaze-client"))
       "org.http4s" %% "http4s-blaze-client" % "0.13.2"
     )
   )
-  .dependsOn(data, dataCompressed)
+  .dependsOn(data, compressed)
