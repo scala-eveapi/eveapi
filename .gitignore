@@ -18,7 +18,3 @@ project/plugins/project/
 
 # IntelliJ specific
 .idea
-
-# Generated sources
-xml/src/main/scala/
-xml/src/main/resources/xsd/

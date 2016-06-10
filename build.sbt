@@ -32,8 +32,7 @@ lazy val xml = (project in file("xml")).settings(
   libraryDependencies ++= Seq(
     "org.scala-lang.modules"       %% "scala-xml"                % "1.0.3",
     "org.scala-lang.modules"       %% "scala-parser-combinators" % "1.0.3"
-  ),
-  sourceGenerators in Compile += Def.task { "./xml/build.sh".lines_!.toList.map(file)}.taskValue
+  )
 )
 
 lazy val blazeClient = (project in file("blaze-client")) .settings(
