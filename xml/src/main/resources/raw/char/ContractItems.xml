@@ -1,0 +1,23 @@
+<eveapi version="2">
+    <currentTime>2015-05-28 12:41:59</currentTime>
+    <result>
+        <rowset name="itemList" key="recordID" columns="recordID,typeID,quantity,rawQuantity,singleton,included">
+            <row recordID="1631349115" typeID="11176" quantity="1" singleton="0" included="1"/>
+            <row recordID="1631349116" typeID="2605" quantity="1" singleton="0" included="1"/>
+            <row recordID="1631349117" typeID="8091" quantity="1" singleton="0" included="1"/>
+            <row recordID="1631349118" typeID="11563" quantity="1" singleton="0" included="1"/>
+            <row recordID="1631349119" typeID="448" quantity="1" singleton="0" included="1"/>
+            <row recordID="1631349120" typeID="31274" quantity="1" singleton="0" included="1"/>
+            <row recordID="1631349121" typeID="3244" quantity="1" singleton="0" included="1"/>
+            <row recordID="1631349122" typeID="5973" quantity="1" singleton="0" included="1"/>
+            <row recordID="1631349123" typeID="28668" quantity="40" singleton="0" included="1"/>
+            <row recordID="1631349124" typeID="8091" quantity="1" singleton="0" included="1"/>
+            <row recordID="1631349125" typeID="8433" quantity="1" singleton="0" included="1"/>
+            <row recordID="1631349126" typeID="31177" quantity="1" singleton="0" included="1"/>
+            <row recordID="1631349127" typeID="27381" quantity="1488" singleton="0" included="1"/>
+            <row recordID="1631349128" typeID="8091" quantity="1" singleton="0" included="1"/>
+            <row recordID="1631349129" typeID="27387" quantity="1488" singleton="0" included="1"/>
+        </rowset>
+    </result>
+    <cachedUntil>2025-05-23 14:29:22</cachedUntil>
+</eveapi>

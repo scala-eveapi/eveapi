@@ -1,0 +1,10 @@
+<eveapi version="2">
+    <currentTime>2016-01-23 15:24:32</currentTime>
+    <result>
+        <rowset name="owners" key="ownerID" columns="ownerID,ownerName,ownerGroupID">
+            <row ownerID="98076155" ownerName="Love Squad" ownerGroupID="2"/>
+            <row ownerID="386292982" ownerName="Pandemic Legion" ownerGroupID="32"/>
+        </rowset>
+    </result>
+    <cachedUntil>2016-02-23 15:24:32</cachedUntil>
+</eveapi>

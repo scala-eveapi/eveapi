@@ -1,0 +1,15 @@
+<eveapi version="2">
+    <currentTime>2015-05-28 12:45:20</currentTime>
+    <result>
+        <rowset name="messages" key="messageID"
+                columns="messageID,senderID,senderName,sentDate,title,toCorpOrAllianceID,toCharacterIDs,toListID">
+            <row messageID="350486872" senderID="1109604843" senderName="wheniaminspace" sentDate="2015-05-25 19:21:00"
+                 title="FW: blah" toCorpOrAllianceID="" toCharacterIDs=""
+                 toListID="145135833" senderTypeID="1379"/>
+            <row messageID="350462190" senderID="1109604843" senderName="wheniaminspace" sentDate="2015-05-25 00:45:00"
+                 title="reminder: cloaky camping pays off" toCorpOrAllianceID="99001561" toCharacterIDs="" toListID=""
+                 senderTypeID="1379"/>
+        </rowset>
+    </result>
+    <cachedUntil>2015-05-28 13:00:20</cachedUntil>
+</eveapi>

@@ -1,0 +1,25 @@
+<eveapi version="2">
+    <currentTime>2015-05-22 20:24:07</currentTime>
+    <result>
+        <characterID>90758388</characterID>
+        <characterName>Lucia Denniard</characterName>
+        <race>Amarr</race>
+        <bloodlineID>13</bloodlineID>
+        <bloodline>Khanid</bloodline>
+        <ancestryID>37</ancestryID>
+        <ancestry>Cyber Knights</ancestry>
+        <corporationID>98076155</corporationID>
+        <corporation>Love Squad</corporation>
+        <corporationDate>2012-01-16 01:40:00</corporationDate>
+        <allianceID>99001561</allianceID>
+        <alliance>Confederation of xXPIZZAXx</alliance>
+        <allianceDate>2014-10-23 02:05:00</allianceDate>
+        <securityStatus>-1.80900473116023</securityStatus>
+        <rowset name="employmentHistory" key="recordID" columns="recordID,corporationID,corporationName,startDate">
+            <row recordID="18735225" corporationID="98076155" corporationName="Love Squad" startDate="2012-01-16 01:40:00"/>
+            <row recordID="17184392" corporationID="98037040" corporationName="Broski Enterprises" startDate="2011-06-24 21:03:00"/>
+            <row recordID="16853342" corporationID="1000077" corporationName="Royal Amarr Institute" startDate="2011-05-18 19:36:00"/>
+        </rowset>
+    </result>
+    <cachedUntil>2015-05-22 20:39:11</cachedUntil>
+</eveapi>

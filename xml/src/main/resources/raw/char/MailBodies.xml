@@ -1,0 +1,13 @@
+<eveapi version="2">
+    <currentTime>2015-05-28 12:46:21</currentTime>
+    <result>
+        <rowset name="messages" key="messageID" columns="messageID">
+            <row messageID="350462190">
+                <![CDATA[
+                content goes here
+]]>
+            </row>
+        </rowset>
+    </result>
+    <cachedUntil>2025-05-25 12:46:21</cachedUntil>
+</eveapi>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<eveapi version="2">
+  <currentTime>2015-06-17 00:16:06</currentTime>
+  <result>
+    <rowset name="corporateContactList" key="contactID" columns="contactID,contactName,standing,contactTypeID">
+        <row contactID="99004230" contactName="Sugar." standing="-5.2" contactTypeID="16159" />
+        <row contactID="99005276" contactName="Illuminati Confirmed." standing="-10.0" contactTypeID="16159" />
+    </rowset>
+    <rowset name="allianceContactList" key="contactID" columns="contactID,contactName,standing,contactTypeID">
+      <row contactID="1399057309" contactName="HUN Reloaded" standing="-5.23" contactTypeID="16159" />
+      <row contactID="1463354890" contactName="Nulli Secunda" standing="-5.1" contactTypeID="16159" />
+      <row contactID="1555742183" contactName="Here Be Dragons" standing="-7.5" contactTypeID="16159" />
+    </rowset>
+  </result>
+  <cachedUntil>2015-06-17 00:31:06</cachedUntil>
+</eveapi>

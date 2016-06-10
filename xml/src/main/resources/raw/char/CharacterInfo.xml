@@ -1,0 +1,284 @@
+<eveapi version="2">
+    <currentTime>2015-05-28 12:37:55</currentTime>
+    <result>
+        <characterID>90758388</characterID>
+        <name>Lucia Denniard</name>
+        <homeStationID>61000771</homeStationID>
+        <DoB>2011-05-18 19:36:00</DoB>
+        <race>Amarr</race>
+        <bloodLine>Khanid</bloodLine>
+        <ancestry>Cyber Knights</ancestry>
+        <gender>Female</gender>
+        <corporationName>Love Squad</corporationName>
+        <corporationID>98076155</corporationID>
+        <allianceName>Confederation of xXPIZZAXx</allianceName>
+        <allianceID>99001561</allianceID>
+        <factionName/>
+        <factionID>0</factionID>
+        <cloneTypeID>164</cloneTypeID>
+        <cloneName>Clone Grade Alpha</cloneName>
+        <cloneSkillPoints>0</cloneSkillPoints>
+        <freeSkillPoints>0</freeSkillPoints>
+        <freeRespecs>0</freeRespecs>
+        <cloneJumpDate>2014-08-17 15:36:28</cloneJumpDate>
+        <lastRespecDate>2012-03-02 18:22:58</lastRespecDate>
+        <lastTimedRespec>2011-05-31 22:43:41</lastTimedRespec>
+        <remoteStationDate>0001-01-01 00:00:00</remoteStationDate>
+        <rowset name="jumpClones" key="jumpCloneID" columns="jumpCloneID,typeID,locationID,cloneName">
+            <row jumpCloneID="20054810" typeID="164" locationID="60003760" cloneName=""/>
+            <row jumpCloneID="15871552" typeID="164" locationID="60011740" cloneName=""/>
+            <row jumpCloneID="20821554" typeID="164" locationID="61000464" cloneName=""/>
+        </rowset>
+        <rowset name="jumpCloneImplants" key="jumpCloneID" columns="jumpCloneID,typeID,typeName">
+            <row jumpCloneID="20054810" typeID="13225" typeName="Eifyr and Co. 'Gunslinger' Small Projectile Turret SP-603"/>
+            <row jumpCloneID="20054810" typeID="13232" typeName="Zainou 'Gypsy' Electronic Warfare EW-903"/>
+            <row jumpCloneID="20054810" typeID="13233" typeName="Zainou 'Gypsy' Long Range Targeting LT-803"/>
+            <row jumpCloneID="20054810" typeID="13240" typeName="Eifyr and Co. 'Rogue' Evasive Maneuvering EM-703"/>
+            <row jumpCloneID="20054810" typeID="13256" typeName="Inherent Implants 'Noble' Hull Upgrades HG-1003"/>
+            <row jumpCloneID="15871552" typeID="13265" typeName="Inherent Implants 'Squire' Capacitor Emission Systems ES-703"/>
+            <row jumpCloneID="15871552" typeID="22131" typeName="Mid-grade Talisman Alpha"/>
+            <row jumpCloneID="15871552" typeID="22133" typeName="Mid-grade Talisman Beta"/>
+            <row jumpCloneID="15871552" typeID="22134" typeName="Mid-grade Talisman Delta"/>
+            <row jumpCloneID="15871552" typeID="22136" typeName="Mid-grade Talisman Gamma"/>
+        </rowset>
+        <jumpActivation>2015-05-27 12:26:27</jumpActivation>
+        <jumpFatigue>2015-05-27 13:02:37</jumpFatigue>
+        <jumpLastUpdate>2015-05-27 12:22:26</jumpLastUpdate>
+        <balance>871554131.27</balance>
+        <rowset name="implants" key="typeID" columns="typeID,typeName"/>
+        <attributes>
+            <intelligence>17</intelligence>
+            <memory>17</memory>
+            <charisma>17</charisma>
+            <perception>27</perception>
+            <willpower>21</willpower>
+        </attributes>
+        <rowset name="skills" key="typeID" columns="typeID,skillpoints,level,published">
+            <row typeID="3300" skillpoints="256000" level="5" published="1"/>
+            <row typeID="3303" skillpoints="256000" level="5" published="1"/>
+            <row typeID="3327" skillpoints="256000" level="5" published="1"/>
+            <row typeID="3331" skillpoints="512000" level="5" published="1"/>
+            <row typeID="3386" skillpoints="45255" level="4" published="1"/>
+            <row typeID="3392" skillpoints="256000" level="5" published="1"/>
+            <row typeID="3402" skillpoints="256000" level="5" published="1"/>
+            <row typeID="3413" skillpoints="256000" level="5" published="1"/>
+            <row typeID="3416" skillpoints="256000" level="5" published="1"/>
+            <row typeID="3426" skillpoints="256000" level="5" published="1"/>
+            <row typeID="3449" skillpoints="256000" level="5" published="1"/>
+            <row typeID="3394" skillpoints="512000" level="5" published="1"/>
+            <row typeID="3393" skillpoints="45255" level="4" published="1"/>
+            <row typeID="3419" skillpoints="768000" level="5" published="1"/>
+            <row typeID="3385" skillpoints="8000" level="3" published="1"/>
+            <row typeID="13279" skillpoints="250" level="1" published="1"/>
+            <row typeID="3450" skillpoints="256000" level="5" published="1"/>
+            <row typeID="3380" skillpoints="256000" level="5" published="1"/>
+            <row typeID="3343" skillpoints="32000" level="3" published="1"/>
+            <row typeID="3312" skillpoints="512000" level="5" published="1"/>
+            <row typeID="3435" skillpoints="768000" level="5" published="1"/>
+            <row typeID="3335" skillpoints="1280000" level="5" published="1"/>
+            <row typeID="3318" skillpoints="512000" level="5" published="1"/>
+            <row typeID="3311" skillpoints="90510" level="4" published="1"/>
+            <row typeID="3411" skillpoints="135765" level="4" published="1"/>
+            <row typeID="3387" skillpoints="2829" level="2" published="1"/>
+            <row typeID="3436" skillpoints="256000" level="5" published="1"/>
+            <row typeID="3438" skillpoints="2829" level="2" published="1"/>
+            <row typeID="3319" skillpoints="256000" level="5" published="1"/>
+            <row typeID="3320" skillpoints="256000" level="5" published="1"/>
+            <row typeID="3424" skillpoints="512000" level="5" published="1"/>
+            <row typeID="3355" skillpoints="8000" level="3" published="1"/>
+            <row typeID="3357" skillpoints="1415" level="2" published="1"/>
+            <row typeID="3423" skillpoints="16000" level="3" published="1"/>
+            <row typeID="17940" skillpoints="32000" level="3" published="1"/>
+            <row typeID="3410" skillpoints="135765" level="4" published="1"/>
+            <row typeID="3551" skillpoints="8000" level="3" published="1"/>
+            <row typeID="3429" skillpoints="256000" level="5" published="1"/>
+            <row typeID="3425" skillpoints="512000" level="5" published="1"/>
+            <row typeID="12095" skillpoints="181020" level="4" published="1"/>
+            <row typeID="3418" skillpoints="768000" level="5" published="1"/>
+            <row typeID="3453" skillpoints="512000" level="5" published="1"/>
+            <row typeID="12441" skillpoints="512000" level="5" published="1"/>
+            <row typeID="12442" skillpoints="181020" level="4" published="1"/>
+            <row typeID="21071" skillpoints="512000" level="5" published="1"/>
+            <row typeID="28164" skillpoints="135765" level="4" published="1"/>
+            <row typeID="3306" skillpoints="768000" level="5" published="1"/>
+            <row typeID="3427" skillpoints="512000" level="5" published="1"/>
+            <row typeID="3323" skillpoints="2829" level="2" published="1"/>
+            <row typeID="20209" skillpoints="24000" level="3" published="1"/>
+            <row typeID="26261" skillpoints="24000" level="3" published="1"/>
+            <row typeID="3455" skillpoints="256000" level="5" published="1"/>
+            <row typeID="12093" skillpoints="1024000" level="5" published="1"/>
+            <row typeID="11579" skillpoints="271530" level="4" published="1"/>
+            <row typeID="3325" skillpoints="1024000" level="5" published="1"/>
+            <row typeID="3324" skillpoints="768000" level="5" published="1"/>
+            <row typeID="19921" skillpoints="135765" level="4" published="1"/>
+            <row typeID="3305" skillpoints="768000" level="5" published="1"/>
+            <row typeID="3428" skillpoints="90510" level="4" published="1"/>
+            <row typeID="11084" skillpoints="135765" level="4" published="1"/>
+            <row typeID="12201" skillpoints="135765" level="4" published="1"/>
+            <row typeID="25544" skillpoints="45255" level="4" published="1"/>
+            <row typeID="26260" skillpoints="24000" level="3" published="1"/>
+            <row typeID="21603" skillpoints="226275" level="4" published="1"/>
+            <row typeID="12208" skillpoints="40000" level="3" published="1"/>
+            <row typeID="3431" skillpoints="256000" level="5" published="1"/>
+            <row typeID="28073" skillpoints="181020" level="4" published="1"/>
+            <row typeID="3330" skillpoints="512000" level="5" published="1"/>
+            <row typeID="3334" skillpoints="1280000" level="5" published="1"/>
+            <row typeID="3452" skillpoints="181020" level="4" published="1"/>
+            <row typeID="25863" skillpoints="4243" level="2" published="1"/>
+            <row typeID="3328" skillpoints="512000" level="5" published="1"/>
+            <row typeID="12485" skillpoints="40000" level="3" published="1"/>
+            <row typeID="23566" skillpoints="40000" level="3" published="1"/>
+            <row typeID="3301" skillpoints="256000" level="5" published="1"/>
+            <row typeID="3310" skillpoints="512000" level="5" published="1"/>
+            <row typeID="25719" skillpoints="768000" level="5" published="1"/>
+            <row typeID="3433" skillpoints="135765" level="4" published="1"/>
+            <row typeID="19759" skillpoints="181020" level="4" published="1"/>
+            <row typeID="19760" skillpoints="768000" level="5" published="1"/>
+            <row typeID="3304" skillpoints="768000" level="5" published="1"/>
+            <row typeID="3442" skillpoints="226275" level="4" published="1"/>
+            <row typeID="12305" skillpoints="256000" level="5" published="1"/>
+            <row typeID="23606" skillpoints="256000" level="5" published="1"/>
+            <row typeID="26259" skillpoints="24000" level="3" published="1"/>
+            <row typeID="11584" skillpoints="24000" level="3" published="1"/>
+            <row typeID="12210" skillpoints="135765" level="4" published="1"/>
+            <row typeID="3363" skillpoints="8000" level="3" published="1"/>
+            <row typeID="12213" skillpoints="135765" level="4" published="1"/>
+            <row typeID="11207" skillpoints="1536000" level="5" published="1"/>
+            <row typeID="28879" skillpoints="90510" level="4" published="1"/>
+            <row typeID="26258" skillpoints="24000" level="3" published="1"/>
+            <row typeID="16069" skillpoints="16000" level="3" published="1"/>
+            <row typeID="22806" skillpoints="16000" level="3" published="1"/>
+            <row typeID="22807" skillpoints="90510" level="4" published="1"/>
+            <row typeID="22808" skillpoints="90510" level="4" published="1"/>
+            <row typeID="22809" skillpoints="90510" level="4" published="1"/>
+            <row typeID="12202" skillpoints="40000" level="3" published="1"/>
+            <row typeID="19761" skillpoints="226275" level="4" published="1"/>
+            <row typeID="27902" skillpoints="16000" level="3" published="1"/>
+            <row typeID="23618" skillpoints="226275" level="4" published="1"/>
+            <row typeID="3439" skillpoints="24000" level="3" published="1"/>
+            <row typeID="12098" skillpoints="226275" level="4" published="1"/>
+            <row typeID="11446" skillpoints="226275" level="4" published="1"/>
+            <row typeID="28609" skillpoints="271530" level="4" published="1"/>
+            <row typeID="16591" skillpoints="271530" level="4" published="1"/>
+            <row typeID="3341" skillpoints="1024000" level="5" published="1"/>
+            <row typeID="21059" skillpoints="512000" level="5" published="1"/>
+            <row typeID="22761" skillpoints="1536000" level="5" published="1"/>
+            <row typeID="12214" skillpoints="40000" level="3" published="1"/>
+            <row typeID="30545" skillpoints="256000" level="5" published="1"/>
+            <row typeID="30537" skillpoints="256000" level="5" published="1"/>
+            <row typeID="30550" skillpoints="45255" level="4" published="1"/>
+            <row typeID="30536" skillpoints="256000" level="5" published="1"/>
+            <row typeID="30539" skillpoints="256000" level="5" published="1"/>
+            <row typeID="30538" skillpoints="256000" level="5" published="1"/>
+            <row typeID="30543" skillpoints="256000" level="5" published="1"/>
+            <row typeID="30547" skillpoints="256000" level="5" published="1"/>
+            <row typeID="30551" skillpoints="256000" level="5" published="1"/>
+            <row typeID="30653" skillpoints="40000" level="3" published="1"/>
+            <row typeID="3308" skillpoints="226275" level="4" published="1"/>
+            <row typeID="20315" skillpoints="226275" level="4" published="1"/>
+            <row typeID="20210" skillpoints="135765" level="4" published="1"/>
+            <row typeID="21718" skillpoints="750" level="1" published="1"/>
+            <row typeID="3348" skillpoints="256000" level="5" published="1"/>
+            <row typeID="3895" skillpoints="90510" level="4" published="1"/>
+            <row typeID="32918" skillpoints="500" level="1" published="1"/>
+            <row typeID="11082" skillpoints="135765" level="4" published="1"/>
+            <row typeID="3421" skillpoints="90510" level="4" published="1"/>
+            <row typeID="3354" skillpoints="271530" level="4" published="1"/>
+            <row typeID="3361" skillpoints="24000" level="3" published="1"/>
+            <row typeID="23950" skillpoints="362039" level="4" published="1"/>
+            <row typeID="33091" skillpoints="512000" level="5" published="1"/>
+            <row typeID="33093" skillpoints="512000" level="5" published="1"/>
+            <row typeID="33095" skillpoints="1536000" level="5" published="1"/>
+            <row typeID="33096" skillpoints="1536000" level="5" published="1"/>
+            <row typeID="33098" skillpoints="1536000" level="5" published="1"/>
+            <row typeID="3332" skillpoints="1280000" level="5" published="1"/>
+            <row typeID="20312" skillpoints="1023147" level="4" published="1"/>
+            <row typeID="30542" skillpoints="256000" level="5" published="1"/>
+            <row typeID="30548" skillpoints="256000" level="5" published="1"/>
+            <row typeID="30549" skillpoints="256000" level="5" published="1"/>
+            <row typeID="30552" skillpoints="256000" level="5" published="1"/>
+            <row typeID="19766" skillpoints="226275" level="4" published="1"/>
+            <row typeID="12486" skillpoints="40000" level="3" published="1"/>
+            <row typeID="32999" skillpoints="16000" level="3" published="1"/>
+            <row typeID="3309" skillpoints="1280000" level="5" published="1"/>
+            <row typeID="20211" skillpoints="40000" level="3" published="1"/>
+            <row typeID="30651" skillpoints="40000" level="3" published="1"/>
+            <row typeID="19719" skillpoints="48000" level="3" published="1"/>
+            <row typeID="12206" skillpoints="40000" level="3" published="1"/>
+            <row typeID="12211" skillpoints="226275" level="4" published="1"/>
+            <row typeID="3307" skillpoints="1280000" level="5" published="1"/>
+            <row typeID="33097" skillpoints="1536000" level="5" published="1"/>
+            <row typeID="12212" skillpoints="11314" level="2" published="1"/>
+            <row typeID="3337" skillpoints="11314" level="2" published="1"/>
+            <row typeID="3456" skillpoints="1280000" level="5" published="1"/>
+            <row typeID="12215" skillpoints="64000" level="3" published="1"/>
+            <row typeID="21610" skillpoints="64000" level="3" published="1"/>
+            <row typeID="21611" skillpoints="407294" level="4" published="1"/>
+            <row typeID="33699" skillpoints="512000" level="5" published="1"/>
+            <row typeID="20213" skillpoints="64000" level="3" published="1"/>
+            <row typeID="23594" skillpoints="1280000" level="5" published="1"/>
+            <row typeID="11083" skillpoints="24000" level="3" published="1"/>
+            <row typeID="34533" skillpoints="135765" level="4" published="1"/>
+            <row typeID="3441" skillpoints="40000" level="3" published="1"/>
+            <row typeID="34390" skillpoints="24000" level="3" published="1"/>
+            <row typeID="33000" skillpoints="16000" level="3" published="1"/>
+            <row typeID="3339" skillpoints="2048000" level="5" published="1"/>
+            <row typeID="30544" skillpoints="256000" level="5" published="1"/>
+            <row typeID="33094" skillpoints="512000" level="5" published="1"/>
+            <row typeID="30554" skillpoints="256000" level="5" published="1"/>
+            <row typeID="30650" skillpoints="7072" level="2" published="1"/>
+            <row typeID="13278" skillpoints="750" level="1" published="1"/>
+            <row typeID="3317" skillpoints="226275" level="4" published="1"/>
+            <row typeID="26257" skillpoints="750" level="1" published="1"/>
+            <row typeID="3420" skillpoints="181020" level="4" published="1"/>
+            <row typeID="3333" skillpoints="1280000" level="5" published="1"/>
+            <row typeID="26256" skillpoints="750" level="1" published="1"/>
+            <row typeID="3434" skillpoints="135765" level="4" published="1"/>
+            <row typeID="24242" skillpoints="256000" level="5" published="1"/>
+            <row typeID="3451" skillpoints="512000" level="5" published="1"/>
+            <row typeID="20314" skillpoints="512000" level="5" published="1"/>
+            <row typeID="3316" skillpoints="512000" level="5" published="1"/>
+            <row typeID="3437" skillpoints="256000" level="5" published="1"/>
+            <row typeID="12484" skillpoints="40000" level="3" published="1"/>
+            <row typeID="3336" skillpoints="11314" level="2" published="1"/>
+            <row typeID="33092" skillpoints="512000" level="5" published="1"/>
+            <row typeID="33078" skillpoints="24000" level="3" published="1"/>
+            <row typeID="25718" skillpoints="40000" level="3" published="1"/>
+            <row typeID="3405" skillpoints="1415" level="2" published="1"/>
+            <row typeID="24241" skillpoints="256000" level="5" published="1"/>
+            <row typeID="3315" skillpoints="181020" level="4" published="1"/>
+            <row typeID="28615" skillpoints="1024000" level="5" published="1"/>
+            <row typeID="3417" skillpoints="256000" level="5" published="1"/>
+            <row typeID="3321" skillpoints="512000" level="5" published="1"/>
+            <row typeID="12092" skillpoints="1024000" level="5" published="1"/>
+            <row typeID="3302" skillpoints="256000" level="5" published="1"/>
+            <row typeID="3329" skillpoints="512000" level="5" published="1"/>
+            <row typeID="3454" skillpoints="226275" level="4" published="1"/>
+            <row typeID="3359" skillpoints="4243" level="2" published="1"/>
+            <row typeID="3432" skillpoints="512000" level="5" published="1"/>
+            <row typeID="3412" skillpoints="135765" level="4" published="1"/>
+            <row typeID="26253" skillpoints="24000" level="3" published="1"/>
+            <row typeID="26254" skillpoints="750" level="1" published="1"/>
+            <row typeID="26252" skillpoints="16000" level="3" published="1"/>
+            <row typeID="33002" skillpoints="16000" level="3" published="1"/>
+            <row typeID="30532" skillpoints="256000" level="5" published="1"/>
+        </rowset>
+        <rowset name="certificates" key="certificateID" columns="certificateID"/>
+        <rowset name="corporationRoles" key="roleID" columns="roleID,roleName">
+            <row roleID="1" roleName="roleDirector"/>
+        </rowset>
+        <rowset name="corporationRolesAtHQ" key="roleID" columns="roleID,roleName">
+            <row roleID="1" roleName="roleDirector"/>
+        </rowset>
+        <rowset name="corporationRolesAtBase" key="roleID" columns="roleID,roleName">
+            <row roleID="1" roleName="roleDirector"/>
+        </rowset>
+        <rowset name="corporationRolesAtOther" key="roleID" columns="roleID,roleName">
+            <row roleID="1" roleName="roleDirector"/>
+        </rowset>
+        <rowset name="corporationTitles" key="titleID" columns="titleID,titleName">
+            <row titleID="32" titleName="Big Deal"/>
+        </rowset>
+    </result>
+    <cachedUntil>2015-05-28 13:26:44</cachedUntil>
+</eveapi>

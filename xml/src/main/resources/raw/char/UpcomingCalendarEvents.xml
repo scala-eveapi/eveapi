@@ -1,0 +1,17 @@
+<eveapi version="2">
+    <currentTime>2015-05-28 12:55:33</currentTime>
+    <result>
+        <rowset name="upcomingEvents" key="eventID"
+                columns="eventID,ownerID,ownerName,eventDate,eventTitle,duration,importance,response,eventText,ownerTypeID">
+            <row eventID="1103101" ownerID="98076155" ownerName="Love Squad" eventDate="2015-06-02 13:34:32"
+                 eventTitle="Control tower in Go Away goes offline" duration="60" importance="0" response="Undecided"
+                 eventText="foo"
+                 ownerTypeID="2"/>
+            <row eventID="1110715" ownerID="98076155" ownerName="Love Squad" eventDate="2015-06-05 09:25:50"
+                 eventTitle="Control tower in Your Mum goes offline" duration="60" importance="0" response="Undecided"
+                 eventText="bar"
+                 ownerTypeID="2"/>
+        </rowset>
+    </result>
+    <cachedUntil>2015-05-28 13:52:33</cachedUntil>
+</eveapi>

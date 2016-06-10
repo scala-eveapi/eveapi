@@ -1,0 +1,11 @@
+<eveapi version="2">
+    <currentTime>2015-05-22 20:24:45</currentTime>
+    <result>
+        <rowset name="characters" key="characterID" columns="name,characterID">
+            <row name="EVE System" characterID="1"/>
+            <row name="EVE Central Bank" characterID="2"/>
+            <row name="EVE Market" characterID="3"/>
+        </rowset>
+    </result>
+    <cachedUntil>2015-06-22 20:24:45</cachedUntil>
+</eveapi>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<eveapi version="2">
+  <currentTime>2015-06-17 00:13:50</currentTime>
+  <result>
+    <corporationNPCStandings>
+      <rowset name="agents" key="fromID" columns="fromID,fromName,standing">
+        <row fromID="3009232" fromName="Dorne Bengot" standing="1.56" />
+        <row fromID="3009381" fromName="Arnerore Rylerave" standing="9.23" />
+      </rowset>
+      <rowset name="NPCCorporations" key="fromID" columns="fromID,fromName,standing">
+        <row fromID="1000005" fromName="Hyasyoda Corporation" standing="1.20" />
+        <row fromID="1000006" fromName="Deep Core Mining Inc." standing="0.05" />
+      </rowset>
+      <rowset name="factions" key="fromID" columns="fromID,fromName,standing">
+        <row fromID="500001" fromName="Caldari State" standing="0.71" />
+      </rowset>
+    </corporationNPCStandings>
+  </result>
+  <cachedUntil>2015-06-17 03:10:50</cachedUntil>
+</eveapi>

@@ -28,7 +28,12 @@ lazy val compress = (project in file("compress")).settings(
 )
 lazy val xml = (project in file("xml")).settings(
   version := Version,
-  scalaVersion := "2.11.8"
+  scalaVersion := "2.11.8",
+  libraryDependencies ++= Seq(
+    "org.scala-lang.modules"       %% "scala-xml"                % "1.0.3",
+    "org.scala-lang.modules"       %% "scala-parser-combinators" % "1.0.3"
+  ),
+  sourceGenerators in Compile += Def.task { "./xml/build.sh".lines_!.toList.map(file)}.taskValue
 )
 
 lazy val blazeClient = (project in file("blaze-client")) .settings(

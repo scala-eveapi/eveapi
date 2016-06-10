@@ -1,0 +1,15 @@
+<eveapi version="2">
+    <currentTime>2015-05-22 20:08:25</currentTime>
+    <result>
+        <rowset name="characters" key="characterID"
+                columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName">
+            <row characterID="1" characterName="EVE System" corporationID="0" corporationName="" allianceID="0"
+                 allianceName="" factionID="0" factionName=""/>
+            <row characterID="2" characterName="Corporation" corporationID="0" corporationName="" allianceID="0"
+                 allianceName="" factionID="0" factionName=""/>
+            <row characterID="3" characterName="Region" corporationID="0" corporationName="" allianceID="0"
+                 allianceName="" factionID="0" factionName=""/>
+        </rowset>
+    </result>
+    <cachedUntil>2015-05-22 20:22:25</cachedUntil>
+</eveapi>

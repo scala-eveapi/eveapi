@@ -1,0 +1,8 @@
+<eveapi version="2">
+    <currentTime>2015-10-23 12:45:41</currentTime>
+    <result>
+        <serverOpen>True</serverOpen>
+        <onlinePlayers>16064</onlinePlayers>
+    </result>
+    <cachedUntil>2015-10-23 12:45:48</cachedUntil>
+</eveapi>

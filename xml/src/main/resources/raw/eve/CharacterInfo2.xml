@@ -1,0 +1,21 @@
+<eveapi version="2">
+	<currentTime>2016-03-07 13:32:54</currentTime>
+	<result>
+		<characterID>92626248</characterID>
+		<characterName>Lecia Denniard</characterName>
+		<race>Caldari</race>
+		<bloodlineID>2</bloodlineID>
+		<bloodline>Civire</bloodline>
+		<ancestryID>7</ancestryID>
+		<ancestry>Entrepreneurs</ancestry>
+		<corporationID>98108335</corporationID>
+		<corporation>Love Hole Inc.</corporation>
+		<corporationDate>2012-11-18 01:13:00</corporationDate>
+		<securityStatus>0.239108371173188</securityStatus>
+		<rowset name="employmentHistory" key="recordID" columns="recordID,corporationID,corporationName,startDate">
+			<row recordID="21162657" corporationID="98108335" corporationName="Love Hole Inc." startDate="2012-11-18 01:13:00"/>
+			<row recordID="21162604" corporationID="1000045" corporationName="Science and Trade Institute" startDate="2012-11-18 01:04:00"/>
+		</rowset>
+	</result>
+	<cachedUntil>2016-03-07 13:39:55</cachedUntil>
+</eveapi>

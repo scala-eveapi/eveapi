@@ -1,0 +1,12 @@
+<eveapi version="2">
+    <currentTime>2015-05-28 12:39:31</currentTime>
+    <result>
+        <rowset name="contactList" key="contactID" columns="contactID,contactName,standing,contactTypeID,inWatchlist">
+            <row contactID="3008735" contactName="Avenid Voohah" standing="0" contactTypeID="1374" inWatchlist="False"/>
+            <row contactID="3008739" contactName="Orda Sand" standing="0" contactTypeID="1374" inWatchlist="False"/>
+            <row contactID="3008745" contactName="Obron Chajma" standing="0" contactTypeID="1374" inWatchlist="False"/>
+            <row contactID="1995590811" contactName="Mustela Erminea" standing="5" contactTypeID="1378"/>
+        </rowset>
+    </result>
+    <cachedUntil>2015-05-28 12:54:31</cachedUntil>
+</eveapi>

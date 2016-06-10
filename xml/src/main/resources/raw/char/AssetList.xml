@@ -1,0 +1,38 @@
+<eveapi version="2">
+    <currentTime>2015-05-28 12:32:58</currentTime>
+    <result>
+        <rowset name="assets" key="itemID" columns="itemID,locationID,typeID,quantity,flag,singleton">
+            <row itemID="1013160496657" locationID="60000964" typeID="596" quantity="1" flag="4" singleton="1" rawQuantity="-1">
+                <rowset name="contents" key="itemID" columns="itemID,typeID,quantity,flag,singleton">
+                    <row itemID="1013160496674" typeID="3634" quantity="1" flag="27" singleton="1" rawQuantity="-1"/>
+                    <row itemID="1013160496675" typeID="3651" quantity="1" flag="28" singleton="1" rawQuantity="-1"/>
+                    <row itemID="1013160496678" typeID="34" quantity="1" flag="5" singleton="0"/>
+                </rowset>
+            </row>
+            <row itemID="1013175042484" locationID="60000964" typeID="596" quantity="1" flag="4" singleton="1" rawQuantity="-1">
+                <rowset name="contents" key="itemID" columns="itemID,typeID,quantity,flag,singleton">
+                    <row itemID="1013175042486" typeID="3634" quantity="1" flag="27" singleton="1" rawQuantity="-1"/>
+                    <row itemID="1013175042487" typeID="3651" quantity="1" flag="28" singleton="1" rawQuantity="-1"/>
+                    <row itemID="1013175042491" typeID="34" quantity="1" flag="5" singleton="0"/>
+                </rowset>
+            </row>
+            <row itemID="1013232436824" locationID="60000964" typeID="12076" quantity="1" flag="4" singleton="1" rawQuantity="-1"/>
+            <row itemID="1013233501897" locationID="60000964" typeID="24509" quantity="527" flag="4" singleton="0"/>
+            <row itemID="1013233554331" locationID="60000964" typeID="24509" quantity="1973" flag="4" singleton="0"/>
+            <row itemID="1013234167110" locationID="60000964" typeID="596" quantity="1" flag="4" singleton="1" rawQuantity="-1">
+                <rowset name="contents" key="itemID" columns="itemID,typeID,quantity,flag,singleton">
+                    <row itemID="1013234167135" typeID="3634" quantity="1" flag="27" singleton="1" rawQuantity="-1"/>
+                    <row itemID="1013234167136" typeID="3651" quantity="1" flag="28" singleton="1" rawQuantity="-1"/>
+                    <row itemID="1013234167144" typeID="34" quantity="1" flag="5" singleton="0"/>
+                </rowset>
+            </row>
+            <row itemID="1013284912588" locationID="60000964" typeID="29011" quantity="1" flag="4" singleton="0"/>
+            <row itemID="1008575215877" locationID="60001330" typeID="34" quantity="1" flag="4" singleton="0"/>
+            <row itemID="1009192939826" locationID="60001438" typeID="264" quantity="10" flag="4" singleton="0"/>
+            <row itemID="1009192939828" locationID="60001438" typeID="264" quantity="10" flag="4" singleton="0"/>
+            <row itemID="1009192939831" locationID="60001438" typeID="21898" quantity="160" flag="4" singleton="0"/>
+            <row itemID="1009192939833" locationID="60001438" typeID="21898" quantity="160" flag="4" singleton="0"/>
+        </rowset>
+    </result>
+    <cachedUntil>2015-05-28 18:32:59</cachedUntil>
+</eveapi>

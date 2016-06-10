@@ -1,0 +1,11 @@
+<eveapi version="2">
+    <currentTime>2015-05-28 12:58:07</currentTime>
+    <result>
+        <rowset name="transactions" key="refID" columns="date,refID,refTypeID,ownerName1,ownerID1,ownerName2,ownerID2,argName1,argID1,amount,balance,reason,taxReceiverID,taxAmount,owner1TypeID,owner2TypeID">
+            <row date="2015-05-27 13:01:52" refID="11221581381" refTypeID="17" ownerName1="CONCORD" ownerID1="1000125" ownerName2="Lucia Denniard" ownerID2="90758388" argName1="Defiant Blessings" argID1="1196427619" amount="963245.46" balance="871554131.27" reason="" taxReceiverID="98076155" taxAmount="104654.16" owner1TypeID="2" owner2TypeID="1385"/>
+            <row date="2015-05-27 12:55:31" refID="11221566792" refTypeID="71" ownerName1="Lucia Denniard" ownerID1="90758388" ownerName2="Hank Taron" ownerID2="93705375" argName1="93932444" argID1="0" amount="-36300000.00" balance="868407563.41" reason="" taxReceiverID="" taxAmount="" owner1TypeID="1385" owner2TypeID="1380"/>
+            <row date="2015-05-22 23:35:05" refID="11201619430" refTypeID="17" ownerName1="CONCORD" ownerID1="1000125" ownerName2="Lucia Denniard" ownerID2="90758388" argName1="Kenji Dystophia" argID1="95463914" amount="76468.64" balance="898943246.21" reason="" taxReceiverID="" taxAmount="" owner1TypeID="2" owner2TypeID="1385"/>
+        </rowset>
+    </result>
+    <cachedUntil>2015-05-28 13:25:07</cachedUntil>
+</eveapi>

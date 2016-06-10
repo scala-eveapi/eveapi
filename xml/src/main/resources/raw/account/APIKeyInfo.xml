@@ -1,0 +1,13 @@
+<eveapi version="2">
+<currentTime>2015-10-20 13:44:43</currentTime>
+<result>
+<key accessMask="268435455" type="Account" expires="">
+<rowset name="characters" key="characterID" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName">
+<row characterID="92023449" characterName="Lorraine Denniard" corporationID="98040755" corporationName="Hard Knocks Inc." allianceID="99005065" allianceName="Hard Knocks Citizens" factionID="0" factionName=""/>
+<row characterID="92626248" characterName="Lecia Denniard" corporationID="98108335" corporationName="Love Hole Inc." allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName=""/>
+<row characterID="94234768" characterName="Lyris Denniard" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName=""/>
+</rowset>
+</key>
+</result>
+<cachedUntil>2015-10-20 13:49:13</cachedUntil>
+</eveapi>

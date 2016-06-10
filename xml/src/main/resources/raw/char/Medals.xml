@@ -1,0 +1,14 @@
+<eveapi version="2">
+    <currentTime>2015-05-28 12:48:07</currentTime>
+    <result>
+        <rowset name="currentCorporation" key="medalID" columns="medalID,reason,status,issuerID,issued">
+            <row medalID="84422" reason="paragone" status="private" issuerID="1109604843" issued="2012-03-11 00:03:33"/>
+            <row medalID="93537" reason="XxXElit3PvPxXx" status="private" issuerID="430119159" issued="2012-08-27 03:36:06"/>
+            <row medalID="133876" reason="Glory to the state!" status="private" issuerID="1107018389" issued="2014-09-04 12:05:26"/>
+        </rowset>
+        <rowset name="otherCorporations" key="medalID" columns="medalID,reason,status,issuerID,issued,corporationID,title,description">
+            <row medalID="144988" reason="Alliance Tournament XII" status="private" issuerID="3019491" issued="2015-05-07 14:13:36" corporationID="1000127" title="Alliance Tournament XII Top 16" description="This medal is awarded to all members of capsuleer alliances whose Alliance Tournament teams finished in the top 16 in YC116."/>
+        </rowset>
+    </result>
+    <cachedUntil>2015-05-28 18:45:07</cachedUntil>
+</eveapi>

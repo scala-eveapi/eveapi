@@ -1,0 +1,12 @@
+<eveapi version="2">
+    <currentTime>2015-05-28 12:50:16</currentTime>
+    <result>
+        <rowset name="notifications" key="notificationID" columns="notificationID,typeID,senderID,senderName,sentDate,read">
+            <row notificationID="514614028" typeID="75" senderID="1000137" senderName="DED" sentDate="2015-05-28 12:28:00" read="0"/>
+            <row notificationID="514613139" typeID="75" senderID="1000137" senderName="DED" sentDate="2015-05-28 12:14:00" read="0"/>
+            <row notificationID="514612347" typeID="76" senderID="1000137" senderName="DED" sentDate="2015-05-28 12:02:00" read="0"/>
+            <row notificationID="514610802" typeID="78" senderID="1000137" senderName="DED" sentDate="2015-05-28 11:34:00" read="0"/>
+        </rowset>
+    </result>
+    <cachedUntil>2015-05-28 13:10:01</cachedUntil>
+</eveapi>

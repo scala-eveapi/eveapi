@@ -1,0 +1,10 @@
+<eveapi version="2">
+    <currentTime>2015-05-22 20:23:14</currentTime>
+    <result>
+        <rowset name="characters" key="characterID" columns="name,characterID">
+            <row name="CCP FoxFour" characterID="92168909"/>
+            <row name="Lucia Denniard" characterID="90758388"/>
+        </rowset>
+    </result>
+    <cachedUntil>2015-06-22 20:23:14</cachedUntil>
+</eveapi>

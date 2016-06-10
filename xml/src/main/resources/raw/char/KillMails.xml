@@ -1,0 +1,480 @@
+<eveapi version="2">
+    <currentTime>2015-05-28 12:43:01</currentTime>
+    <result>
+        <rowset name="kills" key="killID" columns="killID,solarSystemID,killTime,moonID">
+            <row killID="46891914" solarSystemID="30004781" killTime="2015-05-27 13:01:00" moonID="0">
+                <victim characterID="90758388" characterName="Lucia Denniard" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" damageTaken="2633" shipTypeID="11176"/>
+                <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+                    <row characterID="1082820010" characterName="Nikitos41" corporationID="291474287" corporationName="Fighters of the Rising Sun" allianceID="99004136" allianceName="Dangerous Voltage" factionID="0" factionName="" securityStatus="0.878287462874489" damageDone="17" finalBlow="1" weaponTypeID="2969" shipTypeID="29990"/>
+                    <row characterID="442511945" characterName="Taloness" corporationID="1474714402" corporationName="Royal Black Watch Highlanders" allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="5" damageDone="804" finalBlow="0" weaponTypeID="29990" shipTypeID="29990"/>
+                    <row characterID="949706482" characterName="Vlade Randal" corporationID="98148202" corporationName="Kenshin." allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="-0.5" damageDone="622" finalBlow="0" weaponTypeID="29988" shipTypeID="29988"/>
+                    <row characterID="1773603089" characterName="Tallin Vance" corporationID="148873883" corporationName="Section XIII" allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="1.8" damageDone="468" finalBlow="0" weaponTypeID="29986" shipTypeID="29986"/>
+                    <row characterID="93973259" characterName="Azawrath Moon" corporationID="98238290" corporationName="Black VooDoo Asassins" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="0.6" damageDone="318" finalBlow="0" weaponTypeID="29986" shipTypeID="29986"/>
+                    <row characterID="94343846" characterName="Eric Stolypin" corporationID="98290500" corporationName="IceBox Inc." allianceID="99004386" allianceName="Lasers Are Magic" factionID="0" factionName="" securityStatus="1.1" damageDone="311" finalBlow="0" weaponTypeID="12003" shipTypeID="12003"/>
+                    <row characterID="1265294062" characterName="Olex Grant" corporationID="98079882" corporationName="Exclusion Cartel" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="-1.8" damageDone="93" finalBlow="0" weaponTypeID="29986" shipTypeID="29986"/>
+                    <row characterID="94365681" characterName="Spacetime Parasocks" corporationID="98148202" corporationName="Kenshin." allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="4.9" damageDone="0" finalBlow="0" weaponTypeID="10631" shipTypeID="11186"/>
+                    <row characterID="202801824" characterName="PhantomLancer" corporationID="291474287" corporationName="Fighters of the Rising Sun" allianceID="99004136" allianceName="Dangerous Voltage" factionID="0" factionName="" securityStatus="-1.4" damageDone="0" finalBlow="0" weaponTypeID="17559" shipTypeID="29990"/>
+                    <row characterID="861947088" characterName="Geoff W" corporationID="98019139" corporationName="Resilience." allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="-9.8" damageDone="0" finalBlow="0" weaponTypeID="17559" shipTypeID="29990"/>
+                    <row characterID="1098531600" characterName="Cycule" corporationID="994852997" corporationName="Mortis Angelus" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="-1.8" damageDone="0" finalBlow="0" weaponTypeID="2873" shipTypeID="12021"/>
+                    <row characterID="1688015613" characterName="banglord" corporationID="98148202" corporationName="Kenshin." allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="4.8" damageDone="0" finalBlow="0" weaponTypeID="3025" shipTypeID="29986"/>
+                    <row characterID="914554938" characterName="LittlePrince" corporationID="98264254" corporationName="World Society for the Protection of Asteroids" allianceID="99004136" allianceName="Dangerous Voltage" factionID="0" factionName="" securityStatus="-3.1" damageDone="0" finalBlow="0" weaponTypeID="2969" shipTypeID="29990"/>
+                    <row characterID="300604477" characterName="Sir0ja" corporationID="291474287" corporationName="Fighters of the Rising Sun" allianceID="99004136" allianceName="Dangerous Voltage" factionID="0" factionName="" securityStatus="2.3" damageDone="0" finalBlow="0" weaponTypeID="17559" shipTypeID="29990"/>
+                    <row characterID="907310064" characterName="DarkJade" corporationID="291474287" corporationName="Fighters of the Rising Sun" allianceID="99004136" allianceName="Dangerous Voltage" factionID="0" factionName="" securityStatus="4.3" damageDone="0" finalBlow="0" weaponTypeID="2969" shipTypeID="29990"/>
+                </rowset>
+                <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed,singleton">
+                    <row typeID="31274" flag="92" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="3244" flag="22" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="2605" flag="11" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="8091" flag="29" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="27381" flag="5" qtyDropped="0" qtyDestroyed="1344" singleton="0"/>
+                    <row typeID="5973" flag="19" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="8091" flag="28" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="27387" flag="5" qtyDropped="1488" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="27381" flag="29" qtyDropped="0" qtyDestroyed="34" singleton="0"/>
+                    <row typeID="11563" flag="12" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="27381" flag="28" qtyDropped="34" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="8091" flag="27" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="28668" flag="5" qtyDropped="40" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="27381" flag="27" qtyDropped="34" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="8433" flag="21" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="31177" flag="93" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="448" flag="20" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                </rowset>
+            </row>
+            <row killID="46891787" solarSystemID="30004781" killTime="2015-05-27 12:56:00" moonID="0">
+                <victim characterID="90758388" characterName="Lucia Denniard" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" damageTaken="493" shipTypeID="670"/>
+                <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+                    <row characterID="90264260" characterName="Indervaizer" corporationID="1241024248" corporationName="Koa Mai Hoku" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="5.00092919287931" damageDone="493" finalBlow="1" weaponTypeID="27361" shipTypeID="11176"/>
+                </rowset>
+                <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed,singleton"/>
+            </row>
+            <row killID="46891763" solarSystemID="30004781" killTime="2015-05-27 12:54:00" moonID="0">
+                <victim characterID="90758388" characterName="Lucia Denniard" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" damageTaken="7320" shipTypeID="22464"/>
+                <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+                    <row characterID="925285134" characterName="Hitomi Nimarin" corporationID="98148202" corporationName="Kenshin." allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="0.0237851661292068" damageDone="30" finalBlow="1" weaponTypeID="2969" shipTypeID="29990"/>
+                    <row characterID="300604477" characterName="Sir0ja" corporationID="291474287" corporationName="Fighters of the Rising Sun" allianceID="99004136" allianceName="Dangerous Voltage" factionID="0" factionName="" securityStatus="2.3" damageDone="1758" finalBlow="0" weaponTypeID="29990" shipTypeID="29990"/>
+                    <row characterID="1263680857" characterName="Navigator rus27" corporationID="291474287" corporationName="Fighters of the Rising Sun" allianceID="99004136" allianceName="Dangerous Voltage" factionID="0" factionName="" securityStatus="2.2" damageDone="1102" finalBlow="0" weaponTypeID="29990" shipTypeID="29990"/>
+                    <row characterID="367979303" characterName="Kasseopea" corporationID="291474287" corporationName="Fighters of the Rising Sun" allianceID="99004136" allianceName="Dangerous Voltage" factionID="0" factionName="" securityStatus="0.8" damageDone="932" finalBlow="0" weaponTypeID="17559" shipTypeID="29990"/>
+                    <row characterID="93817027" characterName="Dr Shultz27" corporationID="98264254" corporationName="World Society for the Protection of Asteroids" allianceID="99004136" allianceName="Dangerous Voltage" factionID="0" factionName="" securityStatus="1.4" damageDone="793" finalBlow="0" weaponTypeID="29990" shipTypeID="29990"/>
+                    <row characterID="93122092" characterName="Kel Asad" corporationID="98274268" corporationName="Life of Time" allianceID="99004136" allianceName="Dangerous Voltage" factionID="0" factionName="" securityStatus="5" damageDone="459" finalBlow="0" weaponTypeID="29990" shipTypeID="29990"/>
+                    <row characterID="93542619" characterName="Adrian Ostus" corporationID="98079882" corporationName="Exclusion Cartel" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="5" damageDone="426" finalBlow="0" weaponTypeID="29990" shipTypeID="29990"/>
+                    <row characterID="397369993" characterName="chezzter" corporationID="98148202" corporationName="Kenshin." allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="4.9" damageDone="425" finalBlow="0" weaponTypeID="29986" shipTypeID="29986"/>
+                    <row characterID="1196427619" characterName="Defiant Blessings" corporationID="98325514" corporationName="Blood Oath Foundation" allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="5" damageDone="340" finalBlow="0" weaponTypeID="29986" shipTypeID="29986"/>
+                    <row characterID="1773603089" characterName="Tallin Vance" corporationID="148873883" corporationName="Section XIII" allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="1.8" damageDone="266" finalBlow="0" weaponTypeID="29986" shipTypeID="29986"/>
+                    <row characterID="294415567" characterName="MAD NEWT" corporationID="98088894" corporationName="Arch Angels Assault Force" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="4.3" damageDone="222" finalBlow="0" weaponTypeID="29986" shipTypeID="29986"/>
+                    <row characterID="94343846" characterName="Eric Stolypin" corporationID="98290500" corporationName="IceBox Inc." allianceID="99004386" allianceName="Lasers Are Magic" factionID="0" factionName="" securityStatus="1.1" damageDone="208" finalBlow="0" weaponTypeID="12003" shipTypeID="12003"/>
+                    <row characterID="586577549" characterName="Tannikal" corporationID="1468515004" corporationName="Jian Products Engineering Group" allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="1.5" damageDone="121" finalBlow="0" weaponTypeID="29986" shipTypeID="29986"/>
+                    <row characterID="1117639774" characterName="DCLi Ext" corporationID="727917645" corporationName="Swift Redemption" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="3.1" damageDone="94" finalBlow="0" weaponTypeID="29990" shipTypeID="29990"/>
+                    <row characterID="707468250" characterName="Lee Araullo" corporationID="98148202" corporationName="Kenshin." allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="1.8" damageDone="94" finalBlow="0" weaponTypeID="29986" shipTypeID="29986"/>
+                    <row characterID="1265294062" characterName="Olex Grant" corporationID="98079882" corporationName="Exclusion Cartel" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="-1.8" damageDone="50" finalBlow="0" weaponTypeID="29986" shipTypeID="29986"/>
+                    <row characterID="94365681" characterName="Spacetime Parasocks" corporationID="98148202" corporationName="Kenshin." allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="4.9" damageDone="0" finalBlow="0" weaponTypeID="4025" shipTypeID="11186"/>
+                    <row characterID="914554938" characterName="LittlePrince" corporationID="98264254" corporationName="World Society for the Protection of Asteroids" allianceID="99004136" allianceName="Dangerous Voltage" factionID="0" factionName="" securityStatus="-3.1" damageDone="0" finalBlow="0" weaponTypeID="2969" shipTypeID="29990"/>
+                </rowset>
+                <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed,singleton">
+                    <row typeID="31788" flag="93" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="16273" flag="5" qtyDropped="0" qtyDestroyed="300" singleton="0"/>
+                    <row typeID="2048" flag="11" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="22782" flag="27" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="21898" flag="5" qtyDropped="1020" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="21096" flag="31" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="5973" flag="23" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="3831" flag="19" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="2301" flag="21" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="2881" flag="30" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="12608" flag="5" qtyDropped="1488" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="28668" flag="5" qtyDropped="0" qtyDestroyed="44" singleton="0"/>
+                    <row typeID="31788" flag="92" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="2281" flag="22" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="11370" flag="28" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="22778" flag="27" qtyDropped="2" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="21898" flag="29" qtyDropped="142" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="3831" flag="20" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="22778" flag="5" qtyDropped="0" qtyDestroyed="35" singleton="0"/>
+                    <row typeID="21898" flag="30" qtyDropped="142" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="2881" flag="29" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="21906" flag="5" qtyDropped="0" qtyDestroyed="1488" singleton="0"/>
+                </rowset>
+            </row>
+            <row killID="46794840" solarSystemID="30004023" killTime="2015-05-23 00:18:00" moonID="0">
+                <victim characterID="92897381" characterName="Salva Supir" corporationID="251278141" corporationName="Twinstar Universal Services" allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" damageTaken="220" shipTypeID="670"/>
+                <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+                    <row characterID="90758388" characterName="Lucia Denniard" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" securityStatus="-1.80900473116023" damageDone="220" finalBlow="1" weaponTypeID="27920" shipTypeID="12038"/>
+                </rowset>
+                <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed,singleton"/>
+            </row>
+            <row killID="46720460" solarSystemID="30004930" killTime="2015-05-18 23:49:00" moonID="0">
+                <victim characterID="1698950145" characterName="houseofsin" corporationID="98122403" corporationName="Gentlemen of Discerning Taste" allianceID="99004230" allianceName="Sugar." factionID="0" factionName="" damageTaken="8690" shipTypeID="634"/>
+                <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+                    <row characterID="90758388" characterName="Lucia Denniard" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" securityStatus="-1.80900473116023" damageDone="602" finalBlow="1" weaponTypeID="2881" shipTypeID="22464"/>
+                    <row characterID="94850985" characterName="Praleng" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" securityStatus="-1.3" damageDone="2564" finalBlow="0" weaponTypeID="27387" shipTypeID="11176"/>
+                    <row characterID="91266490" characterName="Julia Shaliria" corporationID="98019354" corporationName="Galactic Dragons" allianceID="99005234" allianceName="EON Alliance" factionID="0" factionName="" securityStatus="0.3" damageDone="1962" finalBlow="0" weaponTypeID="22456" shipTypeID="22456"/>
+                    <row characterID="93001272" characterName="captain Atruin" corporationID="652229108" corporationName="Lonestalker" allianceID="99005234" allianceName="EON Alliance" factionID="0" factionName="" securityStatus="0.2" damageDone="1731" finalBlow="0" weaponTypeID="22456" shipTypeID="22456"/>
+                    <row characterID="1359653371" characterName="Raven Evermore" corporationID="652229108" corporationName="Lonestalker" allianceID="99005234" allianceName="EON Alliance" factionID="0" factionName="" securityStatus="1.1" damageDone="1366" finalBlow="0" weaponTypeID="27321" shipTypeID="11186"/>
+                    <row characterID="589676782" characterName="Nartel Vortok" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" securityStatus="-0.1" damageDone="465" finalBlow="0" weaponTypeID="22452" shipTypeID="22452"/>
+                    <row characterID="0" characterName="" corporationID="1000134" corporationName="Blood Raiders" allianceID="0" allianceName="" factionID="0" factionName="" securityStatus="0" damageDone="0" finalBlow="0" weaponTypeID="0" shipTypeID="23252"/>
+                    <row characterID="92796864" characterName="Hamo Acami" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" securityStatus="0.3" damageDone="0" finalBlow="0" weaponTypeID="3244" shipTypeID="11198"/>
+                </rowset>
+                <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed,singleton">
+                    <row typeID="11229" flag="15" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="11269" flag="13" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="2032" flag="19" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="31372" flag="94" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="31360" flag="92" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="31360" flag="93" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="2032" flag="20" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="2048" flag="11" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="5975" flag="22" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="16447" flag="29" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="11325" flag="16" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="2032" flag="21" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="11269" flag="12" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="16447" flag="28" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="23717" flag="87" qtyDropped="3" qtyDestroyed="2" singleton="0"/>
+                    <row typeID="1355" flag="14" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="16447" flag="27" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                </rowset>
+            </row>
+            <row killID="46661090" solarSystemID="30004782" killTime="2015-05-16 13:22:00" moonID="0">
+                <victim characterID="90758388" characterName="Lucia Denniard" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" damageTaken="3722" shipTypeID="22456"/>
+                <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+                    <row characterID="90942683" characterName="salnese godson" corporationID="98019139" corporationName="Resilience." allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="5.00663397830585" damageDone="873" finalBlow="1" weaponTypeID="2969" shipTypeID="29990"/>
+                    <row characterID="1393715466" characterName="Baltior" corporationID="98257549" corporationName="Teutate raiders" allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="2.3" damageDone="614" finalBlow="0" weaponTypeID="29986" shipTypeID="29986"/>
+                    <row characterID="91765006" characterName="Gearhart Antagonistes" corporationID="251278141" corporationName="Twinstar Universal Services" allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="-3.8" damageDone="560" finalBlow="0" weaponTypeID="29986" shipTypeID="29986"/>
+                    <row characterID="1029113240" characterName="Startrooper One" corporationID="251278141" corporationName="Twinstar Universal Services" allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="-2.1" damageDone="490" finalBlow="0" weaponTypeID="29986" shipTypeID="29986"/>
+                    <row characterID="442511945" characterName="Taloness" corporationID="1474714402" corporationName="Royal Black Watch Highlanders" allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="4.9" damageDone="310" finalBlow="0" weaponTypeID="29990" shipTypeID="29990"/>
+                    <row characterID="91655006" characterName="Travis Maywether" corporationID="251278141" corporationName="Twinstar Universal Services" allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="-2.7" damageDone="279" finalBlow="0" weaponTypeID="29986" shipTypeID="29986"/>
+                    <row characterID="748261542" characterName="Dafarr Maul" corporationID="98148202" corporationName="Kenshin." allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="-3.6" damageDone="133" finalBlow="0" weaponTypeID="29990" shipTypeID="29990"/>
+                    <row characterID="1117639774" characterName="DCLi Ext" corporationID="727917645" corporationName="Swift Redemption" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="3" damageDone="121" finalBlow="0" weaponTypeID="29990" shipTypeID="29990"/>
+                    <row characterID="1688015613" characterName="banglord" corporationID="98148202" corporationName="Kenshin." allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="5" damageDone="119" finalBlow="0" weaponTypeID="29986" shipTypeID="29986"/>
+                    <row characterID="91880510" characterName="Chris Kring" corporationID="98345256" corporationName="Primal Instinct." allianceID="99005276" allianceName="Illuminati Confirmed." factionID="0" factionName="" securityStatus="2.5" damageDone="118" finalBlow="0" weaponTypeID="29986" shipTypeID="29986"/>
+                    <row characterID="91159465" characterName="Xenjiro" corporationID="273022492" corporationName="Babylon Knights" allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="3.9" damageDone="105" finalBlow="0" weaponTypeID="29988" shipTypeID="29988"/>
+                    <row characterID="885157909" characterName="Eisen Wolf" corporationID="251278141" corporationName="Twinstar Universal Services" allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="0.3" damageDone="0" finalBlow="0" weaponTypeID="3025" shipTypeID="29986"/>
+                    <row characterID="340801248" characterName="Deniki" corporationID="1137507513" corporationName="High Flyers" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="4.2" damageDone="0" finalBlow="0" weaponTypeID="3025" shipTypeID="29986"/>
+                    <row characterID="1356155886" characterName="WraithChild Reborn" corporationID="98079882" corporationName="Exclusion Cartel" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="4.9" damageDone="0" finalBlow="0" weaponTypeID="3025" shipTypeID="29986"/>
+                    <row characterID="949706482" characterName="Vlade Randal" corporationID="98148202" corporationName="Kenshin." allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="0.6" damageDone="0" finalBlow="0" weaponTypeID="3082" shipTypeID="29988"/>
+                    <row characterID="667646215" characterName="Aletheia Neo" corporationID="98257549" corporationName="Teutate raiders" allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="5" damageDone="0" finalBlow="0" weaponTypeID="2969" shipTypeID="29990"/>
+                    <row characterID="91020821" characterName="Seriously Baroness" corporationID="251278141" corporationName="Twinstar Universal Services" allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="4.7" damageDone="0" finalBlow="0" weaponTypeID="2969" shipTypeID="29990"/>
+                    <row characterID="92925470" characterName="Beans Headio" corporationID="98079882" corporationName="Exclusion Cartel" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="4.4" damageDone="0" finalBlow="0" weaponTypeID="9133" shipTypeID="29990"/>
+                    <row characterID="93540655" characterName="Gozo Onzo" corporationID="98391228" corporationName="Raging Tapirs" allianceID="99005276" allianceName="Illuminati Confirmed." factionID="0" factionName="" securityStatus="5" damageDone="0" finalBlow="0" weaponTypeID="3638" shipTypeID="11989"/>
+                    <row characterID="91439056" characterName="Nasagasa Bump" corporationID="273022492" corporationName="Babylon Knights" allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="-0.3" damageDone="0" finalBlow="0" weaponTypeID="3082" shipTypeID="29988"/>
+                    <row characterID="92681768" characterName="Glader Kautsuo" corporationID="98199230" corporationName="Watschn Inc." allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="2.7" damageDone="0" finalBlow="0" weaponTypeID="2969" shipTypeID="29990"/>
+                    <row characterID="907898334" characterName="Lord Christ0s" corporationID="251278141" corporationName="Twinstar Universal Services" allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="2.5" damageDone="0" finalBlow="0" weaponTypeID="3025" shipTypeID="29986"/>
+                    <row characterID="889340918" characterName="Tocha" corporationID="98028546" corporationName="Forcas armadas" allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="0.9" damageDone="0" finalBlow="0" weaponTypeID="2969" shipTypeID="29990"/>
+                    <row characterID="411143398" characterName="jizzah" corporationID="1474714402" corporationName="Royal Black Watch Highlanders" allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="1.2" damageDone="0" finalBlow="0" weaponTypeID="3025" shipTypeID="29986"/>
+                </rowset>
+                <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed,singleton">
+                    <row typeID="8433" flag="20" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="8113" flag="5" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="2881" flag="34" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="28668" flag="5" qtyDropped="0" qtyDestroyed="50" singleton="0"/>
+                    <row typeID="31177" flag="93" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="21898" flag="5" qtyDropped="0" qtyDestroyed="2016" singleton="0"/>
+                    <row typeID="21898" flag="31" qtyDropped="0" qtyDestroyed="100" singleton="0"/>
+                    <row typeID="2881" flag="31" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="21898" flag="33" qtyDropped="100" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="4025" flag="22" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="519" flag="11" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="21898" flag="32" qtyDropped="0" qtyDestroyed="100" singleton="0"/>
+                    <row typeID="2605" flag="12" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="2881" flag="33" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="27920" flag="5" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="5973" flag="19" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="31153" flag="92" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="2881" flag="30" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="12608" flag="5" qtyDropped="0" qtyDestroyed="2976" singleton="0"/>
+                    <row typeID="22782" flag="27" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="11370" flag="28" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="2881" flag="32" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="21898" flag="34" qtyDropped="100" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="22778" flag="5" qtyDropped="45" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="21898" flag="29" qtyDropped="100" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="21898" flag="30" qtyDropped="0" qtyDestroyed="100" singleton="0"/>
+                    <row typeID="2881" flag="29" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="5299" flag="5" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="21906" flag="5" qtyDropped="3976" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="5439" flag="21" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                </rowset>
+            </row>
+            <row killID="46630895" solarSystemID="30004029" killTime="2015-05-15 01:20:00" moonID="0">
+                <victim characterID="1460381401" characterName="artemus starstrike" corporationID="98379470" corporationName="The 100" allianceID="99004230" allianceName="Sugar." factionID="0" factionName="" damageTaken="461" shipTypeID="670"/>
+                <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+                    <row characterID="90758388" characterName="Lucia Denniard" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" securityStatus="-1.80900473116023" damageDone="461" finalBlow="1" weaponTypeID="2881" shipTypeID="22456"/>
+                </rowset>
+                <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed,singleton"/>
+            </row>
+            <row killID="46630877" solarSystemID="30004029" killTime="2015-05-15 01:18:00" moonID="0">
+                <victim characterID="1460381401" characterName="artemus starstrike" corporationID="98379470" corporationName="The 100" allianceID="99004230" allianceName="Sugar." factionID="0" factionName="" damageTaken="1736" shipTypeID="12032"/>
+                <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+                    <row characterID="90758388" characterName="Lucia Denniard" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" securityStatus="-1.80900473116023" damageDone="1736" finalBlow="1" weaponTypeID="2881" shipTypeID="22456"/>
+                </rowset>
+                <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed,singleton">
+                    <row typeID="27914" flag="28" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="31358" flag="93" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="8113" flag="29" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="27920" flag="5" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="5299" flag="21" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="19810" flag="19" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="27345" flag="31" qtyDropped="0" qtyDestroyed="10" singleton="0"/>
+                    <row typeID="27345" flag="5" qtyDropped="0" qtyDestroyed="1900" singleton="0"/>
+                    <row typeID="5299" flag="20" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="2048" flag="11" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="11578" flag="27" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="434" flag="22" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="27345" flag="30" qtyDropped="0" qtyDestroyed="10" singleton="0"/>
+                    <row typeID="22291" flag="12" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="8113" flag="31" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="27920" flag="28" qtyDropped="2" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="31358" flag="92" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="8113" flag="30" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="27345" flag="29" qtyDropped="0" qtyDestroyed="10" singleton="0"/>
+                </rowset>
+            </row>
+            <row killID="46630298" solarSystemID="30004030" killTime="2015-05-15 00:37:00" moonID="0">
+                <victim characterID="90758388" characterName="Lucia Denniard" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" damageTaken="461" shipTypeID="670"/>
+                <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+                    <row characterID="420524179" characterName="Labyrnth" corporationID="98303583" corporationName="True Power Pos Bashers" allianceID="99000130" allianceName="Drop the Hammer" factionID="0" factionName="" securityStatus="5.00052006691143" damageDone="260" finalBlow="1" weaponTypeID="2873" shipTypeID="22456"/>
+                    <row characterID="1460356293" characterName="Fruchten" corporationID="98194199" corporationName="Phoenix Group." allianceID="99004230" allianceName="Sugar." factionID="0" factionName="" securityStatus="4.1" damageDone="201" finalBlow="0" weaponTypeID="11198" shipTypeID="11198"/>
+                    <row characterID="967894089" characterName="Elipsion" corporationID="1576307093" corporationName="Debitum Naturae" allianceID="99000130" allianceName="Drop the Hammer" factionID="0" factionName="" securityStatus="0.1" damageDone="0" finalBlow="0" weaponTypeID="3244" shipTypeID="11969"/>
+                    <row characterID="760452028" characterName="Kaezon Rio" corporationID="98194199" corporationName="Phoenix Group." allianceID="99004230" allianceName="Sugar." factionID="0" factionName="" securityStatus="1" damageDone="0" finalBlow="0" weaponTypeID="3244" shipTypeID="11176"/>
+                    <row characterID="90856147" characterName="Chunk Anstian" corporationID="98022595" corporationName="Syndicate Society" allianceID="99000130" allianceName="Drop the Hammer" factionID="0" factionName="" securityStatus="4.2" damageDone="0" finalBlow="0" weaponTypeID="3244" shipTypeID="11198"/>
+                    <row characterID="93487588" characterName="MysteriousWaterClown" corporationID="98360911" corporationName="Just The Tip..." allianceID="99004230" allianceName="Sugar." factionID="0" factionName="" securityStatus="3.2" damageDone="0" finalBlow="0" weaponTypeID="3244" shipTypeID="11176"/>
+                </rowset>
+                <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed,singleton"/>
+            </row>
+            <row killID="46630265" solarSystemID="30004030" killTime="2015-05-15 00:34:00" moonID="0">
+                <victim characterID="90758388" characterName="Lucia Denniard" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" damageTaken="3036" shipTypeID="12034"/>
+                <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+                    <row characterID="93487588" characterName="MysteriousWaterClown" corporationID="98360911" corporationName="Just The Tip..." allianceID="99004230" allianceName="Sugar." factionID="0" factionName="" securityStatus="3.21459357102044" damageDone="624" finalBlow="1" weaponTypeID="27361" shipTypeID="11176"/>
+                    <row characterID="1565391457" characterName="chewy ruko" corporationID="98303583" corporationName="True Power Pos Bashers" allianceID="99000130" allianceName="Drop the Hammer" factionID="0" factionName="" securityStatus="5" damageDone="1502" finalBlow="0" weaponTypeID="29990" shipTypeID="29990"/>
+                    <row characterID="1460356293" characterName="Fruchten" corporationID="98194199" corporationName="Phoenix Group." allianceID="99004230" allianceName="Sugar." factionID="0" factionName="" securityStatus="4.1" damageDone="624" finalBlow="0" weaponTypeID="11198" shipTypeID="11198"/>
+                    <row characterID="90856147" characterName="Chunk Anstian" corporationID="98022595" corporationName="Syndicate Society" allianceID="99000130" allianceName="Drop the Hammer" factionID="0" factionName="" securityStatus="4.2" damageDone="197" finalBlow="0" weaponTypeID="27333" shipTypeID="11198"/>
+                    <row characterID="866824314" characterName="Lexikdark" corporationID="98122403" corporationName="Gentlemen of Discerning Taste" allianceID="99004230" allianceName="Sugar." factionID="0" factionName="" securityStatus="0.2" damageDone="89" finalBlow="0" weaponTypeID="642" shipTypeID="642"/>
+                    <row characterID="760452028" characterName="Kaezon Rio" corporationID="98194199" corporationName="Phoenix Group." allianceID="99004230" allianceName="Sugar." factionID="0" factionName="" securityStatus="1" damageDone="0" finalBlow="0" weaponTypeID="12709" shipTypeID="11176"/>
+                    <row characterID="967894089" characterName="Elipsion" corporationID="1576307093" corporationName="Debitum Naturae" allianceID="99000130" allianceName="Drop the Hammer" factionID="0" factionName="" securityStatus="0.1" damageDone="0" finalBlow="0" weaponTypeID="448" shipTypeID="11969"/>
+                </rowset>
+                <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed,singleton">
+                    <row typeID="22291" flag="11" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="11578" flag="30" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="21096" flag="31" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="3888" flag="12" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="2420" flag="29" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="27359" flag="5" qtyDropped="0" qtyDestroyed="225" singleton="0"/>
+                    <row typeID="27359" flag="29" qtyDropped="0" qtyDestroyed="20" singleton="0"/>
+                    <row typeID="3831" flag="19" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="22291" flag="13" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="438" flag="20" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="16273" flag="5" qtyDropped="0" qtyDestroyed="581" singleton="0"/>
+                    <row typeID="2420" flag="28" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="2420" flag="27" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="27359" flag="27" qtyDropped="20" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="31358" flag="93" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="3244" flag="21" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="31358" flag="92" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="27359" flag="28" qtyDropped="0" qtyDestroyed="20" singleton="0"/>
+                </rowset>
+            </row>
+            <row killID="46592046" solarSystemID="30004020" killTime="2015-05-13 01:24:00" moonID="0">
+                <victim characterID="90758388" characterName="Lucia Denniard" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" damageTaken="461" shipTypeID="670"/>
+                <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+                    <row characterID="584042527" characterName="Bakuhz" corporationID="98352148" corporationName="Ebon Cartel" allianceID="99005276" allianceName="Illuminati Confirmed." factionID="0" factionName="" securityStatus="1.11534542384757" damageDone="461" finalBlow="1" weaponTypeID="2969" shipTypeID="29990"/>
+                    <row characterID="752652605" characterName="Kimsemus" corporationID="98191043" corporationName="Vetus Inmortales" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="-8.8" damageDone="0" finalBlow="0" weaponTypeID="4248" shipTypeID="12017"/>
+                </rowset>
+                <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed,singleton"/>
+            </row>
+            <row killID="46592031" solarSystemID="30004020" killTime="2015-05-13 01:23:00" moonID="0">
+                <victim characterID="90758388" characterName="Lucia Denniard" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" damageTaken="2832" shipTypeID="12038"/>
+                <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+                    <row characterID="91620840" characterName="Kayomi Tenkima" corporationID="98352148" corporationName="Ebon Cartel" allianceID="99005276" allianceName="Illuminati Confirmed." factionID="0" factionName="" securityStatus="0.557341668550644" damageDone="1336" finalBlow="1" weaponTypeID="2969" shipTypeID="29990"/>
+                    <row characterID="93162988" characterName="Zanthr" corporationID="98389411" corporationName="Chemical Frontiers" allianceID="99004386" allianceName="Lasers Are Magic" factionID="0" factionName="" securityStatus="-8.8" damageDone="775" finalBlow="0" weaponTypeID="29337" shipTypeID="29337"/>
+                    <row characterID="441959140" characterName="x1984x" corporationID="98345256" corporationName="Primal Instinct." allianceID="99005276" allianceName="Illuminati Confirmed." factionID="0" factionName="" securityStatus="1" damageDone="380" finalBlow="0" weaponTypeID="624" shipTypeID="624"/>
+                    <row characterID="94270381" characterName="Lime Lusion" corporationID="98148202" corporationName="Kenshin." allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="3" damageDone="341" finalBlow="0" weaponTypeID="29990" shipTypeID="29990"/>
+                    <row characterID="752652605" characterName="Kimsemus" corporationID="98191043" corporationName="Vetus Inmortales" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="-8.8" damageDone="0" finalBlow="0" weaponTypeID="4248" shipTypeID="12017"/>
+                    <row characterID="92891248" characterName="mainpr1de" corporationID="98389411" corporationName="Chemical Frontiers" allianceID="99004386" allianceName="Lasers Are Magic" factionID="0" factionName="" securityStatus="-1.8" damageDone="0" finalBlow="0" weaponTypeID="3025" shipTypeID="29337"/>
+                    <row characterID="92667449" characterName="Marcius Decimus" corporationID="304979438" corporationName="Red Ochre Mining and Exploration" allianceID="679584932" allianceName="SpaceMonkey's Alliance" factionID="0" factionName="" securityStatus="-2.1" damageDone="0" finalBlow="0" weaponTypeID="484" shipTypeID="2161"/>
+                    <row characterID="291861659" characterName="Zomgnomnom" corporationID="1474714402" corporationName="Royal Black Watch Highlanders" allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="-1.6" damageDone="0" finalBlow="0" weaponTypeID="17559" shipTypeID="29990"/>
+                </rowset>
+                <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed,singleton">
+                    <row typeID="2605" flag="12" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="27914" flag="28" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="27924" flag="5" qtyDropped="2" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="8117" flag="31" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="19814" flag="21" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="31153" flag="93" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="11578" flag="27" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="27339" flag="31" qtyDropped="15" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="27339" flag="30" qtyDropped="15" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="8117" flag="30" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="31153" flag="92" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="3831" flag="19" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="8117" flag="29" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="16303" flag="13" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="34264" flag="28" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="27339" flag="29" qtyDropped="0" qtyDestroyed="15" singleton="0"/>
+                    <row typeID="11563" flag="11" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="5973" flag="20" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="27339" flag="5" qtyDropped="0" qtyDestroyed="176" singleton="0"/>
+                </rowset>
+            </row>
+            <row killID="46539493" solarSystemID="30004019" killTime="2015-05-10 14:18:00" moonID="0">
+                <victim characterID="94546302" characterName="Vigilant Quiesquant" corporationID="98352148" corporationName="Ebon Cartel" allianceID="99005276" allianceName="Illuminati Confirmed." factionID="0" factionName="" damageTaken="15853" shipTypeID="633"/>
+                <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+                    <row characterID="90758388" characterName="Lucia Denniard" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" securityStatus="-1.80900473116023" damageDone="47" finalBlow="1" weaponTypeID="28215" shipTypeID="12005"/>
+                    <row characterID="92963056" characterName="Wimpy Womp" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" securityStatus="-1.3" damageDone="2125" finalBlow="0" weaponTypeID="28215" shipTypeID="12005"/>
+                    <row characterID="475127011" characterName="xSEARSYx" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" securityStatus="-3.8" damageDone="1628" finalBlow="0" weaponTypeID="28215" shipTypeID="12005"/>
+                    <row characterID="1365182091" characterName="Dauben" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" securityStatus="5" damageDone="1572" finalBlow="0" weaponTypeID="28215" shipTypeID="12005"/>
+                    <row characterID="1710681839" characterName="Plantona" corporationID="98255434" corporationName="City of Babylon" allianceID="99005234" allianceName="EON Alliance" factionID="0" factionName="" securityStatus="5" damageDone="1381" finalBlow="0" weaponTypeID="28215" shipTypeID="12005"/>
+                    <row characterID="1359653371" characterName="Raven Evermore" corporationID="652229108" corporationName="Lonestalker" allianceID="99005234" allianceName="EON Alliance" factionID="0" factionName="" securityStatus="1.1" damageDone="1362" finalBlow="0" weaponTypeID="28215" shipTypeID="12005"/>
+                    <row characterID="94337589" characterName="Wexa Tion" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" securityStatus="-2.2" damageDone="1346" finalBlow="0" weaponTypeID="23563" shipTypeID="12005"/>
+                    <row characterID="674103020" characterName="Porucznik Borewicz" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" securityStatus="1.8" damageDone="1324" finalBlow="0" weaponTypeID="28215" shipTypeID="12005"/>
+                    <row characterID="951883866" characterName="Deszra" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" securityStatus="3.3" damageDone="1196" finalBlow="0" weaponTypeID="28215" shipTypeID="12005"/>
+                    <row characterID="1575966850" characterName="CallMa" corporationID="98158361" corporationName="0.0 POWERBLOCK" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" securityStatus="5" damageDone="1036" finalBlow="0" weaponTypeID="28215" shipTypeID="12005"/>
+                    <row characterID="93112113" characterName="cheech smokemup" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" securityStatus="0.9" damageDone="891" finalBlow="0" weaponTypeID="28215" shipTypeID="12005"/>
+                    <row characterID="90901994" characterName="Dimitri Raskaloff" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" securityStatus="-1.8" damageDone="583" finalBlow="0" weaponTypeID="28215" shipTypeID="12005"/>
+                    <row characterID="101082271" characterName="dexington" corporationID="98367624" corporationName="The Returners Hideout" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" securityStatus="5" damageDone="539" finalBlow="0" weaponTypeID="28215" shipTypeID="12005"/>
+                    <row characterID="94393404" characterName="mr Oll" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" securityStatus="0.9" damageDone="466" finalBlow="0" weaponTypeID="23563" shipTypeID="12005"/>
+                    <row characterID="90202944" characterName="Revan Chion" corporationID="98063259" corporationName="Eclipse Navy" allianceID="99005446" allianceName="Something Fishy." factionID="0" factionName="" securityStatus="0.7" damageDone="296" finalBlow="0" weaponTypeID="23563" shipTypeID="12005"/>
+                    <row characterID="1851321124" characterName="drift181" corporationID="251278141" corporationName="Twinstar Universal Services" allianceID="99002938" allianceName="DARKNESS." factionID="0" factionName="" securityStatus="3.5" damageDone="61" finalBlow="0" weaponTypeID="17732" shipTypeID="17732"/>
+                    <row characterID="91058330" characterName="Kurogame" corporationID="98371266" corporationName="Know your Role" allianceID="99005234" allianceName="EON Alliance" factionID="0" factionName="" securityStatus="-9.8" damageDone="0" finalBlow="0" weaponTypeID="5299" shipTypeID="609"/>
+                    <row characterID="93690770" characterName="Danny Dynamite" corporationID="1544590699" corporationName="Empyrean Warriors" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" securityStatus="1.7" damageDone="0" finalBlow="0" weaponTypeID="5299" shipTypeID="609"/>
+                </rowset>
+                <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed,singleton">
+                    <row typeID="31055" flag="93" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="213" flag="5" qtyDropped="0" qtyDestroyed="1397" singleton="0"/>
+                    <row typeID="16421" flag="14" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="6005" flag="23" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="1952" flag="22" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="2048" flag="11" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="5301" flag="21" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="2183" flag="87" qtyDropped="2" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="23033" flag="5" qtyDropped="0" qtyDestroyed="697" singleton="0"/>
+                    <row typeID="31055" flag="92" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="11329" flag="12" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="213" flag="29" qtyDropped="0" qtyDestroyed="40" singleton="0"/>
+                    <row typeID="23033" flag="28" qtyDropped="160" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="5301" flag="20" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="7331" flag="27" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="2486" flag="87" qtyDropped="1" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="29015" flag="19" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="29015" flag="21" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="16365" flag="13" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="499" flag="29" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="16421" flag="15" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="5301" flag="19" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="7333" flag="28" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="27381" flag="5" qtyDropped="0" qtyDestroyed="346" singleton="0"/>
+                    <row typeID="23033" flag="27" qtyDropped="0" qtyDestroyed="160" singleton="0"/>
+                    <row typeID="29015" flag="5" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="2464" flag="87" qtyDropped="2" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="31055" flag="94" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                </rowset>
+            </row>
+            <row killID="46460452" solarSystemID="30004722" killTime="2015-05-06 20:44:00" moonID="0">
+                <victim characterID="2084032703" characterName="Stratega01HUN" corporationID="1787911624" corporationName="Hungarian Bastardz" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" damageTaken="489" shipTypeID="670"/>
+                <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+                    <row characterID="90758388" characterName="Lucia Denniard" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" securityStatus="-1.80900473116023" damageDone="256" finalBlow="1" weaponTypeID="2881" shipTypeID="22456"/>
+                    <row characterID="92776752" characterName="shimiku" corporationID="98238290" corporationName="Black VooDoo Asassins" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="5" damageDone="233" finalBlow="0" weaponTypeID="27920" shipTypeID="12038"/>
+                </rowset>
+                <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed,singleton"/>
+            </row>
+            <row killID="46460441" solarSystemID="30004722" killTime="2015-05-06 20:43:00" moonID="0">
+                <victim characterID="597480262" characterName="GrimBattle" corporationID="1787911624" corporationName="Hungarian Bastardz" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" damageTaken="488" shipTypeID="670"/>
+                <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+                    <row characterID="90758388" characterName="Lucia Denniard" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" securityStatus="-1.80900473116023" damageDone="253" finalBlow="1" weaponTypeID="2881" shipTypeID="22456"/>
+                    <row characterID="92776752" characterName="shimiku" corporationID="98238290" corporationName="Black VooDoo Asassins" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="5" damageDone="235" finalBlow="0" weaponTypeID="27920" shipTypeID="12038"/>
+                </rowset>
+                <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed,singleton">
+                    <row typeID="3256" flag="89" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                </rowset>
+            </row>
+            <row killID="46460418" solarSystemID="30004722" killTime="2015-05-06 20:42:00" moonID="0">
+                <victim characterID="480686297" characterName="Guerrero d'Inferno" corporationID="1787911624" corporationName="Hungarian Bastardz" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" damageTaken="488" shipTypeID="670"/>
+                <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+                    <row characterID="90758388" characterName="Lucia Denniard" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" securityStatus="-1.80900473116023" damageDone="488" finalBlow="1" weaponTypeID="2881" shipTypeID="22456"/>
+                </rowset>
+                <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed,singleton">
+                    <row typeID="3256" flag="89" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                </rowset>
+            </row>
+            <row killID="46459815" solarSystemID="30004722" killTime="2015-05-06 20:19:00" moonID="0">
+                <victim characterID="90758388" characterName="Lucia Denniard" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" damageTaken="459" shipTypeID="670"/>
+                <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+                    <row characterID="1089468284" characterName="3erg" corporationID="612633154" corporationName="Eve Defence Force" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="-0.202686778132283" damageDone="80" finalBlow="1" weaponTypeID="2873" shipTypeID="11198"/>
+                    <row characterID="92925470" characterName="Beans Headio" corporationID="98079882" corporationName="Exclusion Cartel" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="4.4" damageDone="253" finalBlow="0" weaponTypeID="22456" shipTypeID="22456"/>
+                    <row characterID="1205645544" characterName="sir Beto" corporationID="98079882" corporationName="Exclusion Cartel" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="5" damageDone="126" finalBlow="0" weaponTypeID="11196" shipTypeID="11196"/>
+                    <row characterID="91345913" characterName="Anne Navarre" corporationID="98079882" corporationName="Exclusion Cartel" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="-1.6" damageDone="0" finalBlow="0" weaponTypeID="3244" shipTypeID="11198"/>
+                    <row characterID="93973259" characterName="Azawrath Moon" corporationID="98238290" corporationName="Black VooDoo Asassins" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="0.5" damageDone="0" finalBlow="0" weaponTypeID="3074" shipTypeID="670"/>
+                    <row characterID="93533738" characterName="Mike Albosa" corporationID="98288376" corporationName="From Our Cold Dead Hands" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="2.5" damageDone="0" finalBlow="0" weaponTypeID="8091" shipTypeID="11176"/>
+                </rowset>
+                <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed,singleton"/>
+            </row>
+            <row killID="46459776" solarSystemID="30004722" killTime="2015-05-06 20:18:00" moonID="0">
+                <victim characterID="90758388" characterName="Lucia Denniard" corporationID="98076155" corporationName="Love Squad" allianceID="99001561" allianceName="Confederation of xXPIZZAXx" factionID="0" factionName="" damageTaken="3322" shipTypeID="22456"/>
+                <rowset name="attackers" columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+                    <row characterID="367184947" characterName="John McCreedy" corporationID="612633154" corporationName="Eve Defence Force" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="5.00040531775757" damageDone="26" finalBlow="1" weaponTypeID="3082" shipTypeID="29984"/>
+                    <row characterID="92674996" characterName="Airos Yassavi" corporationID="98373489" corporationName="Yard Evolution" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="2" damageDone="753" finalBlow="0" weaponTypeID="12011" shipTypeID="12011"/>
+                    <row characterID="94869382" characterName="Gorodan LOranin" corporationID="98008663" corporationName="Angry Angels Constructions" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="0.2" damageDone="469" finalBlow="0" weaponTypeID="12011" shipTypeID="12011"/>
+                    <row characterID="480686297" characterName="Guerrero d'Inferno" corporationID="1787911624" corporationName="Hungarian Bastardz" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="-2.8" damageDone="441" finalBlow="0" weaponTypeID="12011" shipTypeID="12011"/>
+                    <row characterID="378787406" characterName="Da BasterMKII" corporationID="98008663" corporationName="Angry Angels Constructions" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="5" damageDone="313" finalBlow="0" weaponTypeID="12011" shipTypeID="12011"/>
+                    <row characterID="93533738" characterName="Mike Albosa" corporationID="98288376" corporationName="From Our Cold Dead Hands" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="2.5" damageDone="262" finalBlow="0" weaponTypeID="27361" shipTypeID="11176"/>
+                    <row characterID="1734701674" characterName="Siuna" corporationID="994852997" corporationName="Mortis Angelus" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="-3.1" damageDone="239" finalBlow="0" weaponTypeID="29984" shipTypeID="29984"/>
+                    <row characterID="282616371" characterName="oUTSKIRTs" corporationID="98238290" corporationName="Black VooDoo Asassins" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="-1.9" damageDone="195" finalBlow="0" weaponTypeID="27387" shipTypeID="11176"/>
+                    <row characterID="294415567" characterName="MAD NEWT" corporationID="98088894" corporationName="Arch Angels Assault Force" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="5" damageDone="131" finalBlow="0" weaponTypeID="12011" shipTypeID="12011"/>
+                    <row characterID="597480262" characterName="GrimBattle" corporationID="1787911624" corporationName="Hungarian Bastardz" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="5" damageDone="91" finalBlow="0" weaponTypeID="12011" shipTypeID="12011"/>
+                    <row characterID="1038223958" characterName="Agamemnnonn" corporationID="1137507513" corporationName="High Flyers" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="-0.7" damageDone="87" finalBlow="0" weaponTypeID="29984" shipTypeID="29984"/>
+                    <row characterID="512997774" characterName="Deniedexponent" corporationID="612633154" corporationName="Eve Defence Force" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="5" damageDone="79" finalBlow="0" weaponTypeID="12011" shipTypeID="12011"/>
+                    <row characterID="1709245881" characterName="alienv1" corporationID="727917645" corporationName="Swift Redemption" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="1.8" damageDone="70" finalBlow="0" weaponTypeID="29984" shipTypeID="29984"/>
+                    <row characterID="92310024" characterName="darren crowther" corporationID="994852997" corporationName="Mortis Angelus" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="2.6" damageDone="67" finalBlow="0" weaponTypeID="12011" shipTypeID="12011"/>
+                    <row characterID="460656052" characterName="Onteros" corporationID="1137507513" corporationName="High Flyers" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="-5.8" damageDone="60" finalBlow="0" weaponTypeID="29984" shipTypeID="29984"/>
+                    <row characterID="1089468284" characterName="3erg" corporationID="612633154" corporationName="Eve Defence Force" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="-0.2" damageDone="39" finalBlow="0" weaponTypeID="11198" shipTypeID="11198"/>
+                    <row characterID="91345913" characterName="Anne Navarre" corporationID="98079882" corporationName="Exclusion Cartel" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="-1.6" damageDone="0" finalBlow="0" weaponTypeID="3244" shipTypeID="11198"/>
+                    <row characterID="92776752" characterName="shimiku" corporationID="98238290" corporationName="Black VooDoo Asassins" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="5" damageDone="0" finalBlow="0" weaponTypeID="8117" shipTypeID="12038"/>
+                    <row characterID="92925470" characterName="Beans Headio" corporationID="98079882" corporationName="Exclusion Cartel" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="4.4" damageDone="0" finalBlow="0" weaponTypeID="2881" shipTypeID="22456"/>
+                    <row characterID="93178146" characterName="Thoria Ragnarok" corporationID="98088894" corporationName="Arch Angels Assault Force" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="0.3" damageDone="0" finalBlow="0" weaponTypeID="3082" shipTypeID="29984"/>
+                    <row characterID="91897241" characterName="Jorah Kor-Azor" corporationID="1137507513" corporationName="High Flyers" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="-8.9" damageDone="0" finalBlow="0" weaponTypeID="3082" shipTypeID="12011"/>
+                    <row characterID="92527850" characterName="Belgarion Anvar" corporationID="98008663" corporationName="Angry Angels Constructions" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="5" damageDone="0" finalBlow="0" weaponTypeID="7367" shipTypeID="12011"/>
+                    <row characterID="303757882" characterName="Feylon" corporationID="98088894" corporationName="Arch Angels Assault Force" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="2.2" damageDone="0" finalBlow="0" weaponTypeID="3082" shipTypeID="29984"/>
+                    <row characterID="1738840148" characterName="Amarth X" corporationID="98088894" corporationName="Arch Angels Assault Force" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="-1.7" damageDone="0" finalBlow="0" weaponTypeID="1877" shipTypeID="11961"/>
+                    <row characterID="736428250" characterName="Blasis Stargazer" corporationID="1787911624" corporationName="Hungarian Bastardz" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="4.2" damageDone="0" finalBlow="0" weaponTypeID="3082" shipTypeID="12011"/>
+                    <row characterID="93584069" characterName="Keith Kelley" corporationID="98378445" corporationName="SpearHead Armada." allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="2.9" damageDone="0" finalBlow="0" weaponTypeID="8027" shipTypeID="621"/>
+                    <row characterID="93542619" characterName="Adrian Ostus" corporationID="98079882" corporationName="Exclusion Cartel" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="5" damageDone="0" finalBlow="0" weaponTypeID="3082" shipTypeID="29984"/>
+                    <row characterID="1014466800" characterName="Sherio" corporationID="1137507513" corporationName="High Flyers" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="-1" damageDone="0" finalBlow="0" weaponTypeID="3082" shipTypeID="12011"/>
+                    <row characterID="91456108" characterName="Cerberus O'Connor" corporationID="98008663" corporationName="Angry Angels Constructions" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="5" damageDone="0" finalBlow="0" weaponTypeID="3082" shipTypeID="12011"/>
+                    <row characterID="93973259" characterName="Azawrath Moon" corporationID="98238290" corporationName="Black VooDoo Asassins" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="0.5" damageDone="0" finalBlow="0" weaponTypeID="3074" shipTypeID="11178"/>
+                    <row characterID="102100120" characterName="Humongo" corporationID="98079882" corporationName="Exclusion Cartel" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="2.4" damageDone="0" finalBlow="0" weaponTypeID="3082" shipTypeID="29984"/>
+                    <row characterID="92042168" characterName="Alan Korevus" corporationID="98079882" corporationName="Exclusion Cartel" allianceID="1147488332" allianceName="The Kadeshi" factionID="0" factionName="" securityStatus="1.2" damageDone="0" finalBlow="0" weaponTypeID="3082" shipTypeID="12011"/>
+                </rowset>
+                <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed,singleton">
+                    <row typeID="8433" flag="20" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="2881" flag="34" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="21898" flag="33" qtyDropped="138" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="28668" flag="5" qtyDropped="50" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="21898" flag="5" qtyDropped="2016" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="21898" flag="31" qtyDropped="138" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="2881" flag="31" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="4025" flag="22" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="31177" flag="93" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="519" flag="11" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="2881" flag="29" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="2605" flag="12" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="2881" flag="33" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="5973" flag="19" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="31153" flag="92" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="2881" flag="30" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="12608" flag="5" qtyDropped="2976" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="22782" flag="27" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="11370" flag="28" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="22778" flag="27" qtyDropped="1" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="2881" flag="32" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                    <row typeID="21898" flag="34" qtyDropped="0" qtyDestroyed="138" singleton="0"/>
+                    <row typeID="22778" flag="5" qtyDropped="51" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="21898" flag="29" qtyDropped="138" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="21898" flag="30" qtyDropped="138" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="21898" flag="32" qtyDropped="138" qtyDestroyed="0" singleton="0"/>
+                    <row typeID="21906" flag="5" qtyDropped="0" qtyDestroyed="3976" singleton="0"/>
+                    <row typeID="5439" flag="21" qtyDropped="0" qtyDestroyed="1" singleton="0"/>
+                </rowset>
+            </row>
+        </rowset>
+    </result>
+    <cachedUntil>2015-05-28 13:00:46</cachedUntil>
+</eveapi>

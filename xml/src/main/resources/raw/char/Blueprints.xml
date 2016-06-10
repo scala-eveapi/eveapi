@@ -1,0 +1,223 @@
+<eveapi version="2">
+    <currentTime>2015-05-28 12:37:08</currentTime>
+    <result>
+        <rowset name="blueprints" key="itemID" columns="itemID,locationID,typeID,typeName,flagID,quantity,timeEfficiency,materialEfficiency,runs">
+            <row itemID="325990124" locationID="1002288767275" typeID="2465" typeName="Hornet I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="325990129" locationID="1002288767275" typeID="2465" typeName="Hornet I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="325990151" locationID="1002288767275" typeID="2465" typeName="Hornet I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="325990153" locationID="1002288767275" typeID="2465" typeName="Hornet I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="325990162" locationID="1002288767275" typeID="2465" typeName="Hornet I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="325990163" locationID="1002288767275" typeID="2465" typeName="Hornet I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="325990185" locationID="1002288767275" typeID="2465" typeName="Hornet I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="325990191" locationID="1002288767275" typeID="2465" typeName="Hornet I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="325990203" locationID="1002288767275" typeID="2465" typeName="Hornet I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="325990204" locationID="1002288767275" typeID="2465" typeName="Hornet I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="343718281" locationID="1002288767275" typeID="23058" typeName="Dragonfly Blueprint" flagID="64" quantity="-2" timeEfficiency="0" materialEfficiency="10" runs="10"/>
+            <row itemID="531892874" locationID="1002288767275" typeID="2184" typeName="Hammerhead I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="531892945" locationID="1002288767275" typeID="2184" typeName="Hammerhead I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="531893569" locationID="1002288767275" typeID="2184" typeName="Hammerhead I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="531894277" locationID="1002288767275" typeID="2184" typeName="Hammerhead I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="531896130" locationID="1002288767275" typeID="2184" typeName="Hammerhead I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="531896301" locationID="1002288767275" typeID="2184" typeName="Hammerhead I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="531896534" locationID="1002288767275" typeID="2184" typeName="Hammerhead I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="531897773" locationID="1002288767275" typeID="2184" typeName="Hammerhead I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="531899408" locationID="1002288767275" typeID="2184" typeName="Hammerhead I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="531899516" locationID="1002288767275" typeID="2184" typeName="Hammerhead I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318520" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318523" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318541" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318598" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318601" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318604" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318622" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318635" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318656" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318660" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318683" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318684" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318686" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318690" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318704" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318716" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318720" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318725" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318729" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318731" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318738" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318768" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318784" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318813" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318822" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318824" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318825" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318834" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318855" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318864" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318870" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318881" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318886" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318888" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318889" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318896" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318898" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318915" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318919" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="624318931" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703008643" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703008680" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703008681" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703008683" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703008693" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703008761" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703009308" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703009382" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703009470" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703009562" locationID="1002288767275" typeID="1214" typeName="Wasp I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703009778" locationID="1002288767275" typeID="2487" typeName="Warrior I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703009790" locationID="1002288767275" typeID="2487" typeName="Warrior I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703009864" locationID="1002288767275" typeID="2487" typeName="Warrior I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703010181" locationID="1002288767275" typeID="2487" typeName="Warrior I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703010197" locationID="1002288767275" typeID="2487" typeName="Warrior I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703010263" locationID="1002288767275" typeID="2487" typeName="Warrior I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703011118" locationID="1002288767275" typeID="2487" typeName="Warrior I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703011146" locationID="1002288767275" typeID="2487" typeName="Warrior I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703011173" locationID="1002288767275" typeID="2487" typeName="Warrior I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703011498" locationID="1002288767275" typeID="2487" typeName="Warrior I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703011504" locationID="1002288767275" typeID="23560" typeName="Warden I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703011625" locationID="1002288767275" typeID="23560" typeName="Warden I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703012140" locationID="1002288767275" typeID="23560" typeName="Warden I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703012171" locationID="1002288767275" typeID="23560" typeName="Warden I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703012394" locationID="1002288767275" typeID="23560" typeName="Warden I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703013132" locationID="1002288767275" typeID="23560" typeName="Warden I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703013379" locationID="1002288767275" typeID="23560" typeName="Warden I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703013697" locationID="1002288767275" typeID="23560" typeName="Warden I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703014040" locationID="1002288767275" typeID="23560" typeName="Warden I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="703014354" locationID="1002288767275" typeID="23560" typeName="Warden I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="726012214" locationID="1002288767275" typeID="23562" typeName="Garde I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="726012216" locationID="1002288767275" typeID="23562" typeName="Garde I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="726012218" locationID="1002288767275" typeID="23562" typeName="Garde I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="726012237" locationID="1002288767275" typeID="23562" typeName="Garde I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="726012264" locationID="1002288767275" typeID="23562" typeName="Garde I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="726012269" locationID="1002288767275" typeID="23562" typeName="Garde I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="726012313" locationID="1002288767275" typeID="23562" typeName="Garde I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="726012314" locationID="1002288767275" typeID="23562" typeName="Garde I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="726012318" locationID="1002288767275" typeID="23562" typeName="Garde I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="726012344" locationID="1002288767275" typeID="23526" typeName="Curator I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="726012359" locationID="1002288767275" typeID="23526" typeName="Curator I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="726012369" locationID="1002288767275" typeID="23526" typeName="Curator I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="726012391" locationID="1002288767275" typeID="23526" typeName="Curator I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="726012392" locationID="1002288767275" typeID="23526" typeName="Curator I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="726012393" locationID="1002288767275" typeID="23526" typeName="Curator I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="726012397" locationID="1002288767275" typeID="23526" typeName="Curator I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="726012411" locationID="1002288767275" typeID="23526" typeName="Curator I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="726012420" locationID="1002288767275" typeID="23526" typeName="Curator I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="726012429" locationID="1002288767275" typeID="23526" typeName="Curator I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="726012779" locationID="1002288767275" typeID="23564" typeName="Bouncer I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="933213282" locationID="1002288767275" typeID="2455" typeName="Hobgoblin I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="933213295" locationID="1002288767275" typeID="2455" typeName="Hobgoblin I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="933213316" locationID="1002288767275" typeID="2455" typeName="Hobgoblin I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="933213337" locationID="1002288767275" typeID="2455" typeName="Hobgoblin I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="933213339" locationID="1002288767275" typeID="2455" typeName="Hobgoblin I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="933213340" locationID="1002288767275" typeID="2455" typeName="Hobgoblin I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="933213357" locationID="1002288767275" typeID="2455" typeName="Hobgoblin I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="933213360" locationID="1002288767275" typeID="2455" typeName="Hobgoblin I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="933213361" locationID="1002288767275" typeID="2455" typeName="Hobgoblin I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="933213400" locationID="1002288767275" typeID="2455" typeName="Hobgoblin I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="959177178" locationID="1002288767275" typeID="2174" typeName="Infiltrator I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="959177183" locationID="1002288767275" typeID="2174" typeName="Infiltrator I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="959177287" locationID="1002288767275" typeID="2174" typeName="Infiltrator I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="959177377" locationID="1002288767275" typeID="2174" typeName="Infiltrator I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="959177398" locationID="1002288767275" typeID="2174" typeName="Infiltrator I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="959177399" locationID="1002288767275" typeID="2174" typeName="Infiltrator I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="959177422" locationID="1002288767275" typeID="2174" typeName="Infiltrator I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="959177423" locationID="1002288767275" typeID="2174" typeName="Infiltrator I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="959177425" locationID="1002288767275" typeID="2174" typeName="Infiltrator I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="959177430" locationID="1002288767275" typeID="2174" typeName="Infiltrator I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874089" locationID="1002288767275" typeID="2445" typeName="Ogre I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874124" locationID="1002288767275" typeID="2445" typeName="Ogre I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874133" locationID="1002288767275" typeID="2445" typeName="Ogre I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874170" locationID="1002288767275" typeID="2445" typeName="Ogre I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874176" locationID="1002288767275" typeID="2445" typeName="Ogre I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874183" locationID="1002288767275" typeID="2445" typeName="Ogre I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874185" locationID="1002288767275" typeID="2445" typeName="Ogre I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874205" locationID="1002288767275" typeID="2445" typeName="Ogre I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874210" locationID="1002288767275" typeID="2445" typeName="Ogre I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874222" locationID="1002288767275" typeID="2445" typeName="Ogre I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874273" locationID="1002288767275" typeID="23720" typeName="Light Shield Maintenance Bot I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874280" locationID="1002288767275" typeID="23720" typeName="Light Shield Maintenance Bot I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874296" locationID="1002288767275" typeID="23720" typeName="Light Shield Maintenance Bot I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874353" locationID="1002288767275" typeID="23720" typeName="Light Shield Maintenance Bot I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874355" locationID="1002288767275" typeID="23720" typeName="Light Shield Maintenance Bot I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874356" locationID="1002288767275" typeID="23720" typeName="Light Shield Maintenance Bot I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874357" locationID="1002288767275" typeID="23720" typeName="Light Shield Maintenance Bot I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874358" locationID="1002288767275" typeID="23720" typeName="Light Shield Maintenance Bot I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874360" locationID="1002288767275" typeID="23720" typeName="Light Shield Maintenance Bot I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874362" locationID="1002288767275" typeID="23720" typeName="Light Shield Maintenance Bot I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874374" locationID="1002288767275" typeID="23712" typeName="Light Armor Maintenance Bot I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874375" locationID="1002288767275" typeID="23712" typeName="Light Armor Maintenance Bot I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874435" locationID="1002288767275" typeID="23712" typeName="Light Armor Maintenance Bot I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874452" locationID="1002288767275" typeID="23712" typeName="Light Armor Maintenance Bot I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874459" locationID="1002288767275" typeID="23712" typeName="Light Armor Maintenance Bot I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874460" locationID="1002288767275" typeID="23712" typeName="Light Armor Maintenance Bot I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874461" locationID="1002288767275" typeID="23712" typeName="Light Armor Maintenance Bot I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874468" locationID="1002288767275" typeID="23712" typeName="Light Armor Maintenance Bot I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874495" locationID="1002288767275" typeID="23712" typeName="Light Armor Maintenance Bot I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874499" locationID="1002288767275" typeID="2465" typeName="Hornet I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874508" locationID="1002288767275" typeID="2465" typeName="Hornet I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874510" locationID="1002288767275" typeID="2465" typeName="Hornet I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874529" locationID="1002288767275" typeID="2465" typeName="Hornet I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874542" locationID="1002288767275" typeID="2465" typeName="Hornet I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874544" locationID="1002288767275" typeID="2465" typeName="Hornet I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874546" locationID="1002288767275" typeID="2465" typeName="Hornet I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874552" locationID="1002288767275" typeID="2465" typeName="Hornet I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874557" locationID="1002288767275" typeID="2465" typeName="Hornet I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1048874563" locationID="1002288767275" typeID="2465" typeName="Hornet I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1161865194" locationID="1002288767275" typeID="2194" typeName="Praetor I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1161865203" locationID="1002288767275" typeID="2194" typeName="Praetor I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1161865209" locationID="1002288767275" typeID="2194" typeName="Praetor I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1161865221" locationID="1002288767275" typeID="2194" typeName="Praetor I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1161865232" locationID="1002288767275" typeID="2194" typeName="Praetor I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1161865276" locationID="1002288767275" typeID="2194" typeName="Praetor I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1161865326" locationID="1002288767275" typeID="2194" typeName="Praetor I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1161865330" locationID="1002288767275" typeID="2194" typeName="Praetor I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1161865341" locationID="1002288767275" typeID="2194" typeName="Praetor I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1161865379" locationID="1002288767275" typeID="2194" typeName="Praetor I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1181150566" locationID="1002288767275" typeID="15511" typeName="Valkyrie I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1181150572" locationID="1002288767275" typeID="15511" typeName="Valkyrie I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1181150588" locationID="1002288767275" typeID="15511" typeName="Valkyrie I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1181150594" locationID="1002288767275" typeID="15511" typeName="Valkyrie I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1181150609" locationID="1002288767275" typeID="15511" typeName="Valkyrie I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1181150610" locationID="1002288767275" typeID="15511" typeName="Valkyrie I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1181150611" locationID="1002288767275" typeID="15511" typeName="Valkyrie I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1181150613" locationID="1002288767275" typeID="15511" typeName="Valkyrie I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1181150615" locationID="1002288767275" typeID="15511" typeName="Valkyrie I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1181150647" locationID="1002288767275" typeID="15511" typeName="Valkyrie I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1210794764" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1210794765" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1210794777" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1210794778" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1210794779" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1210794795" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1210794796" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1210794797" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1210794798" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1210794802" locationID="1002288767275" typeID="15509" typeName="Vespa I Blueprint" flagID="64" quantity="-2" timeEfficiency="20" materialEfficiency="10" runs="1500"/>
+            <row itemID="1510298417" locationID="1002288767275" typeID="23714" typeName="Hammerhead SD-600 Blueprint" flagID="64" quantity="-2" timeEfficiency="0" materialEfficiency="10" runs="1500"/>
+            <row itemID="1510298428" locationID="1002288767275" typeID="23714" typeName="Hammerhead SD-600 Blueprint" flagID="64" quantity="-2" timeEfficiency="0" materialEfficiency="10" runs="1500"/>
+            <row itemID="1510298434" locationID="1002288767275" typeID="23714" typeName="Hammerhead SD-600 Blueprint" flagID="64" quantity="-2" timeEfficiency="0" materialEfficiency="10" runs="1500"/>
+            <row itemID="1510298435" locationID="1002288767275" typeID="23714" typeName="Hammerhead SD-600 Blueprint" flagID="64" quantity="-2" timeEfficiency="0" materialEfficiency="10" runs="1500"/>
+            <row itemID="1510298437" locationID="1002288767275" typeID="23714" typeName="Hammerhead SD-600 Blueprint" flagID="64" quantity="-2" timeEfficiency="0" materialEfficiency="10" runs="1500"/>
+            <row itemID="1510298439" locationID="1002288767275" typeID="23714" typeName="Hammerhead SD-600 Blueprint" flagID="64" quantity="-2" timeEfficiency="0" materialEfficiency="10" runs="1500"/>
+            <row itemID="1510298440" locationID="1002288767275" typeID="23714" typeName="Hammerhead SD-600 Blueprint" flagID="64" quantity="-2" timeEfficiency="0" materialEfficiency="10" runs="1500"/>
+            <row itemID="1510298444" locationID="1002288767275" typeID="23714" typeName="Hammerhead SD-600 Blueprint" flagID="64" quantity="-2" timeEfficiency="0" materialEfficiency="10" runs="1500"/>
+            <row itemID="1002414107857" locationID="60008491" typeID="938" typeName="Tormentor Blueprint" flagID="4" quantity="-2" timeEfficiency="14" materialEfficiency="9" runs="4"/>
+            <row itemID="1002599103208" locationID="60012745" typeID="17479" typeName="Retriever Blueprint" flagID="4" quantity="-2" timeEfficiency="0" materialEfficiency="10" runs="4"/>
+            <row itemID="1002723170530" locationID="60012745" typeID="17483" typeName="Strip Miner I Blueprint" flagID="4" quantity="-2" timeEfficiency="18" materialEfficiency="10" runs="300"/>
+            <row itemID="1002878675748" locationID="60012745" typeID="29249" typeName="Magnate Blueprint" flagID="4" quantity="-1" timeEfficiency="0" materialEfficiency="0" runs="-1"/>
+            <row itemID="1002878718160" locationID="60012745" typeID="1318" typeName="Expanded Cargohold I Blueprint" flagID="4" quantity="-1" timeEfficiency="0" materialEfficiency="0" runs="-1"/>
+            <row itemID="1002878751849" locationID="60012745" typeID="835" typeName="Dual Light Pulse Laser I Blueprint" flagID="4" quantity="-1" timeEfficiency="0" materialEfficiency="0" runs="-1"/>
+            <row itemID="1002878851381" locationID="60012745" typeID="11268" typeName="Energized Adaptive Nano Membrane I Blueprint" flagID="4" quantity="-1" timeEfficiency="0" materialEfficiency="0" runs="-1"/>
+        </rowset>
+    </result>
+    <cachedUntil>2015-05-29 00:07:08</cachedUntil>
+</eveapi>

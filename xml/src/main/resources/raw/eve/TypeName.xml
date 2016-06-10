@@ -1,0 +1,12 @@
+<eveapi version="2">
+    <currentTime>2015-05-22 20:28:34</currentTime>
+    <result>
+        <rowset name="types" key="typeID" columns="typeID,typeName">
+            <row typeID="1" typeName="Unknown Type"/>
+            <row typeID="2" typeName="Corporation"/>
+            <row typeID="3" typeName="Region"/>
+            <row typeID="4" typeName="Constellation"/>
+        </rowset>
+    </result>
+    <cachedUntil>2015-05-22 21:28:34</cachedUntil>
+</eveapi>

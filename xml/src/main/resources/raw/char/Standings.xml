@@ -1,0 +1,27 @@
+<eveapi version="2">
+    <currentTime>2015-05-28 12:54:43</currentTime>
+    <result>
+        <characterNPCStandings>
+            <rowset name="agents" key="fromID" columns="fromID,fromName,standing">
+                <row fromID="3008735" fromName="Avenid Voohah" standing="2.99"/>
+                <row fromID="3008739" fromName="Orda Sand" standing="0.96"/>
+                <row fromID="3008745" fromName="Obron Chajma" standing="0.76"/>
+            </rowset>
+            <rowset name="NPCCorporations" key="fromID" columns="fromID,fromName,standing">
+                <row fromID="1000004" fromName="Ytiri" standing="0.32"/>
+                <row fromID="1000006" fromName="Deep Core Mining Inc." standing="-1.54"/>
+                <row fromID="1000009" fromName="Caldari Provisions" standing="-1.32"/>
+                <row fromID="1000182" fromName="Tribal Liberation Force" standing="-9.84"/>
+            </rowset>
+            <rowset name="factions" key="fromID" columns="fromID,fromName,standing">
+                <row fromID="500001" fromName="Caldari State" standing="-6.02"/>
+                <row fromID="500002" fromName="Minmatar Republic" standing="-3.97"/>
+                <row fromID="500015" fromName="Thukker Tribe" standing="-4.00"/>
+                <row fromID="500018" fromName="Mordu's Legion Command" standing="-2.95"/>
+                <row fromID="500019" fromName="Sansha's Nation" standing="-3.50"/>
+                <row fromID="500020" fromName="Serpentis" standing="-3.52"/>
+            </rowset>
+        </characterNPCStandings>
+    </result>
+    <cachedUntil>2015-05-28 15:51:43</cachedUntil>
+</eveapi>

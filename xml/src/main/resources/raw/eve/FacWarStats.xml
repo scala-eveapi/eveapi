@@ -1,0 +1,30 @@
+<eveapi version="2">
+    <currentTime>2015-05-22 20:26:30</currentTime>
+    <result>
+        <totals>
+            <killsYesterday>1165</killsYesterday>
+            <killsLastWeek>8457</killsLastWeek>
+            <killsTotal>1895759</killsTotal>
+            <victoryPointsYesterday>81820</victoryPointsYesterday>
+            <victoryPointsLastWeek>630040</victoryPointsLastWeek>
+            <victoryPointsTotal>188187905</victoryPointsTotal>
+        </totals>
+        <rowset name="factions" key="factionID" columns="factionID,factionName,pilots,systemsControlled,killsYesterday,killsLastWeek,killsTotal,victoryPointsYesterday,victoryPointsLastWeek,victoryPointsTotal">
+            <row factionID="500001" factionName="Caldari State" pilots="6026" systemsControlled="38" killsYesterday="347" killsLastWeek="2860" killsTotal="460472" victoryPointsYesterday="21240" victoryPointsLastWeek="179320" victoryPointsTotal="36336540"/>
+            <row factionID="500002" factionName="Minmatar Republic" pilots="4441" systemsControlled="43" killsYesterday="145" killsLastWeek="954" killsTotal="425382" victoryPointsYesterday="11900" victoryPointsLastWeek="82000" victoryPointsTotal="24326315"/>
+            <row factionID="500003" factionName="Amarr Empire" pilots="4019" systemsControlled="27" killsYesterday="216" killsLastWeek="1311" killsTotal="446892" victoryPointsYesterday="10380" victoryPointsLastWeek="83340" victoryPointsTotal="24310876"/>
+            <row factionID="500004" factionName="Gallente Federation" pilots="6613" systemsControlled="63" killsYesterday="447" killsLastWeek="3302" killsTotal="562779" victoryPointsYesterday="23300" victoryPointsLastWeek="189680" victoryPointsTotal="34205703"/>
+        </rowset>
+        <rowset name="factionWars" columns="factionID,factionName,againstID,againstName">
+            <row factionID="500001" factionName="Caldari State" againstID="500002" againstName="Minmatar Republic"/>
+            <row factionID="500001" factionName="Caldari State" againstID="500004" againstName="Gallente Federation"/>
+            <row factionID="500002" factionName="Minmatar Republic" againstID="500001" againstName="Caldari State"/>
+            <row factionID="500002" factionName="Minmatar Republic" againstID="500003" againstName="Amarr Empire"/>
+            <row factionID="500003" factionName="Amarr Empire" againstID="500002" againstName="Minmatar Republic"/>
+            <row factionID="500003" factionName="Amarr Empire" againstID="500004" againstName="Gallente Federation"/>
+            <row factionID="500004" factionName="Gallente Federation" againstID="500001" againstName="Caldari State"/>
+            <row factionID="500004" factionName="Gallente Federation" againstID="500003" againstName="Amarr Empire"/>
+        </rowset>
+    </result>
+    <cachedUntil>2015-05-22 20:30:05</cachedUntil>
+</eveapi>
