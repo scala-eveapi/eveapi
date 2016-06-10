@@ -1,6 +1,6 @@
 organization := "eveapi"
 
-name := "data-compressed"
+name := "xml"
 
 version := "1.0"
 
