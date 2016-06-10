@@ -7,7 +7,12 @@ lazy val data = (project in file("data")).settings(
   scalaVersion := "2.11.8",
   libraryDependencies ++= Seq(
       "org.http4s" %% "http4s-blaze-client" % "0.14.0a-SNAPSHOT"
+  ),
+  resolvers ++= Seq(
+      Resolver.sonatypeRepo("releases")
+    , Resolver.sonatypeRepo("snapshots")
   )
+
 )
 lazy val compressed = (project in file("compressed")).settings(
   scalaVersion := "2.11.8",
