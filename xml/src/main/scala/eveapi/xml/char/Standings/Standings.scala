@@ -9,7 +9,7 @@ case class Eveapi(currentTime: String,
 }
 
 case class Result(
-    characterNPCStandings: eveapi.xml.char.Standings.CharacterNPCStandings)
+  characterNPCStandings: eveapi.xml.char.Standings.CharacterNPCStandings)
 
 case class CharacterNPCStandings(rowset: eveapi.xml.char.Standings.Rowset*)
 

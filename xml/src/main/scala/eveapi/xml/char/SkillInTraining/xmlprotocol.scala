@@ -56,8 +56,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
       })
 
     override def writesAttribute(
-        __obj: eveapi.xml.char.SkillInTraining.Eveapi,
-        __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
+      __obj: eveapi.xml.char.SkillInTraining.Eveapi,
+      __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
       var attr: scala.xml.MetaData = scala.xml.Null
       __obj.attributes.toList map {
         case ("@version", _) =>
@@ -74,8 +74,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
     }
 
     def writesChildNodes(
-        __obj: eveapi.xml.char.SkillInTraining.Eveapi,
-        __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+      __obj: eveapi.xml.char.SkillInTraining.Eveapi,
+      __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
       Seq.concat(
           scalaxb.toXML[String](
               __obj.currentTime, None, Some("currentTime"), __scope, false),
@@ -114,8 +114,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
       })
 
     def writesChildNodes(
-        __obj: eveapi.xml.char.SkillInTraining.Result,
-        __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+      __obj: eveapi.xml.char.SkillInTraining.Result,
+      __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
       Seq.concat(scalaxb.toXML[eveapi.xml.char.SkillInTraining.CurrentTQTime](
                      __obj.currentTQTime,
                      None,
@@ -185,8 +185,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
       })
 
     override def writesAttribute(
-        __obj: eveapi.xml.char.SkillInTraining.CurrentTQTime,
-        __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
+      __obj: eveapi.xml.char.SkillInTraining.CurrentTQTime,
+      __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
       var attr: scala.xml.MetaData = scala.xml.Null
       __obj.attributes.toList map {
         case ("@offset", _) =>
@@ -203,8 +203,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
     }
 
     def writesChildNodes(
-        __obj: eveapi.xml.char.SkillInTraining.CurrentTQTime,
-        __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+      __obj: eveapi.xml.char.SkillInTraining.CurrentTQTime,
+      __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
       __obj.mixed.toSeq flatMap { x =>
         scalaxb.toXML[scalaxb.DataRecord[Any]](
             x, x.namespace, x.key, __scope, false)

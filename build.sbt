@@ -2,12 +2,13 @@ organization := "eveapi"
 name := "eveapi"
 scalaVersion in ThisBuild := "2.11.8"
 version in ThisBuild := Version
-scalafmtConfig in ThisBuild := Some(file(".scalafmt"))
+scalafmtConfig in ThisBuild := Some((baseDirectory in root).value / ".scalafmt")
 
 val globalSettings = reformatOnCompileSettings
 
 lazy val Version = "0.1"
 
+lazy val root = file(".")
 lazy val data = (project in file("data")).settings(reformatOnCompileSettings)
 lazy val compressed = (project in file("compressed")).settings(reformatOnCompileSettings)
 lazy val compress = (project in file("compress")).settings(

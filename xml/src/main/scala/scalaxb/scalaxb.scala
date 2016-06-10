@@ -14,7 +14,7 @@ object `package` {
 
   @implicitNotFound(msg = "Cannot find XMLFormat type class for ${A}")
   def fromXML[A](seq: NodeSeq, stack: List[ElemName] = Nil)(
-      implicit format: XMLFormat[A]): A = format.reads(seq, stack) match {
+    implicit format: XMLFormat[A]): A = format.reads(seq, stack) match {
     case Right(a) => a
     case Left(a) =>
       throw new ParserFailure(
@@ -23,7 +23,7 @@ object `package` {
 
   @implicitNotFound(msg = "Cannot find XMLFormat type class for ${A}")
   def fromXMLEither[A](seq: NodeSeq, stack: List[ElemName] = Nil)(
-      implicit format: XMLFormat[A]): Either[String, A] =
+    implicit format: XMLFormat[A]): Either[String, A] =
     format.reads(seq, stack)
 
   @implicitNotFound(msg = "Cannot find CanWriteXML type class for ${A}")
@@ -31,8 +31,8 @@ object `package` {
                namespace: Option[String],
                elementLabel: Option[String],
                scope: NamespaceBinding,
-               typeAttribute: Boolean =
-                 false)(implicit format: CanWriteXML[A]): NodeSeq =
+               typeAttribute: Boolean = false)(
+    implicit format: CanWriteXML[A]): NodeSeq =
     format.writes(obj, namespace, elementLabel, scope, typeAttribute)
 
   @implicitNotFound(msg = "Cannot find CanWriteXML type class for ${A}")
@@ -40,12 +40,12 @@ object `package` {
                namespace: Option[String],
                elementLabel: String,
                scope: NamespaceBinding)(
-      implicit format: CanWriteXML[A]): NodeSeq =
+    implicit format: CanWriteXML[A]): NodeSeq =
     toXML(obj, namespace, Some(elementLabel), scope, false)
 
   @implicitNotFound(msg = "Cannot find CanWriteXML type class for ${A}")
   def toXML[A](obj: A, elementLabel: String, scope: NamespaceBinding)(
-      implicit format: CanWriteXML[A]): NodeSeq =
+    implicit format: CanWriteXML[A]): NodeSeq =
     toXML(obj, None, Some(elementLabel), scope, false)
 
   /** @return - maps from prefix to namespace URI.
@@ -91,7 +91,7 @@ object XMLStandardTypes extends XMLStandardTypes {}
 trait XMLStandardTypes {
   implicit lazy val __NodeXMLFormat: XMLFormat[Node] = new XMLFormat[Node] {
     def reads(
-        seq: scala.xml.NodeSeq, stack: List[ElemName]): Either[String, Node] =
+      seq: scala.xml.NodeSeq, stack: List[ElemName]): Either[String, Node] =
       seq match {
         case node: Node => Right(node)
         case _ => Left("scala.xml.Node is required.")
@@ -120,7 +120,7 @@ trait XMLStandardTypes {
 
   implicit lazy val __ElemXMLFormat: XMLFormat[Elem] = new XMLFormat[Elem] {
     def reads(
-        seq: scala.xml.NodeSeq, stack: List[ElemName]): Either[String, Elem] =
+      seq: scala.xml.NodeSeq, stack: List[ElemName]): Either[String, Elem] =
       seq match {
         case elem: Elem => Right(elem)
         case _ => Left("scala.xml.Elem is required.")
@@ -150,7 +150,7 @@ trait XMLStandardTypes {
 
   implicit lazy val __IntXMLFormat: XMLFormat[Int] = new XMLFormat[Int] {
     def reads(
-        seq: scala.xml.NodeSeq, stack: List[ElemName]): Either[String, Int] =
+      seq: scala.xml.NodeSeq, stack: List[ElemName]): Either[String, Int] =
       try {
         Right(seq.text.toInt)
       } catch { case e: Exception => Left(e.toString) }
@@ -165,7 +165,7 @@ trait XMLStandardTypes {
 
   implicit lazy val __ByteXMLFormat: XMLFormat[Byte] = new XMLFormat[Byte] {
     def reads(
-        seq: scala.xml.NodeSeq, stack: List[ElemName]): Either[String, Byte] =
+      seq: scala.xml.NodeSeq, stack: List[ElemName]): Either[String, Byte] =
       try {
         Right(seq.text.toByte)
       } catch { case e: Exception => Left(e.toString) }
@@ -180,7 +180,7 @@ trait XMLStandardTypes {
 
   implicit lazy val __ShortXMLFormat: XMLFormat[Short] = new XMLFormat[Short] {
     def reads(
-        seq: scala.xml.NodeSeq, stack: List[ElemName]): Either[String, Short] =
+      seq: scala.xml.NodeSeq, stack: List[ElemName]): Either[String, Short] =
       try {
         Right(seq.text.toShort)
       } catch { case e: Exception => Left(e.toString) }
@@ -195,7 +195,7 @@ trait XMLStandardTypes {
 
   implicit lazy val __LongXMLFormat: XMLFormat[Long] = new XMLFormat[Long] {
     def reads(
-        seq: scala.xml.NodeSeq, stack: List[ElemName]): Either[String, Long] =
+      seq: scala.xml.NodeSeq, stack: List[ElemName]): Either[String, Long] =
       try {
         Right(seq.text.toLong)
       } catch { case e: Exception => Left(e.toString) }
@@ -242,7 +242,7 @@ trait XMLStandardTypes {
 
   implicit lazy val __FloatXMLFormat: XMLFormat[Float] = new XMLFormat[Float] {
     def reads(
-        seq: scala.xml.NodeSeq, stack: List[ElemName]): Either[String, Float] =
+      seq: scala.xml.NodeSeq, stack: List[ElemName]): Either[String, Float] =
       try {
         Right(seq.text.toFloat)
       } catch { case e: Exception => Left(e.toString) }
@@ -292,8 +292,8 @@ trait XMLStandardTypes {
   implicit lazy val __DurationXMLFormat: XMLFormat[javax.xml.datatype.Duration] =
     new XMLFormat[javax.xml.datatype.Duration] {
       def reads(
-          seq: scala.xml.NodeSeq,
-          stack: List[ElemName]): Either[String, javax.xml.datatype.Duration] =
+        seq: scala.xml.NodeSeq,
+        stack: List[ElemName]): Either[String, javax.xml.datatype.Duration] =
         try { Right(Helper.toDuration(seq.text)) } catch {
           case e: Exception => Left(e.toString)
         }
@@ -337,8 +337,8 @@ trait XMLStandardTypes {
   def qnameXMLFormat(scope: scala.xml.NamespaceBinding) =
     new XMLFormat[javax.xml.namespace.QName] {
       def reads(
-          seq: scala.xml.NodeSeq,
-          stack: List[ElemName]): Either[String, javax.xml.namespace.QName] =
+        seq: scala.xml.NodeSeq,
+        stack: List[ElemName]): Either[String, javax.xml.namespace.QName] =
         seq match {
           case node: scala.xml.Node =>
             val (namespace, localPart) = Helper.splitQName(node.text, scope)
@@ -357,8 +357,8 @@ trait XMLStandardTypes {
   implicit lazy val __QNameXMLFormat: XMLFormat[javax.xml.namespace.QName] =
     new XMLFormat[javax.xml.namespace.QName] {
       def reads(
-          seq: scala.xml.NodeSeq,
-          stack: List[ElemName]): Either[String, javax.xml.namespace.QName] =
+        seq: scala.xml.NodeSeq,
+        stack: List[ElemName]): Either[String, javax.xml.namespace.QName] =
         seq match {
           case node: scala.xml.Node =>
             qnameXMLFormat(node.scope).reads(node, stack)
@@ -458,8 +458,8 @@ trait XMLStandardTypes {
   implicit def dataRecordFormat[A: XMLFormat]: XMLFormat[DataRecord[A]] =
     new XMLFormat[DataRecord[A]] {
       def reads(
-          seq: scala.xml.NodeSeq,
-          stack: List[ElemName]): Either[String, DataRecord[A]] = seq match {
+        seq: scala.xml.NodeSeq,
+        stack: List[ElemName]): Either[String, DataRecord[A]] = seq match {
         case node: Node =>
           try {
             Right(
@@ -947,7 +947,7 @@ object DataRecord extends XMLStandardTypes {
   }
 
   def unapply[A](
-      record: DataRecord[A]): Option[(Option[String], Option[String], A)] =
+    record: DataRecord[A]): Option[(Option[String], Option[String], A)] =
     Some((record.namespace, record.key, record.value))
 
   def toXML[A](obj: DataRecord[A],
@@ -1027,10 +1027,10 @@ trait AnyElemNameParser extends scala.util.parsing.combinator.Parsers {
   }
 
   implicit def parserViewToParserExt[T, P](current: P)(
-      implicit ev: P => Parser[T]): ParserExt[T, P] =
+    implicit ev: P => Parser[T]): ParserExt[T, P] =
     new ParserExt[T, P](current, ev)
   implicit def parserToParserExt[T](
-      current: Parser[T]): ParserExt[T, Parser[T]] =
+    current: Parser[T]): ParserExt[T, Parser[T]] =
     new ParserExt[T, Parser[T]](current, identity)
   class ParserExt[+T, P](current: P, ev0: P => Parser[T]) {
     implicit val ev: P => Parser[T] = ev0
@@ -1089,7 +1089,7 @@ trait AnyElemNameParser extends scala.util.parsing.combinator.Parsers {
     accept("any", { case x: ElemName if x.name != "" && f(x) => x })
 
   def optTextRecord(
-      implicit format: XMLFormat[String]): Parser[Option[DataRecord[Any]]] =
+    implicit format: XMLFormat[String]): Parser[Option[DataRecord[Any]]] =
     opt(text ^^ (x => DataRecord(x.node.text)(format)))
 
   def text: Parser[ElemName] =
@@ -1132,10 +1132,10 @@ trait CanWriteChildNodes[A] extends CanWriteXML[A] {
   def targetNamespace: Option[String]
   def typeName: Option[String] = None
   def writesAttribute(
-      obj: A, scope: scala.xml.NamespaceBinding): scala.xml.MetaData =
+    obj: A, scope: scala.xml.NamespaceBinding): scala.xml.MetaData =
     scala.xml.Null
   def writesChildNodes(
-      obj: A, scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node]
+    obj: A, scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node]
 
   def writes(obj: A,
              namespace: Option[String],
@@ -1460,7 +1460,7 @@ object Helper {
     }
 
   def withInnerScope[A](scope: NamespaceBinding, outer: NamespaceBinding)(
-      f: (NamespaceBinding, Map[Option[String], Option[String]]) => A): A = {
+    f: (NamespaceBinding, Map[Option[String], Option[String]]) => A): A = {
     val outerList = fromScope(outer)
     def renamePrefix(prefix: Option[String], n: Int): Option[String] =
       if (outerList exists {

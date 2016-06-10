@@ -55,8 +55,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
       })
 
     override def writesAttribute(
-        __obj: eveapi.xml.char.MailBodies.Eveapi,
-        __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
+      __obj: eveapi.xml.char.MailBodies.Eveapi,
+      __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
       var attr: scala.xml.MetaData = scala.xml.Null
       __obj.attributes.toList map {
         case ("@version", _) =>
@@ -73,8 +73,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
     }
 
     def writesChildNodes(
-        __obj: eveapi.xml.char.MailBodies.Eveapi,
-        __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+      __obj: eveapi.xml.char.MailBodies.Eveapi,
+      __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
       Seq.concat(
           scalaxb.toXML[String](
               __obj.currentTime, None, Some("currentTime"), __scope, false),
@@ -99,8 +99,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
       })
 
     def writesChildNodes(
-        __obj: eveapi.xml.char.MailBodies.Result,
-        __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+      __obj: eveapi.xml.char.MailBodies.Result,
+      __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
       (scalaxb.toXML[eveapi.xml.char.MailBodies.Rowset](
           __obj.rowset, None, Some("rowset"), __scope, false))
   }
@@ -111,7 +111,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
 
     def parser(node: scala.xml.Node, stack: List[scalaxb.ElemName])
       : Parser[eveapi.xml.char.MailBodies.Rowset] =
-      phrase((scalaxb.ElemName(None, "row")) ^^ {
+      phrase(
+          (scalaxb.ElemName(None, "row")) ^^ {
         case p1 =>
           eveapi.xml.char.MailBodies.Rowset(
               scalaxb.fromXML[eveapi.xml.char.MailBodies.Row](
@@ -145,8 +146,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
       })
 
     override def writesAttribute(
-        __obj: eveapi.xml.char.MailBodies.Rowset,
-        __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
+      __obj: eveapi.xml.char.MailBodies.Rowset,
+      __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
       var attr: scala.xml.MetaData = scala.xml.Null
       __obj.attributes.toList map {
         case ("@columns", _) =>
@@ -167,8 +168,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
     }
 
     def writesChildNodes(
-        __obj: eveapi.xml.char.MailBodies.Rowset,
-        __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+      __obj: eveapi.xml.char.MailBodies.Rowset,
+      __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
       (scalaxb.toXML[eveapi.xml.char.MailBodies.Row](
           __obj.row, None, Some("row"), __scope, false))
   }
@@ -179,8 +180,9 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
 
     override def isMixed: Boolean = true
 
-    def parser(node: scala.xml.Node, stack: List[scalaxb.ElemName])
-      : Parser[eveapi.xml.char.MailBodies.Row] =
+    def parser(
+      node: scala.xml.Node,
+      stack: List[scalaxb.ElemName]): Parser[eveapi.xml.char.MailBodies.Row] =
       phrase(
           optTextRecord ^^ {
         case p1 =>
@@ -199,8 +201,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
       })
 
     override def writesAttribute(
-        __obj: eveapi.xml.char.MailBodies.Row,
-        __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
+      __obj: eveapi.xml.char.MailBodies.Row,
+      __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
       var attr: scala.xml.MetaData = scala.xml.Null
       __obj.attributes.toList map {
         case ("@messageID", _) =>
@@ -217,8 +219,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
     }
 
     def writesChildNodes(
-        __obj: eveapi.xml.char.MailBodies.Row,
-        __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+      __obj: eveapi.xml.char.MailBodies.Row,
+      __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
       __obj.mixed.toSeq flatMap { x =>
         scalaxb.toXML[scalaxb.DataRecord[Any]](
             x, x.namespace, x.key, __scope, false)

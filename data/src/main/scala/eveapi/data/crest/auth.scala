@@ -6,11 +6,11 @@ case class CallbackResponse(access_token: String,
                             refresh_token: Option[String])
 
 case class VerifyResponse(
-    CharacterID: Long,
-    CharacterName: String,
-    ExpiresOn: String,
-    Scopes: String,
-    TokenType: String,
-    CharacterOwnerHash: String,
-    IntellectualProperty: String
+  CharacterID: Long,
+  CharacterName: String,
+  ExpiresOn: String,
+  Scopes: String,
+  TokenType: String,
+  CharacterOwnerHash: String,
+  IntellectualProperty: String
 )

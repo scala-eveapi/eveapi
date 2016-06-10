@@ -56,8 +56,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
       })
 
     override def writesAttribute(
-        __obj: eveapi.xml.account.AccountStatus.Eveapi,
-        __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
+      __obj: eveapi.xml.account.AccountStatus.Eveapi,
+      __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
       var attr: scala.xml.MetaData = scala.xml.Null
       __obj.attributes.toList map {
         case ("@version", _) =>
@@ -74,8 +74,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
     }
 
     def writesChildNodes(
-        __obj: eveapi.xml.account.AccountStatus.Eveapi,
-        __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+      __obj: eveapi.xml.account.AccountStatus.Eveapi,
+      __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
       Seq.concat(
           scalaxb.toXML[String](
               __obj.currentTime, None, Some("currentTime"), __scope, false),
@@ -108,8 +108,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
       })
 
     def writesChildNodes(
-        __obj: eveapi.xml.account.AccountStatus.Result,
-        __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+      __obj: eveapi.xml.account.AccountStatus.Result,
+      __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
       Seq.concat(
           scalaxb.toXML[String](
               __obj.paidUntil, None, Some("paidUntil"), __scope, false),
@@ -139,27 +139,28 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
               scalaxb.DataRecord(
                   x,
                   node,
-                  scalaxb.fromXML[String](x,
-                                          scalaxb.ElemName(node) :: stack))
+                  scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack))
             } map { "@columns" -> _ },
                         (node \ "@key").headOption map { x =>
-              scalaxb.DataRecord(
-                  x,
-                  node,
-                  scalaxb.fromXML[String](x,
-                                          scalaxb.ElemName(node) :: stack))
+              scalaxb.DataRecord(x,
+                                 node,
+                                 scalaxb
+                                   .fromXML[String](x,
+                                                    scalaxb.ElemName(node) :: stack))
             } map { "@key" -> _ },
                         (node \ "@name").headOption map { x =>
               scalaxb.DataRecord(
-                  x, node, scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack))
+                  x,
+                  node,
+                  scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack))
             } map { "@name" -> _ }
                     ).flatten[(String, scalaxb.DataRecord[Any])]: _*)))
       case _ => Left("reads failed: seq must be scala.xml.Node")
     }
 
     override def writesAttribute(
-        __obj: eveapi.xml.account.AccountStatus.Rowset,
-        __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
+      __obj: eveapi.xml.account.AccountStatus.Rowset,
+      __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
       var attr: scala.xml.MetaData = scala.xml.Null
       __obj.attributes.toList map {
         case ("@columns", _) =>
@@ -180,8 +181,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
     }
 
     def writesChildNodes(
-        __obj: eveapi.xml.account.AccountStatus.Rowset,
-        __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+      __obj: eveapi.xml.account.AccountStatus.Rowset,
+      __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
       Nil
   }
 }

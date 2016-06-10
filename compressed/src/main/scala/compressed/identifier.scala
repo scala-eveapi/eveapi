@@ -8,35 +8,35 @@ case class Paginated[T](items: List[T], pageCount: Int, totalCount: Int)
 case class Identifier[T](id: Long, name: String)
 
 case class Fleet(
-    id: Long,
-    isFreeMove: Boolean,
-    isRegistered: Boolean,
-    isVoiceEnabled: Boolean,
-    motd: String
+  id: Long,
+  isFreeMove: Boolean,
+  isRegistered: Boolean,
+  isVoiceEnabled: Boolean,
+  motd: String
 )
 
 case class Member(
-    boosterID: Short,
-    character: Identifier[Character],
-    joinTime: String,
-    roleID: Short,
-    ship: Identifier[Ship],
-    solarSystem: Identifier[SolarSystem],
-    squadID: Long,
-    station: Option[Identifier[Station]],
-    takesFleetWarp: Boolean,
-    wingID: Long
+  boosterID: Short,
+  character: Identifier[Character],
+  joinTime: String,
+  roleID: Short,
+  ship: Identifier[Ship],
+  solarSystem: Identifier[SolarSystem],
+  squadID: Long,
+  station: Option[Identifier[Station]],
+  takesFleetWarp: Boolean,
+  wingID: Long
 )
 
 case class Wing(
-    id: Long,
-    name: String,
-    squadsList: List[Squad]
+  id: Long,
+  name: String,
+  squadsList: List[Squad]
 )
 
 case class Squad(
-    id: Long,
-    name: String
+  id: Long,
+  name: String
 )
 
 case class Character()

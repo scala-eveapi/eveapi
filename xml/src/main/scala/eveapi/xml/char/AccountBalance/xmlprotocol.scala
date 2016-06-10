@@ -59,8 +59,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
       })
 
     override def writesAttribute(
-        __obj: eveapi.xml.char.AccountBalance.Eveapi,
-        __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
+      __obj: eveapi.xml.char.AccountBalance.Eveapi,
+      __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
       var attr: scala.xml.MetaData = scala.xml.Null
       __obj.attributes.toList map {
         case ("@version", _) =>
@@ -77,8 +77,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
     }
 
     def writesChildNodes(
-        __obj: eveapi.xml.char.AccountBalance.Eveapi,
-        __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+      __obj: eveapi.xml.char.AccountBalance.Eveapi,
+      __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
       Seq.concat(
           scalaxb.toXML[String](
               __obj.currentTime, None, Some("currentTime"), __scope, false),
@@ -103,8 +103,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
       })
 
     def writesChildNodes(
-        __obj: eveapi.xml.char.AccountBalance.Result,
-        __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+      __obj: eveapi.xml.char.AccountBalance.Result,
+      __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
       (scalaxb.toXML[eveapi.xml.char.AccountBalance.Rowset](
           __obj.rowset, None, Some("rowset"), __scope, false))
   }
@@ -149,8 +149,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
       })
 
     override def writesAttribute(
-        __obj: eveapi.xml.char.AccountBalance.Rowset,
-        __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
+      __obj: eveapi.xml.char.AccountBalance.Rowset,
+      __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
       var attr: scala.xml.MetaData = scala.xml.Null
       __obj.attributes.toList map {
         case ("@columns", _) =>
@@ -171,8 +171,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
     }
 
     def writesChildNodes(
-        __obj: eveapi.xml.char.AccountBalance.Rowset,
-        __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+      __obj: eveapi.xml.char.AccountBalance.Rowset,
+      __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
       (scalaxb.toXML[eveapi.xml.char.AccountBalance.Row](
           __obj.row, None, Some("row"), __scope, false))
   }
@@ -194,25 +194,25 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
               scalaxb.DataRecord(x, node, scalaxb.fromXML[BigInt](x, scalaxb.ElemName(node) :: stack))
             } map { "@accountID" -> _ },
                         (node \ "@accountKey").headOption map { x =>
+              scalaxb
+                .DataRecord(
+                  x,
+                  node,
+                  scalaxb.fromXML[BigInt](x, scalaxb.ElemName(node) :: stack))
+            } map { "@accountKey" -> _ },
+                        (node \ "@balance").headOption map { x =>
               scalaxb.DataRecord(
                   x,
                   node,
-                  scalaxb.fromXML[BigInt](x,
-                                          scalaxb.ElemName(node) :: stack))
-            } map { "@accountKey" -> _ },
-                        (node \ "@balance").headOption map { x =>
-              scalaxb.DataRecord(x,
-                                 node,
-                                 scalaxb.fromXML[BigDecimal](
-                                     x, scalaxb.ElemName(node) :: stack))
+                  scalaxb.fromXML[BigDecimal](x, scalaxb.ElemName(node) :: stack))
             } map { "@balance" -> _ }
                     ).flatten[(String, scalaxb.DataRecord[Any])]: _*)))
       case _ => Left("reads failed: seq must be scala.xml.Node")
     }
 
     override def writesAttribute(
-        __obj: eveapi.xml.char.AccountBalance.Row,
-        __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
+      __obj: eveapi.xml.char.AccountBalance.Row,
+      __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
       var attr: scala.xml.MetaData = scala.xml.Null
       __obj.attributes.toList map {
         case ("@accountID", _) =>
@@ -235,8 +235,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
     }
 
     def writesChildNodes(
-        __obj: eveapi.xml.char.AccountBalance.Row,
-        __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+      __obj: eveapi.xml.char.AccountBalance.Row,
+      __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
       Nil
   }
 }

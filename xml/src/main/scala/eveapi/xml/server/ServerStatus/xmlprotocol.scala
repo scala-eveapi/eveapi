@@ -53,8 +53,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
       })
 
     override def writesAttribute(
-        __obj: eveapi.xml.server.ServerStatus.Eveapi,
-        __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
+      __obj: eveapi.xml.server.ServerStatus.Eveapi,
+      __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
       var attr: scala.xml.MetaData = scala.xml.Null
       __obj.attributes.toList map {
         case ("@version", _) =>
@@ -71,8 +71,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
     }
 
     def writesChildNodes(
-        __obj: eveapi.xml.server.ServerStatus.Eveapi,
-        __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+      __obj: eveapi.xml.server.ServerStatus.Eveapi,
+      __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
       Seq.concat(
           scalaxb.toXML[String](
               __obj.currentTime, None, Some("currentTime"), __scope, false),
@@ -98,8 +98,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
       })
 
     def writesChildNodes(
-        __obj: eveapi.xml.server.ServerStatus.Result,
-        __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+      __obj: eveapi.xml.server.ServerStatus.Result,
+      __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
       Seq.concat(
           scalaxb.toXML[String](
               __obj.serverOpen, None, Some("serverOpen"), __scope, false),
