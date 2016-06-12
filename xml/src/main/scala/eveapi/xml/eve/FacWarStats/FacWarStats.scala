@@ -30,18 +30,12 @@ case class Row(attributes: Map[String, scalaxb.DataRecord[Any]] = Map()) {
   lazy val againstName = attributes.get("@againstName") map { _.as[String] }
   lazy val factionID = attributes("@factionID").as[BigInt]
   lazy val factionName = attributes("@factionName").as[String]
-  lazy val killsLastWeek =
-    attributes.get("@killsLastWeek") map { _.as[BigInt] }
+  lazy val killsLastWeek = attributes.get("@killsLastWeek") map { _.as[BigInt] }
   lazy val killsTotal = attributes.get("@killsTotal") map { _.as[BigInt] }
-  lazy val killsYesterday =
-    attributes.get("@killsYesterday") map { _.as[BigInt] }
+  lazy val killsYesterday = attributes.get("@killsYesterday") map { _.as[BigInt] }
   lazy val pilots = attributes.get("@pilots") map { _.as[BigInt] }
-  lazy val systemsControlled =
-    attributes.get("@systemsControlled") map { _.as[BigInt] }
-  lazy val victoryPointsLastWeek =
-    attributes.get("@victoryPointsLastWeek") map { _.as[BigInt] }
-  lazy val victoryPointsTotal =
-    attributes.get("@victoryPointsTotal") map { _.as[BigInt] }
-  lazy val victoryPointsYesterday =
-    attributes.get("@victoryPointsYesterday") map { _.as[BigInt] }
+  lazy val systemsControlled = attributes.get("@systemsControlled") map { _.as[BigInt] }
+  lazy val victoryPointsLastWeek = attributes.get("@victoryPointsLastWeek") map { _.as[BigInt] }
+  lazy val victoryPointsTotal = attributes.get("@victoryPointsTotal") map { _.as[BigInt] }
+  lazy val victoryPointsYesterday = attributes.get("@victoryPointsYesterday") map { _.as[BigInt] }
 }

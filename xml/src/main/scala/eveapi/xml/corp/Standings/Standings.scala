@@ -8,8 +8,7 @@ case class Eveapi(currentTime: String,
   lazy val version = attributes("@version").as[BigInt]
 }
 
-case class Result(
-  corporationNPCStandings: eveapi.xml.corp.Standings.CorporationNPCStandings)
+case class Result(corporationNPCStandings: eveapi.xml.corp.Standings.CorporationNPCStandings)
 
 case class CorporationNPCStandings(rowset: eveapi.xml.corp.Standings.Rowset*)
 

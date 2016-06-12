@@ -20,10 +20,8 @@ case class Rowset(row: Seq[eveapi.xml.eve.AllianceList.Row] = Nil,
 case class Row(rowset: Option[eveapi.xml.eve.AllianceList.Rowset] = None,
                attributes: Map[String, scalaxb.DataRecord[Any]] = Map()) {
   lazy val allianceID = attributes.get("@allianceID") map { _.as[BigInt] }
-  lazy val corporationID =
-    attributes.get("@corporationID") map { _.as[BigInt] }
-  lazy val executorCorpID =
-    attributes.get("@executorCorpID") map { _.as[BigInt] }
+  lazy val corporationID = attributes.get("@corporationID") map { _.as[BigInt] }
+  lazy val executorCorpID = attributes.get("@executorCorpID") map { _.as[BigInt] }
   lazy val memberCount = attributes.get("@memberCount") map { _.as[BigInt] }
   lazy val name = attributes.get("@name") map { _.as[String] }
   lazy val shortName = attributes.get("@shortName") map { _.as[String] }

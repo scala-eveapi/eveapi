@@ -23,12 +23,9 @@ case class Row(victim: Option[eveapi.xml.char.KillMails.Victim] = None,
   lazy val allianceID = attributes.get("@allianceID") map { _.as[BigInt] }
   lazy val allianceName = attributes.get("@allianceName") map { _.as[String] }
   lazy val characterID = attributes.get("@characterID") map { _.as[BigInt] }
-  lazy val characterName =
-    attributes.get("@characterName") map { _.as[String] }
-  lazy val corporationID =
-    attributes.get("@corporationID") map { _.as[BigInt] }
-  lazy val corporationName =
-    attributes.get("@corporationName") map { _.as[String] }
+  lazy val characterName = attributes.get("@characterName") map { _.as[String] }
+  lazy val corporationID = attributes.get("@corporationID") map { _.as[BigInt] }
+  lazy val corporationName = attributes.get("@corporationName") map { _.as[String] }
   lazy val damageDone = attributes.get("@damageDone") map { _.as[BigInt] }
   lazy val factionID = attributes.get("@factionID") map { _.as[BigInt] }
   lazy val factionName = attributes.get("@factionName") map { _.as[String] }
@@ -39,12 +36,10 @@ case class Row(victim: Option[eveapi.xml.char.KillMails.Victim] = None,
   lazy val moonID = attributes.get("@moonID") map { _.as[BigInt] }
   lazy val qtyDestroyed = attributes.get("@qtyDestroyed") map { _.as[BigInt] }
   lazy val qtyDropped = attributes.get("@qtyDropped") map { _.as[BigInt] }
-  lazy val securityStatus =
-    attributes.get("@securityStatus") map { _.as[BigDecimal] }
+  lazy val securityStatus = attributes.get("@securityStatus") map { _.as[BigDecimal] }
   lazy val shipTypeID = attributes.get("@shipTypeID") map { _.as[BigInt] }
   lazy val singleton = attributes.get("@singleton") map { _.as[BigInt] }
-  lazy val solarSystemID =
-    attributes.get("@solarSystemID") map { _.as[BigInt] }
+  lazy val solarSystemID = attributes.get("@solarSystemID") map { _.as[BigInt] }
   lazy val typeID = attributes.get("@typeID") map { _.as[BigInt] }
   lazy val weaponTypeID = attributes.get("@weaponTypeID") map { _.as[BigInt] }
 }

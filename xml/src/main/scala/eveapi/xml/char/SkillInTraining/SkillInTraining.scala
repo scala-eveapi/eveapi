@@ -18,7 +18,6 @@ case class Result(currentTQTime: eveapi.xml.char.SkillInTraining.CurrentTQTime,
                   skillInTraining: BigInt)
 
 case class CurrentTQTime(mixed: Seq[scalaxb.DataRecord[Any]] = Nil,
-                         attributes: Map[String, scalaxb.DataRecord[Any]] =
-                           Map()) {
+                         attributes: Map[String, scalaxb.DataRecord[Any]] = Map()) {
   lazy val offset = attributes("@offset").as[BigInt]
 }

@@ -20,13 +20,11 @@ case class Rowset(row: Seq[eveapi.xml.map.FacWarSystems.Row] = Nil,
 case class Row(attributes: Map[String, scalaxb.DataRecord[Any]] = Map()) {
   lazy val contested = attributes("@contested").as[String]
   lazy val occupyingFactionID = attributes("@occupyingFactionID").as[BigInt]
-  lazy val occupyingFactionName =
-    attributes("@occupyingFactionName").as[String]
+  lazy val occupyingFactionName = attributes("@occupyingFactionName").as[String]
   lazy val owningFactionID = attributes("@owningFactionID").as[BigInt]
   lazy val owningFactionName = attributes("@owningFactionName").as[String]
   lazy val solarSystemID = attributes("@solarSystemID").as[BigInt]
   lazy val solarSystemName = attributes("@solarSystemName").as[String]
-  lazy val victoryPointThreshold =
-    attributes("@victoryPointThreshold").as[BigInt]
+  lazy val victoryPointThreshold = attributes("@victoryPointThreshold").as[BigInt]
   lazy val victoryPoints = attributes("@victoryPoints").as[BigInt]
 }

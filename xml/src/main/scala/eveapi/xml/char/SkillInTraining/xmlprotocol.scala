@@ -11,18 +11,14 @@ val document = scalaxb.toXML[eveapi.xml.char.SkillInTraining.Foo](obj, "foo", ev
 object `package` extends XMLProtocol {}
 
 trait XMLProtocol extends scalaxb.XMLStandardTypes {
-  implicit lazy val executionContext =
-    scala.concurrent.ExecutionContext.Implicits.global
+  implicit lazy val executionContext = scala.concurrent.ExecutionContext.Implicits.global
 
-  val defaultScope = scalaxb.toScope(
-      Some("xs") -> "http://www.w3.org/2001/XMLSchema",
-      Some("xsi") -> "http://www.w3.org/2001/XMLSchema-instance")
+  val defaultScope = scalaxb.toScope(Some("xs") -> "http://www.w3.org/2001/XMLSchema",
+                                     Some("xsi") -> "http://www.w3.org/2001/XMLSchema-instance")
   implicit lazy val SkillInTrainingEveapiFormat: scalaxb.XMLFormat[
-      eveapi.xml.char.SkillInTraining.Eveapi] =
-    new DefaultSkillInTrainingEveapiFormat {}
+      eveapi.xml.char.SkillInTraining.Eveapi] = new DefaultSkillInTrainingEveapiFormat {}
   implicit lazy val SkillInTrainingResultFormat: scalaxb.XMLFormat[
-      eveapi.xml.char.SkillInTraining.Result] =
-    new DefaultSkillInTrainingResultFormat {}
+      eveapi.xml.char.SkillInTraining.Result] = new DefaultSkillInTrainingResultFormat {}
   implicit lazy val SkillInTrainingCurrentTQTimeFormat: scalaxb.XMLFormat[
       eveapi.xml.char.SkillInTraining.CurrentTQTime] =
     new DefaultSkillInTrainingCurrentTQTimeFormat {}
@@ -31,8 +27,8 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
       extends scalaxb.ElemNameParser[eveapi.xml.char.SkillInTraining.Eveapi] {
     val targetNamespace: Option[String] = None
 
-    def parser(node: scala.xml.Node, stack: List[scalaxb.ElemName])
-      : Parser[eveapi.xml.char.SkillInTraining.Eveapi] =
+    def parser(node: scala.xml.Node,
+               stack: List[scalaxb.ElemName]): Parser[eveapi.xml.char.SkillInTraining.Eveapi] =
       phrase(
           (scalaxb.ElemName(None, "currentTime")) ~
           (scalaxb.ElemName(None, "result")) ~
@@ -48,49 +44,42 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
                     x =>
                       scalaxb.DataRecord(x,
                                          node,
-                                         scalaxb.fromXML[BigInt](
-                                             x,
-                                             scalaxb.ElemName(node) :: stack))
+                                         scalaxb.fromXML[BigInt](x,
+                                                                 scalaxb.ElemName(node) :: stack))
                   } map { "@version" -> _ }
                   ).flatten[(String, scalaxb.DataRecord[Any])]: _*))
       })
 
-    override def writesAttribute(
-      __obj: eveapi.xml.char.SkillInTraining.Eveapi,
-      __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
+    override def writesAttribute(__obj: eveapi.xml.char.SkillInTraining.Eveapi,
+                                 __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
       var attr: scala.xml.MetaData = scala.xml.Null
       __obj.attributes.toList map {
         case ("@version", _) =>
-          attr =
-            scala.xml.Attribute(null, "version", __obj.version.toString, attr)
+          attr = scala.xml.Attribute(null, "version", __obj.version.toString, attr)
         case (key, x) =>
-          attr = scala.xml.Attribute(
-              (x.namespace map { __scope.getPrefix(_) }).orNull,
-              x.key.orNull,
-              x.value.toString,
-              attr)
+          attr = scala.xml.Attribute((x.namespace map { __scope.getPrefix(_) }).orNull,
+                                     x.key.orNull,
+                                     x.value.toString,
+                                     attr)
       }
       attr
     }
 
-    def writesChildNodes(
-      __obj: eveapi.xml.char.SkillInTraining.Eveapi,
-      __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+    def writesChildNodes(__obj: eveapi.xml.char.SkillInTraining.Eveapi,
+                         __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
       Seq.concat(
-          scalaxb.toXML[String](
-              __obj.currentTime, None, Some("currentTime"), __scope, false),
+          scalaxb.toXML[String](__obj.currentTime, None, Some("currentTime"), __scope, false),
           scalaxb.toXML[eveapi.xml.char.SkillInTraining.Result](
               __obj.result, None, Some("result"), __scope, false),
-          scalaxb.toXML[String](
-              __obj.cachedUntil, None, Some("cachedUntil"), __scope, false))
+          scalaxb.toXML[String](__obj.cachedUntil, None, Some("cachedUntil"), __scope, false))
   }
 
   trait DefaultSkillInTrainingResultFormat
       extends scalaxb.ElemNameParser[eveapi.xml.char.SkillInTraining.Result] {
     val targetNamespace: Option[String] = None
 
-    def parser(node: scala.xml.Node, stack: List[scalaxb.ElemName])
-      : Parser[eveapi.xml.char.SkillInTraining.Result] =
+    def parser(node: scala.xml.Node,
+               stack: List[scalaxb.ElemName]): Parser[eveapi.xml.char.SkillInTraining.Result] =
       phrase(
           (scalaxb.ElemName(None, "currentTQTime")) ~
           (scalaxb.ElemName(None, "trainingEndTime")) ~
@@ -113,101 +102,97 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
               scalaxb.fromXML[BigInt](p8, scalaxb.ElemName(node) :: stack))
       })
 
-    def writesChildNodes(
-      __obj: eveapi.xml.char.SkillInTraining.Result,
-      __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
-      Seq.concat(scalaxb.toXML[eveapi.xml.char.SkillInTraining.CurrentTQTime](
-                     __obj.currentTQTime,
-                     None,
-                     Some("currentTQTime"),
-                     __scope,
-                     false),
-                 scalaxb.toXML[String](__obj.trainingEndTime,
-                                       None,
-                                       Some("trainingEndTime"),
-                                       __scope,
-                                       false),
-                 scalaxb.toXML[String](__obj.trainingStartTime,
-                                       None,
-                                       Some("trainingStartTime"),
-                                       __scope,
-                                       false),
-                 scalaxb.toXML[BigInt](__obj.trainingTypeID,
-                                       None,
-                                       Some("trainingTypeID"),
-                                       __scope,
-                                       false),
-                 scalaxb.toXML[BigInt](__obj.trainingStartSP,
-                                       None,
-                                       Some("trainingStartSP"),
-                                       __scope,
-                                       false),
-                 scalaxb.toXML[BigInt](__obj.trainingDestinationSP,
-                                       None,
-                                       Some("trainingDestinationSP"),
-                                       __scope,
-                                       false),
-                 scalaxb.toXML[BigInt](__obj.trainingToLevel,
-                                       None,
-                                       Some("trainingToLevel"),
-                                       __scope,
-                                       false),
-                 scalaxb.toXML[BigInt](__obj.skillInTraining,
-                                       None,
-                                       Some("skillInTraining"),
-                                       __scope,
-                                       false))
+    def writesChildNodes(__obj: eveapi.xml.char.SkillInTraining.Result,
+                         __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+      Seq.concat(
+          scalaxb.toXML[eveapi.xml.char.SkillInTraining.CurrentTQTime](__obj.currentTQTime,
+                                                                       None,
+                                                                       Some("currentTQTime"),
+                                                                       __scope,
+                                                                       false),
+          scalaxb.toXML[String](__obj.trainingEndTime,
+                                None,
+                                Some("trainingEndTime"),
+                                __scope,
+                                false),
+          scalaxb.toXML[String](__obj.trainingStartTime,
+                                None,
+                                Some("trainingStartTime"),
+                                __scope,
+                                false),
+          scalaxb.toXML[BigInt](__obj.trainingTypeID,
+                                None,
+                                Some("trainingTypeID"),
+                                __scope,
+                                false),
+          scalaxb.toXML[BigInt](__obj.trainingStartSP,
+                                None,
+                                Some("trainingStartSP"),
+                                __scope,
+                                false),
+          scalaxb.toXML[BigInt](__obj.trainingDestinationSP,
+                                None,
+                                Some("trainingDestinationSP"),
+                                __scope,
+                                false),
+          scalaxb.toXML[BigInt](__obj.trainingToLevel,
+                                None,
+                                Some("trainingToLevel"),
+                                __scope,
+                                false),
+          scalaxb.toXML[BigInt](__obj.skillInTraining,
+                                None,
+                                Some("skillInTraining"),
+                                __scope,
+                                false))
   }
 
   trait DefaultSkillInTrainingCurrentTQTimeFormat
-      extends scalaxb.ElemNameParser[
-          eveapi.xml.char.SkillInTraining.CurrentTQTime] {
+      extends scalaxb.ElemNameParser[eveapi.xml.char.SkillInTraining.CurrentTQTime] {
     val targetNamespace: Option[String] = None
 
     override def isMixed: Boolean = true
 
-    def parser(node: scala.xml.Node, stack: List[scalaxb.ElemName])
-      : Parser[eveapi.xml.char.SkillInTraining.CurrentTQTime] =
-      phrase(optTextRecord ^^ {
+    def parser(
+      node: scala.xml.Node,
+      stack: List[scalaxb.ElemName]): Parser[eveapi.xml.char.SkillInTraining.CurrentTQTime] =
+      phrase(
+          optTextRecord ^^ {
         case p1 =>
-          eveapi.xml.char.SkillInTraining.CurrentTQTime(
-              Seq.concat(p1.toList),
-              scala.collection.immutable.ListMap(List(
-                      (node \ "@offset").headOption map {
-                    x =>
-                      scalaxb.DataRecord(x,
-                                         node,
-                                         scalaxb.fromXML[BigInt](
-                                             x,
-                                             scalaxb.ElemName(node) :: stack))
-                  } map { "@offset" -> _ }
-                  ).flatten[(String, scalaxb.DataRecord[Any])]: _*))
+          eveapi.xml.char.SkillInTraining.CurrentTQTime(Seq.concat(p1.toList),
+                                                        scala.collection.immutable.ListMap(List(
+                                                                (node \ "@offset").headOption map {
+                                                              x =>
+                                                                scalaxb.DataRecord(
+                                                                    x,
+                                                                    node,
+                                                                    scalaxb.fromXML[BigInt](
+                                                                        x,
+                                                                        scalaxb.ElemName(node) :: stack))
+                                                            } map { "@offset" -> _ }
+                                                            ).flatten[(String,
+                                                                       scalaxb.DataRecord[Any])]: _*))
       })
 
-    override def writesAttribute(
-      __obj: eveapi.xml.char.SkillInTraining.CurrentTQTime,
-      __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
+    override def writesAttribute(__obj: eveapi.xml.char.SkillInTraining.CurrentTQTime,
+                                 __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
       var attr: scala.xml.MetaData = scala.xml.Null
       __obj.attributes.toList map {
         case ("@offset", _) =>
-          attr =
-            scala.xml.Attribute(null, "offset", __obj.offset.toString, attr)
+          attr = scala.xml.Attribute(null, "offset", __obj.offset.toString, attr)
         case (key, x) =>
-          attr = scala.xml.Attribute(
-              (x.namespace map { __scope.getPrefix(_) }).orNull,
-              x.key.orNull,
-              x.value.toString,
-              attr)
+          attr = scala.xml.Attribute((x.namespace map { __scope.getPrefix(_) }).orNull,
+                                     x.key.orNull,
+                                     x.value.toString,
+                                     attr)
       }
       attr
     }
 
-    def writesChildNodes(
-      __obj: eveapi.xml.char.SkillInTraining.CurrentTQTime,
-      __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+    def writesChildNodes(__obj: eveapi.xml.char.SkillInTraining.CurrentTQTime,
+                         __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
       __obj.mixed.toSeq flatMap { x =>
-        scalaxb.toXML[scalaxb.DataRecord[Any]](
-            x, x.namespace, x.key, __scope, false)
+        scalaxb.toXML[scalaxb.DataRecord[Any]](x, x.namespace, x.key, __scope, false)
       }
   }
 }

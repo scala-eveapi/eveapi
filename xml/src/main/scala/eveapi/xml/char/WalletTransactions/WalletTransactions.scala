@@ -21,8 +21,7 @@ case class Row(attributes: Map[String, scalaxb.DataRecord[Any]] = Map()) {
   lazy val clientID = attributes("@clientID").as[BigInt]
   lazy val clientName = attributes("@clientName").as[String]
   lazy val clientTypeID = attributes("@clientTypeID").as[BigInt]
-  lazy val journalTransactionID =
-    attributes("@journalTransactionID").as[BigInt]
+  lazy val journalTransactionID = attributes("@journalTransactionID").as[BigInt]
   lazy val price = attributes("@price").as[BigDecimal]
   lazy val quantity = attributes("@quantity").as[BigInt]
   lazy val stationID = attributes("@stationID").as[BigInt]

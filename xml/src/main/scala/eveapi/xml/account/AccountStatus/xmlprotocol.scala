@@ -11,28 +11,23 @@ val document = scalaxb.toXML[eveapi.xml.account.AccountStatus.Foo](obj, "foo", e
 object `package` extends XMLProtocol {}
 
 trait XMLProtocol extends scalaxb.XMLStandardTypes {
-  implicit lazy val executionContext =
-    scala.concurrent.ExecutionContext.Implicits.global
+  implicit lazy val executionContext = scala.concurrent.ExecutionContext.Implicits.global
 
-  val defaultScope = scalaxb.toScope(
-      Some("xs") -> "http://www.w3.org/2001/XMLSchema",
-      Some("xsi") -> "http://www.w3.org/2001/XMLSchema-instance")
+  val defaultScope = scalaxb.toScope(Some("xs") -> "http://www.w3.org/2001/XMLSchema",
+                                     Some("xsi") -> "http://www.w3.org/2001/XMLSchema-instance")
   implicit lazy val AccountStatusEveapiFormat: scalaxb.XMLFormat[
-      eveapi.xml.account.AccountStatus.Eveapi] =
-    new DefaultAccountStatusEveapiFormat {}
+      eveapi.xml.account.AccountStatus.Eveapi] = new DefaultAccountStatusEveapiFormat {}
   implicit lazy val AccountStatusResultFormat: scalaxb.XMLFormat[
-      eveapi.xml.account.AccountStatus.Result] =
-    new DefaultAccountStatusResultFormat {}
+      eveapi.xml.account.AccountStatus.Result] = new DefaultAccountStatusResultFormat {}
   implicit lazy val AccountStatusRowsetFormat: scalaxb.XMLFormat[
-      eveapi.xml.account.AccountStatus.Rowset] =
-    new DefaultAccountStatusRowsetFormat {}
+      eveapi.xml.account.AccountStatus.Rowset] = new DefaultAccountStatusRowsetFormat {}
 
   trait DefaultAccountStatusEveapiFormat
       extends scalaxb.ElemNameParser[eveapi.xml.account.AccountStatus.Eveapi] {
     val targetNamespace: Option[String] = None
 
-    def parser(node: scala.xml.Node, stack: List[scalaxb.ElemName])
-      : Parser[eveapi.xml.account.AccountStatus.Eveapi] =
+    def parser(node: scala.xml.Node,
+               stack: List[scalaxb.ElemName]): Parser[eveapi.xml.account.AccountStatus.Eveapi] =
       phrase(
           (scalaxb.ElemName(None, "currentTime")) ~
           (scalaxb.ElemName(None, "result")) ~
@@ -48,49 +43,42 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
                     x =>
                       scalaxb.DataRecord(x,
                                          node,
-                                         scalaxb.fromXML[BigInt](
-                                             x,
-                                             scalaxb.ElemName(node) :: stack))
+                                         scalaxb.fromXML[BigInt](x,
+                                                                 scalaxb.ElemName(node) :: stack))
                   } map { "@version" -> _ }
                   ).flatten[(String, scalaxb.DataRecord[Any])]: _*))
       })
 
-    override def writesAttribute(
-      __obj: eveapi.xml.account.AccountStatus.Eveapi,
-      __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
+    override def writesAttribute(__obj: eveapi.xml.account.AccountStatus.Eveapi,
+                                 __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
       var attr: scala.xml.MetaData = scala.xml.Null
       __obj.attributes.toList map {
         case ("@version", _) =>
-          attr =
-            scala.xml.Attribute(null, "version", __obj.version.toString, attr)
+          attr = scala.xml.Attribute(null, "version", __obj.version.toString, attr)
         case (key, x) =>
-          attr = scala.xml.Attribute(
-              (x.namespace map { __scope.getPrefix(_) }).orNull,
-              x.key.orNull,
-              x.value.toString,
-              attr)
+          attr = scala.xml.Attribute((x.namespace map { __scope.getPrefix(_) }).orNull,
+                                     x.key.orNull,
+                                     x.value.toString,
+                                     attr)
       }
       attr
     }
 
-    def writesChildNodes(
-      __obj: eveapi.xml.account.AccountStatus.Eveapi,
-      __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+    def writesChildNodes(__obj: eveapi.xml.account.AccountStatus.Eveapi,
+                         __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
       Seq.concat(
-          scalaxb.toXML[String](
-              __obj.currentTime, None, Some("currentTime"), __scope, false),
+          scalaxb.toXML[String](__obj.currentTime, None, Some("currentTime"), __scope, false),
           scalaxb.toXML[eveapi.xml.account.AccountStatus.Result](
               __obj.result, None, Some("result"), __scope, false),
-          scalaxb.toXML[String](
-              __obj.cachedUntil, None, Some("cachedUntil"), __scope, false))
+          scalaxb.toXML[String](__obj.cachedUntil, None, Some("cachedUntil"), __scope, false))
   }
 
   trait DefaultAccountStatusResultFormat
       extends scalaxb.ElemNameParser[eveapi.xml.account.AccountStatus.Result] {
     val targetNamespace: Option[String] = None
 
-    def parser(node: scala.xml.Node, stack: List[scalaxb.ElemName])
-      : Parser[eveapi.xml.account.AccountStatus.Result] =
+    def parser(node: scala.xml.Node,
+               stack: List[scalaxb.ElemName]): Parser[eveapi.xml.account.AccountStatus.Result] =
       phrase(
           (scalaxb.ElemName(None, "paidUntil")) ~
           (scalaxb.ElemName(None, "createDate")) ~
@@ -107,18 +95,13 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
                   p5, scalaxb.ElemName(node) :: stack))
       })
 
-    def writesChildNodes(
-      __obj: eveapi.xml.account.AccountStatus.Result,
-      __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+    def writesChildNodes(__obj: eveapi.xml.account.AccountStatus.Result,
+                         __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
       Seq.concat(
-          scalaxb.toXML[String](
-              __obj.paidUntil, None, Some("paidUntil"), __scope, false),
-          scalaxb.toXML[String](
-              __obj.createDate, None, Some("createDate"), __scope, false),
-          scalaxb.toXML[BigInt](
-              __obj.logonCount, None, Some("logonCount"), __scope, false),
-          scalaxb.toXML[BigInt](
-              __obj.logonMinutes, None, Some("logonMinutes"), __scope, false),
+          scalaxb.toXML[String](__obj.paidUntil, None, Some("paidUntil"), __scope, false),
+          scalaxb.toXML[String](__obj.createDate, None, Some("createDate"), __scope, false),
+          scalaxb.toXML[BigInt](__obj.logonCount, None, Some("logonCount"), __scope, false),
+          scalaxb.toXML[BigInt](__obj.logonMinutes, None, Some("logonMinutes"), __scope, false),
           scalaxb.toXML[eveapi.xml.account.AccountStatus.Rowset](
               __obj.rowset, None, Some("rowset"), __scope, false))
   }
@@ -129,60 +112,53 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
     val targetNamespace: Option[String] = None
     import scalaxb.ElemName._
 
-    def reads(seq: scala.xml.NodeSeq, stack: List[scalaxb.ElemName])
-      : Either[String, eveapi.xml.account.AccountStatus.Rowset] = seq match {
-      case node: scala.xml.Node =>
-        Right(
-            eveapi.xml.account.AccountStatus
-              .Rowset(scala.collection.immutable.ListMap(List(
-                        (node \ "@columns").headOption map { x =>
-              scalaxb.DataRecord(
-                  x,
-                  node,
-                  scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack))
-            } map { "@columns" -> _ },
-                        (node \ "@key").headOption map { x =>
-              scalaxb.DataRecord(x,
-                                 node,
-                                 scalaxb
-                                   .fromXML[String](x,
-                                                    scalaxb.ElemName(node) :: stack))
-            } map { "@key" -> _ },
-                        (node \ "@name").headOption map { x =>
-              scalaxb.DataRecord(
-                  x,
-                  node,
-                  scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack))
-            } map { "@name" -> _ }
-                    ).flatten[(String, scalaxb.DataRecord[Any])]: _*)))
-      case _ => Left("reads failed: seq must be scala.xml.Node")
-    }
+    def reads(
+      seq: scala.xml.NodeSeq,
+      stack: List[scalaxb.ElemName]): Either[String, eveapi.xml.account.AccountStatus.Rowset] =
+      seq match {
+        case node: scala.xml.Node =>
+          Right(
+              eveapi.xml.account.AccountStatus.Rowset(scala.collection.immutable.ListMap(List(
+                          (node \ "@columns").headOption map { x =>
+                scalaxb.DataRecord(x,
+                                   node,
+                                   scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack))
+              } map { "@columns" -> _ },
+                          (node \ "@key").headOption map { x =>
+                scalaxb.DataRecord(x,
+                                   node,
+                                   scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack))
+              } map { "@key" -> _ },
+                          (node \ "@name").headOption map { x =>
+                scalaxb.DataRecord(x,
+                                   node,
+                                   scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack))
+              } map { "@name" -> _ }
+                      ).flatten[(String, scalaxb.DataRecord[Any])]: _*)))
+        case _ => Left("reads failed: seq must be scala.xml.Node")
+      }
 
-    override def writesAttribute(
-      __obj: eveapi.xml.account.AccountStatus.Rowset,
-      __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
+    override def writesAttribute(__obj: eveapi.xml.account.AccountStatus.Rowset,
+                                 __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
       var attr: scala.xml.MetaData = scala.xml.Null
       __obj.attributes.toList map {
         case ("@columns", _) =>
-          attr =
-            scala.xml.Attribute(null, "columns", __obj.columns.toString, attr)
+          attr = scala.xml.Attribute(null, "columns", __obj.columns.toString, attr)
         case ("@key", _) =>
           attr = scala.xml.Attribute(null, "key", __obj.key.toString, attr)
         case ("@name", _) =>
           attr = scala.xml.Attribute(null, "name", __obj.name.toString, attr)
         case (key, x) =>
-          attr = scala.xml.Attribute(
-              (x.namespace map { __scope.getPrefix(_) }).orNull,
-              x.key.orNull,
-              x.value.toString,
-              attr)
+          attr = scala.xml.Attribute((x.namespace map { __scope.getPrefix(_) }).orNull,
+                                     x.key.orNull,
+                                     x.value.toString,
+                                     attr)
       }
       attr
     }
 
-    def writesChildNodes(
-      __obj: eveapi.xml.account.AccountStatus.Rowset,
-      __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+    def writesChildNodes(__obj: eveapi.xml.account.AccountStatus.Rowset,
+                         __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
       Nil
   }
 }

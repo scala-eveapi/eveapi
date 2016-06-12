@@ -18,8 +18,7 @@ case class Rowset(row: Seq[eveapi.xml.char.Medals.Row] = Nil,
 }
 
 case class Row(attributes: Map[String, scalaxb.DataRecord[Any]] = Map()) {
-  lazy val corporationID =
-    attributes.get("@corporationID") map { _.as[BigInt] }
+  lazy val corporationID = attributes.get("@corporationID") map { _.as[BigInt] }
   lazy val description = attributes.get("@description") map { _.as[String] }
   lazy val issued = attributes("@issued").as[String]
   lazy val issuerID = attributes("@issuerID").as[BigInt]

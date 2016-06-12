@@ -27,15 +27,11 @@ case class Rowset(row: Seq[eveapi.xml.eve.FacWarTopStats.Row] = Nil,
 
 case class Row(attributes: Map[String, scalaxb.DataRecord[Any]] = Map()) {
   lazy val characterID = attributes.get("@characterID") map { _.as[BigInt] }
-  lazy val characterName =
-    attributes.get("@characterName") map { _.as[String] }
-  lazy val corporationID =
-    attributes.get("@corporationID") map { _.as[BigInt] }
-  lazy val corporationName =
-    attributes.get("@corporationName") map { _.as[String] }
+  lazy val characterName = attributes.get("@characterName") map { _.as[String] }
+  lazy val corporationID = attributes.get("@corporationID") map { _.as[BigInt] }
+  lazy val corporationName = attributes.get("@corporationName") map { _.as[String] }
   lazy val factionID = attributes.get("@factionID") map { _.as[BigInt] }
   lazy val factionName = attributes.get("@factionName") map { _.as[String] }
   lazy val kills = attributes.get("@kills") map { _.as[BigInt] }
-  lazy val victoryPoints =
-    attributes.get("@victoryPoints") map { _.as[BigInt] }
+  lazy val victoryPoints = attributes.get("@victoryPoints") map { _.as[BigInt] }
 }
