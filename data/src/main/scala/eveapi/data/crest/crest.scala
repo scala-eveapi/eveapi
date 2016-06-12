@@ -4,34 +4,40 @@ case class Href(
   href: String
 )
 
-trait Identifier[T] {
+case class ImageHref(
+  href: String
+)
+
+trait Identifier[L, T[_]] extends GetLink[L, T[L]] {
   def id: Long
-  def href: String
+  def href: L
 }
 
-case class ShortIdentifier[T](
+case class ShortIdentifier[L, T[_]](
   id: Long,
-  href: String
+  href: L
 )
-    extends Identifier[T]
+    extends Identifier[L, T]
 
-case class StandardIdentifier[T](
+case class StandardIdentifier[L, T[_]](
   id: Long,
   name: String,
-  href: String
+  href: L
 )
-    extends Identifier[T]
+    extends Identifier[L, T]
 
-case class ContactIdentifier[T](
+case class ContactIdentifier[L, T[_]](
   id: Long,
   name: String,
-  href: String,
+  href: L,
   isNPC: Boolean
 )
-    extends Identifier[T]
+    extends Identifier[L, T]
 
 case class Paginated[T](
   items: List[T],
   pageCount: Long,
   totalCount: Long
 )
+
+case class Empty()

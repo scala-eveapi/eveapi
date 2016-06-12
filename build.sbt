@@ -4,15 +4,14 @@ scalaVersion in ThisBuild := "2.11.8"
 version in ThisBuild := Version
 scalafmtConfig in ThisBuild := Some((baseDirectory in root).value / ".scalafmt")
 
-val globalSettings = reformatOnCompileSettings
+val globalSettings = reformatOnCompileSettings ++ addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.7.1")
 
 lazy val Version = "0.1"
 
 lazy val root = file(".")
-lazy val data = (project in file("data")).settings(reformatOnCompileSettings)
-lazy val compressed = (project in file("compressed")).settings(reformatOnCompileSettings)
-lazy val compress = (project in file("compress")).settings(
-  reformatOnCompileSettings,
+lazy val data = (project in file("data")).settings(globalSettings)
+lazy val compressed = (project in file("compressed")).settings(globalSettings)
+lazy val compress = (project in file("compress")).settings(globalSettings).settings(
   version := Version,
   scalaVersion := "2.11.8",
   resolvers ++= Seq(
@@ -25,16 +24,14 @@ lazy val compress = (project in file("compress")).settings(
     , "com.chuusai" %% "shapeless" % "2.3.1"
   )
 )
-lazy val xml = (project in file("xml")).settings(
-  reformatOnCompileSettings,
+lazy val xml = (project in file("xml")).settings(globalSettings).settings(
   libraryDependencies ++= Seq(
       "org.scala-lang.modules"       %% "scala-xml"                % "1.0.3"
     , "org.scala-lang.modules"       %% "scala-parser-combinators" % "1.0.3"
   )
 )
 
-lazy val blazeClient = (project in file("blaze-client")) .settings(
-  reformatOnCompileSettings,
+lazy val blazeClient = (project in file("blaze-client")).settings(globalSettings).settings(
   name := "blaze-client",
   libraryDependencies ++= Seq(
   )

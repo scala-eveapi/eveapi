@@ -6,17 +6,17 @@ case class Position(
   z: Double
 )
 
-case class Constellation()
-case class Station()
+case class Constellation[L]()
+case class Station[L]()
 
-case class SolarSystem(
-  stats: Href,
+case class SolarSystem[L](
+  // stats: Href,
   name: String,
   securityStatus: Double,
   securityClass: String,
   href: String,
-  planets: List[Href],
+  // planets: List[Href],
   position: Position,
-  constellation: ShortIdentifier[Constellation],
+  constellation: ShortIdentifier[L, Constellation],
   id: Long
 )

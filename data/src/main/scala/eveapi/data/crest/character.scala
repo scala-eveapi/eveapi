@@ -1,10 +1,10 @@
 package eveapi.data.crest
 
 case class Portrait(
-  `32x32`: Href,
-  `64x64`: Href,
-  `128x128`: Href,
-  `256x256`: Href
+  `32x32`: ImageHref,
+  `64x64`: ImageHref,
+  `128x128`: ImageHref,
+  `256x256`: ImageHref
 )
 
 case class Corporation(
@@ -15,44 +15,44 @@ case class Corporation(
   id: Long
 )
 
-case class BloodLine()
-case class Race()
+case class BloodLine[L]()
+case class Race[L]()
 
-case class Character(
-  standings: Href,
-  bloodLine: Identifier[BloodLine],
-  waypoints: Href,
-  channels: Href,
-  href: String,
-  accounts: Href,
+case class Character[L](
+  // standings: GetLinkI[L],
+  bloodLine: Identifier[L, BloodLine],
+  // waypoints: Href,
+  // channels: Href,
+  href: GetLinkI[L, Character[L]],
+  // accounts: Href,
   portrait: Portrait,
   id: Long,
-  fittings: Href,
-  contacts: Href,
+  // fittings: Href,
+  // contacts: Href,
   corporation: Corporation,
-  location: Href,
-  mail: Href,
+  // location: Href,
+  // mail: Href,
   description: String,
-  notifications: Href,
+  // notifications: Href,
   name: String,
   gender: Long,
-  race: Identifier[Race]
+  race: Identifier[L, Race]
 )
 
-case class Location(
-  solarSystem: Option[Identifier[SolarSystem]],
-  station: Option[Identifier[Station]]
+case class Location[L](
+  solarSystem: Option[Identifier[L, SolarSystem]],
+  station: Option[Identifier[L, Station]]
 )
 
-case class Alliance()
+case class Alliance[L]()
 
 case class ContactsCharacter(
   name: String,
   corporation: Corporation,
   isNPC: Boolean,
   href: String,
-  capsuleer: Href,
-  portrait: Map[String, Href],
+  // capsuleer: Href,
+  portrait: Map[String, ImageHref],
   id: Long
 )
 
@@ -72,9 +72,9 @@ sealed trait ContactsListItem {
   def blocked: Boolean
 }
 
-case class AllianceContact(
+case class AllianceContact[L](
   standing: Double,
-  alliance: Identifier[Alliance],
+  alliance: Identifier[L, Alliance],
   contact: Contact,
   href: String,
   contactType: String,
