@@ -36,3 +36,14 @@ lazy val blazeClient = (project in file("blaze-client")).settings(globalSettings
   libraryDependencies ++= Seq(
   )
 ).dependsOn(data, compressed)
+lazy val blazeClientXml = (project in file("blaze-client-xml")).settings(globalSettings).settings(
+  name:= "blaze-client-xml",
+  resolvers ++= Seq(
+      Resolver.sonatypeRepo("releases")
+    , Resolver.sonatypeRepo("snapshots")
+  ),
+  libraryDependencies ++= Seq(
+    "org.http4s" %% "http4s-blaze-client" % "0.14.0a-SNAPSHOT",
+    "joda-time"  %  "joda-time"           % "2.9.4"
+  )
+).dependsOn(xml)

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="eveapi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="currentTime"/>
+        <xs:element ref="result"/>
+        <xs:element ref="cachedUntil"/>
+      </xs:sequence>
+      <xs:attribute name="version" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="currentTime" type="xs:string"/>
+  <xs:element name="result">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="characterID"/>
+        <xs:element ref="characterName"/>
+        <xs:element ref="race"/>
+        <xs:element ref="bloodlineID"/>
+        <xs:element ref="bloodline"/>
+        <xs:element ref="ancestryID"/>
+        <xs:element ref="ancestry"/>
+        <xs:element ref="corporationID"/>
+        <xs:element ref="corporation"/>
+        <xs:element ref="corporationDate"/>
+        <xs:element ref="securityStatus"/>
+        <xs:element ref="rowset"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="characterID" type="xs:integer"/>
+  <xs:element name="characterName" type="xs:string"/>
+  <xs:element name="race" type="xs:NCName"/>
+  <xs:element name="bloodlineID" type="xs:integer"/>
+  <xs:element name="bloodline" type="xs:NCName"/>
+  <xs:element name="ancestryID" type="xs:integer"/>
+  <xs:element name="ancestry" type="xs:NCName"/>
+  <xs:element name="corporationID" type="xs:integer"/>
+  <xs:element name="corporation" type="xs:string"/>
+  <xs:element name="corporationDate" type="xs:string"/>
+  <xs:element name="securityStatus" type="xs:decimal"/>
+  <xs:element name="rowset">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="row"/>
+      </xs:sequence>
+      <xs:attribute name="columns" use="required"/>
+      <xs:attribute name="key" use="required" type="xs:NCName"/>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="row">
+    <xs:complexType>
+      <xs:attribute name="corporationID" use="required" type="xs:integer"/>
+      <xs:attribute name="corporationName" use="required"/>
+      <xs:attribute name="recordID" use="required" type="xs:integer"/>
+      <xs:attribute name="startDate" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cachedUntil" type="xs:string"/>
+</xs:schema>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="eveapi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="currentTime"/>
+        <xs:element ref="result"/>
+        <xs:element ref="cachedUntil"/>
+      </xs:sequence>
+      <xs:attribute name="version" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="currentTime" type="xs:string"/>
+  <xs:element name="result">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="totals"/>
+        <xs:element maxOccurs="unbounded" ref="rowset"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="totals">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="killsYesterday"/>
+        <xs:element ref="killsLastWeek"/>
+        <xs:element ref="killsTotal"/>
+        <xs:element ref="victoryPointsYesterday"/>
+        <xs:element ref="victoryPointsLastWeek"/>
+        <xs:element ref="victoryPointsTotal"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="killsYesterday" type="xs:integer"/>
+  <xs:element name="killsLastWeek" type="xs:integer"/>
+  <xs:element name="killsTotal" type="xs:integer"/>
+  <xs:element name="victoryPointsYesterday" type="xs:integer"/>
+  <xs:element name="victoryPointsLastWeek" type="xs:integer"/>
+  <xs:element name="victoryPointsTotal" type="xs:integer"/>
+  <xs:element name="rowset">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="row"/>
+      </xs:sequence>
+      <xs:attribute name="columns" use="required"/>
+      <xs:attribute name="key" type="xs:NCName"/>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="row">
+    <xs:complexType>
+      <xs:attribute name="againstID" type="xs:integer"/>
+      <xs:attribute name="againstName"/>
+      <xs:attribute name="factionID" use="required" type="xs:integer"/>
+      <xs:attribute name="factionName" use="required"/>
+      <xs:attribute name="killsLastWeek" type="xs:integer"/>
+      <xs:attribute name="killsTotal" type="xs:integer"/>
+      <xs:attribute name="killsYesterday" type="xs:integer"/>
+      <xs:attribute name="pilots" type="xs:integer"/>
+      <xs:attribute name="systemsControlled" type="xs:integer"/>
+      <xs:attribute name="victoryPointsLastWeek" type="xs:integer"/>
+      <xs:attribute name="victoryPointsTotal" type="xs:integer"/>
+      <xs:attribute name="victoryPointsYesterday" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cachedUntil" type="xs:string"/>
+</xs:schema>

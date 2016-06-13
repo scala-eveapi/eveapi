@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="eveapi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="currentTime"/>
+        <xs:element ref="result"/>
+        <xs:element ref="cachedUntil"/>
+      </xs:sequence>
+      <xs:attribute name="version" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="currentTime" type="xs:string"/>
+  <xs:element name="result">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="characters"/>
+        <xs:element ref="corporations"/>
+        <xs:element ref="factions"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="characters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="rowset"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="corporations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="rowset"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="factions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="rowset"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cachedUntil" type="xs:string"/>
+  <xs:element name="rowset">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="row"/>
+      </xs:sequence>
+      <xs:attribute name="columns" use="required"/>
+      <xs:attribute name="key" use="required" type="xs:NCName"/>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="row">
+    <xs:complexType>
+      <xs:attribute name="characterID" type="xs:integer"/>
+      <xs:attribute name="characterName"/>
+      <xs:attribute name="corporationID" type="xs:integer"/>
+      <xs:attribute name="corporationName"/>
+      <xs:attribute name="factionID" type="xs:integer"/>
+      <xs:attribute name="factionName"/>
+      <xs:attribute name="kills" type="xs:integer"/>
+      <xs:attribute name="victoryPoints" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
