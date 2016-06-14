@@ -30,36 +30,42 @@ case class DeletionResponse(code: Int, error: Option[EveException]) extends Resp
 
 // TCs
 sealed trait Requester[L] {
+  type ErrorMonad [_, _]
   type Monad [_]
 }
 trait GetRequester[L, T] extends Requester[L] {
-  def get(href: L): Monad[T]
+  def get(href: L): Monad[ErrorMonad[EveException, T]]
 }
 trait PutRequester[L, T] extends Requester[L] {
-  def put(href: L, input: T): Monad[UpdateResponse]
+  def put(href: L, input: T): Monad[ErrorMonad[EveException, UpdateResponse]]
 }
 trait PostRequester[L, T] extends Requester[L] {
-  def post(href: L, input: T): Monad[CreationResponse]
+  def post(href: L, input: T): Monad[ErrorMonad[EveException, CreationResponse]]
 }
 trait DeleteRequester[L] extends Requester[L] {
-  def delete(href: L): Monad[DeletionResponse]
+  def delete(href: L): Monad[ErrorMonad[EveException, DeletionResponse]]
 }
 
 // Case classes
 sealed trait Link[L] { def href: L }
 trait GetLink[L, T] extends Link[L] {
-  def get()(implicit requester: GetRequester[L, T]): requester.Monad[T] = requester.get(href)
+  def get()(implicit requester: GetRequester[L, T])
+    : requester.Monad[requester.ErrorMonad[EveException, T]] =
+    requester.get(href)
 }
 trait PutLink[L, T] extends Link[L] {
-  def put(input: T)(implicit requester: PutRequester[L, T]): requester.Monad[UpdateResponse] =
+  def put(input: T)(implicit requester: PutRequester[L, T])
+    : requester.Monad[requester.ErrorMonad[EveException, UpdateResponse]] =
     requester.put(href, input)
 }
 trait PostLink[L, T] extends Link[L] {
-  def post(input: T)(implicit requester: PostRequester[L, T]): requester.Monad[CreationResponse] =
+  def post(input: T)(implicit requester: PostRequester[L, T])
+    : requester.Monad[requester.ErrorMonad[EveException, CreationResponse]] =
     requester.post(href, input)
 }
 trait DeleteLink[L] extends Link[L] {
-  def delete()(implicit requester: DeleteRequester[L]): requester.Monad[DeletionResponse] =
+  def delete()(implicit requester: DeleteRequester[L])
+    : requester.Monad[requester.ErrorMonad[EveException, DeletionResponse]] =
     requester.delete(href)
 }
 
