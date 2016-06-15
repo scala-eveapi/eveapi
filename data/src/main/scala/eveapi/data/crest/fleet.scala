@@ -30,11 +30,16 @@ object InviteMember {
     val wingID = Some(wingId)
     val squadID = Some(squadId)
   }
-  case class Peon[L](character: GetLinkI[L, Character[L]], wingId: Long, squadId: Long)
+  case class SquadMember[L](character: GetLinkI[L, Character[L]], wingId: Long, squadId: Long)
       extends InviteMember[L] {
     def role = "squadMember"
     val wingID = Some(wingId)
     val squadID = Some(squadId)
+  }
+  case class RandomInvite[L](character: GetLink[L, Character[L]]) extends InviteMember[L] {
+    def role = "squadMember"
+    val wingID = None
+    val squadID = None
   }
 }
 
