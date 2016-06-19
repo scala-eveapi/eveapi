@@ -8,9 +8,29 @@ resolvers in ThisBuild ++= Seq(
   , Resolver.sonatypeRepo("snapshots")
 )
 
-val globalSettings = reformatOnCompileSettings ++ addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.7.1")
+val globalSettings =
+  reformatOnCompileSettings ++
+    addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.7.1") ++ Seq(
+      scalacOptions ++= Seq(
+        "-deprecation",
+        "-feature",
+        "-unchecked",
+        "-Xlint",
+        "-Ywarn-adapted-args",
+        "-Ywarn-dead-code",
+        "-Ywarn-inaccessible",
+        "-Ywarn-nullary-override",
+        "-Ywarn-numeric-widen",
+        "-language:implicitConversions",
+        "-language:higherKinds",
+        "-language:existentials",
+        "-encoding", "utf8",
+        "-Xelide-below", annotation.elidable.ALL.toString
+      )
+    )
 
 lazy val Version = "0.1"
+lazy val http4sVersion = "0.14.1a"
 
 lazy val root = file(".")
 lazy val data = (project in file("data")).settings(globalSettings)
@@ -33,7 +53,7 @@ lazy val xml = (project in file("xml")).settings(globalSettings).settings(
 lazy val blazeClient = (project in file("blaze-client")).settings(globalSettings).settings(
   name := "blaze-client",
   libraryDependencies ++= Seq(
-      "org.http4s" %% "http4s-blaze-client" % "0.14.1a"
+      "org.http4s" %% "http4s-blaze-client" % http4sVersion
   )
 ).dependsOn(data)
 
@@ -51,3 +71,16 @@ lazy val circeCodecs = (project in file("circe")).settings(globalSettings).setti
     "io.circe" %% "circe-parser"
   ).map(_ % "0.4.1")
 ).dependsOn(data)
+
+lazy val blazeArgonautApi = (project in file("blaze-argonaut-api")).settings(globalSettings).settings(
+  libraryDependencies ++= Seq(
+      "org.atnos" %% "eff-scalaz" % "1.7.1"
+    , "commons-codec" % "commons-codec" % "1.10"
+    , "org.http4s" %% "http4s-blaze-server" % http4sVersion
+    , "org.http4s" %% "http4s-dsl" % http4sVersion
+    , "org.http4s" %% "http4s-argonaut" % http4sVersion
+    , "ch.qos.logback" %  "logback-classic" % "1.1.7"
+  ),
+  addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.7.1"),
+  addCompilerPlugin("com.milessabin" % "si2712fix-plugin_2.11.8" % "1.1.0")
+).dependsOn(data, argonautCodecs, blazeClient)
