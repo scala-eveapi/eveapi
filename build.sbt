@@ -33,6 +33,21 @@ lazy val xml = (project in file("xml")).settings(globalSettings).settings(
 lazy val blazeClient = (project in file("blaze-client")).settings(globalSettings).settings(
   name := "blaze-client",
   libraryDependencies ++= Seq(
-      "org.http4s" %% "http4s-blaze-client" % "0.14.0a-SNAPSHOT"
+      "org.http4s" %% "http4s-blaze-client" % "0.14.1a"
   )
-).dependsOn(data, compressed)
+).dependsOn(data)
+
+lazy val argonautCodecs = (project in file("argonaut")).settings(globalSettings).settings(
+  libraryDependencies ++= Seq(
+    "io.argonaut" %% "argonaut" % "6.1a",
+    "com.github.alexarchambault" %% "argonaut-shapeless_6.1" % "1.1.0-RC2"
+  ),
+  dependencyOverrides += "io.argonaut" %% "argonaut" % "6.1a"
+).dependsOn(data)
+lazy val circeCodecs = (project in file("circe")).settings(globalSettings).settings(
+  libraryDependencies ++= Seq(
+    "io.circe" %% "circe-core",
+    "io.circe" %% "circe-generic",
+    "io.circe" %% "circe-parser"
+  ).map(_ % "0.4.1")
+).dependsOn(data)

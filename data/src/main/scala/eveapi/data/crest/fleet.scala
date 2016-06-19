@@ -6,7 +6,7 @@ case class FleetUrl[L](href: L) extends GetLink[L, Fleet[L]] with PutLink[L, Fle
 case class FleetUpdate(isFreeMove: Option[Boolean] = None, motd: Option[String] = None)
 
 // TODO write circe/argonaut codecs for this one
-sealed trait InviteMember[L] {
+sealed abstract class InviteMember[L] extends Serializable with Product {
   def role: String
   def wingID: Option[Long]
   def squadID: Option[Long]
@@ -36,7 +36,7 @@ object InviteMember {
     val wingID = Some(wingId)
     val squadID = Some(squadId)
   }
-  case class RandomInvite[L](character: GetLink[L, Character[L]]) extends InviteMember[L] {
+  case class RandomInvite[L](character: GetLinkI[L, Character[L]]) extends InviteMember[L] {
     def role = "squadMember"
     val wingID = None
     val squadID = None
