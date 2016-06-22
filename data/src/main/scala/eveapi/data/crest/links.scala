@@ -28,46 +28,12 @@ case class CreationResponse(code: Int, error: Option[EveException]) extends Resp
 case class UpdateResponse(code: Int, error: Option[EveException]) extends Response
 case class DeletionResponse(code: Int, error: Option[EveException]) extends Response
 
-// TCs
-sealed trait Requester[L] {
-  type ErrorMonad [_, _]
-  type Monad [_]
-}
-trait GetRequester[L, T] extends Requester[L] {
-  def get(href: L): Monad[ErrorMonad[EveException, T]]
-}
-trait PutRequester[L, T] extends Requester[L] {
-  def put(href: L, input: T): Monad[ErrorMonad[EveException, UpdateResponse]]
-}
-trait PostRequester[L, T] extends Requester[L] {
-  def post(href: L, input: T): Monad[ErrorMonad[EveException, CreationResponse]]
-}
-trait DeleteRequester[L] extends Requester[L] {
-  def delete(href: L): Monad[ErrorMonad[EveException, DeletionResponse]]
-}
-
 // Case classes
 sealed trait Link[L] { def href: L }
-trait GetLink[L, T] extends Link[L] {
-  def get()(implicit requester: GetRequester[L, T])
-    : requester.Monad[requester.ErrorMonad[EveException, T]] =
-    requester.get(href)
-}
-trait PutLink[L, T] extends Link[L] {
-  def put(input: T)(implicit requester: PutRequester[L, T])
-    : requester.Monad[requester.ErrorMonad[EveException, UpdateResponse]] =
-    requester.put(href, input)
-}
-trait PostLink[L, T] extends Link[L] {
-  def post(input: T)(implicit requester: PostRequester[L, T])
-    : requester.Monad[requester.ErrorMonad[EveException, CreationResponse]] =
-    requester.post(href, input)
-}
-trait DeleteLink[L] extends Link[L] {
-  def delete()(implicit requester: DeleteRequester[L])
-    : requester.Monad[requester.ErrorMonad[EveException, DeletionResponse]] =
-    requester.delete(href)
-}
+trait GetLink[L, T] extends Link[L]
+trait PutLink[L, T] extends Link[L]
+trait PostLink[L, T] extends Link[L]
+trait DeleteLink[L] extends Link[L]
 
 case class GetLinkI[L, T](href: L) extends GetLink[L, T]
 case class PutLinkI[L, T](href: L) extends PutLink[L, T]

@@ -50,13 +50,6 @@ lazy val xml = (project in file("xml")).settings(globalSettings).settings(
   )
 )
 
-lazy val blazeClient = (project in file("blaze-client")).settings(globalSettings).settings(
-  name := "blaze-client",
-  libraryDependencies ++= Seq(
-      "org.http4s" %% "http4s-blaze-client" % http4sVersion
-  )
-).dependsOn(data)
-
 lazy val argonautCodecs = (project in file("argonaut")).settings(globalSettings).settings(
   libraryDependencies ++= Seq(
     "io.argonaut" %% "argonaut" % "6.1a",
@@ -79,8 +72,9 @@ lazy val blazeArgonautApi = (project in file("blaze-argonaut-api")).settings(glo
     , "org.http4s" %% "http4s-blaze-server" % http4sVersion
     , "org.http4s" %% "http4s-dsl" % http4sVersion
     , "org.http4s" %% "http4s-argonaut" % http4sVersion
+    , "org.http4s" %% "http4s-blaze-client" % http4sVersion
     , "ch.qos.logback" %  "logback-classic" % "1.1.7"
   ),
   addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.7.1"),
   addCompilerPlugin("com.milessabin" % "si2712fix-plugin_2.11.8" % "1.1.0")
-).dependsOn(data, argonautCodecs, blazeClient)
+).dependsOn(data, argonautCodecs)

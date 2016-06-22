@@ -72,11 +72,18 @@ case class OAuth2State(seed: Long) {
 
 case class ExchangeToken(code: String, state: String)
 
+object OAuth2 {
+  type EveApiS = Task |: (EveApiError \/ ?) |: State[OAuth2Token, ?] |: NoEffect
+  type Api[T] = Eff[EveApiS, T]
+  type A = EveApiS
+}
+
 case class OAuth2(client: Client,
                   settings: OAuth2Settings,
                   state: OAuth2State,
                   clock: Clock,
                   clientSettings: OAuth2ClientSettings) {
+  import OAuth2._
   implicit def oauth2Decoder =
     DecodeJson({ c =>
       for {
@@ -119,8 +126,7 @@ case class OAuth2(client: Client,
                      .popToken(exchange.state)
                      .fold(x => Task.now(x.left[OAuth2Token]), _ => {
                        client
-                         .fetchAs[OAuth2Token]( // TODO better error handling
-                             POST
+                         .expect[OAuth2Token](POST // TODO handle denial
                                .apply(settings.accessTokenUri,
                                       UrlForm("grant_type" -> "authorization_code",
                                               "code" -> exchange.code))
@@ -157,10 +163,6 @@ case class OAuth2(client: Client,
       }
   }
 
-  type EveApiS = Task |: (EveApiError \/ ?) |: State[OAuth2Token, ?] |: NoEffect
-  type Api[T] = Eff[EveApiS, T]
-  type A = EveApiS
-
   private[this] val logger = getLogger
 
   def bearer(request: Request, token: String) =
@@ -171,18 +173,17 @@ case class OAuth2(client: Client,
       token <- StateEffect.get[A, OAuth2Token]
       newToken <- task[A, OAuth2Token]({
                    client
-                     .fetchAs[OAuth2Token](
+                     .expect[OAuth2Token]( // TODO handle denial
                          POST(settings.refreshUri,
                               UrlForm("grant_type" -> "refresh_token",
                                       "refresh_token" -> token.refresh_token))
-                           .putHeaders(encodeAuth(settings))
-                     )(jsonOf[OAuth2Token])
+                           .putHeaders(encodeAuth(settings)))(jsonOf[OAuth2Token])
                      .map(_.copy(generatedAt = Instant.now(clock)))
                  })
       _ <- StateEffect.put[A, OAuth2Token](token)
     } yield ()
 
-  def executeOAuth[T](request: Request)(decoder: Response => Task[T]): Api[T] = {
+  def executeOAuth[T](request: Request, decoder: Response => Task[T]): Api[T] = {
     for {
       token <- StateEffect.get[A, OAuth2Token]
       _ <- if (token.expired(clock)) refresh else EffMonad[A].point(())
@@ -207,7 +208,7 @@ case class OAuth2(client: Client,
   }
 
   def fetch[T: DecodeJson](request: Request): Api[T] =
-    executeOAuth(request)(_.as[String].map({ str =>
+    executeOAuth(request, _.as[String].map({ str =>
       logger.debug(s"Received body: $str")
       Parse.decode[T](str).fold(err => throw JsonParseError(err), x => x)
     }))
