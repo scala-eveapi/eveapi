@@ -15,13 +15,10 @@ object Execute {
     def apply[T](l: Lift.Link[T]) = l match {
       case Lift.Get(link, dec) => oauth.fetch(Request(uri = link.href, method = Method.GET))(dec)
       case Lift.Put(link, value, dec, enc) =>
-        innocentTask[EveApiS, Request](
-            Request(uri = link.href, method = Method.PUT).withBody(enc.encode(value)))
-          .flatMap(req => oauth.fetch(req)(dec))
+        oauth.fetch(Request(uri = link.href, method = Method.PUT).withBody(enc.encode(value)))(dec)
       case Lift.Post(link, value, dec, enc) =>
-        innocentTask[EveApiS, Request](
-            Request(uri = link.href, method = Method.POST).withBody(enc.encode(value)))
-          .flatMap(req => oauth.fetch(req)(dec))
+        oauth
+          .fetch(Request(uri = link.href, method = Method.POST).withBody(enc.encode(value)))(dec)
       case Lift.Delete(link, dec) =>
         oauth.fetch(Request(uri = link.href, method = Method.DELETE))(dec)
     }

@@ -212,6 +212,8 @@ case class OAuth2(client: Client,
       logger.debug(s"Received body: $str")
       Parse.decode[T](str).fold(err => throw JsonParseError(err), x => x)
     }))
+  def fetch[T: DecodeJson](request: Task[Request]): Api[T] =
+    innocentTask[EveApiS, Request](request).flatMap(r => fetch(r))
   def fetch[T: DecodeJson](uri: Uri): Api[T] = fetch[T](Request(method = Method.GET, uri = uri))
   def verify: Api[VerifyAnswer] = fetch[VerifyAnswer](settings.verifyUri)
 }
