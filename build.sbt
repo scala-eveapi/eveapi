@@ -1,4 +1,4 @@
-organization := "eveapi"
+organization in ThisBuild := "eveapi"
 name := "eveapi"
 scalaVersion in ThisBuild := "2.11.8"
 version in ThisBuild := Version
