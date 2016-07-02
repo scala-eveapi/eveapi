@@ -18,8 +18,7 @@ object InviteMember {
     val wingID = None
     val squadID = None
   }
-  case class WingCommander[L](character: GetLinkI[L, Character[L]], wingId: Long)
-      extends InviteMember[L] {
+  case class WingCommander[L](character: GetLinkI[L, Character[L]], wingId: Long) extends InviteMember[L] {
     def role = "wingCommander"
     val wingID = Some(wingId)
     val squadID = None
@@ -55,18 +54,17 @@ case class Fleet[L](
 /**
   * Choose one of: squadMember, squadCommander, wingCommander, fleetCommander
   */
-case class MoveMember[L](
-  role: String = "squadMember", newWingId: Option[Long], squadID: Option[Long])
+case class MoveMember[L](role: String = "squadMember", newWingId: Option[Long], squadID: Option[Long])
 
 case class Member[L](
   boosterID: Short,
-  character: Identifier[L, Character],
+  character: StandardIdentifier[L, Character],
   joinTime: Instant,
   roleID: Short,
-  ship: Identifier[L, Ship],
-  solarSystem: Identifier[L, SolarSystem],
+  ship: StandardIdentifier[L, Ship],
+  solarSystem: StandardIdentifier[L, SolarSystem],
   squadID: Long,
-  station: Option[Identifier[L, Station]],
+  station: Option[StandardIdentifier[L, Station]],
   takesFleetWarp: Boolean,
   wingID: Long,
   href: L

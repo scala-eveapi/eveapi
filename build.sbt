@@ -7,6 +7,7 @@ resolvers in ThisBuild ++= Seq(
     Resolver.sonatypeRepo("releases")
   , Resolver.sonatypeRepo("snapshots")
 )
+libraryDependencies in ThisBuild += "com.github.alexarchambault" %% "scalacheck-shapeless_1.13" % "1.1.0-RC1" % Test
 
 val globalSettings =
   reformatOnCompileSettings ++
@@ -34,15 +35,14 @@ lazy val http4sVersion = "0.14.1a"
 
 lazy val root = file(".")
 lazy val data = (project in file("data")).settings(globalSettings)
-lazy val compressed = (project in file("compressed")).settings(globalSettings)
 lazy val compress = (project in file("compress")).settings(globalSettings).settings(
   version := Version,
   scalaVersion := "2.11.8",
   libraryDependencies ++= Seq(
-      "org.scalaz" %% "scalaz-core" % "7.2.2"
+      "org.scalaz" %% "scalaz-core" % "7.2.4"
     , "com.chuusai" %% "shapeless" % "2.3.1"
   )
-)
+).dependsOn(data)
 lazy val xml = (project in file("xml")).settings(globalSettings).settings(
   libraryDependencies ++= Seq(
       "org.scala-lang.modules"       %% "scala-xml"                % "1.0.3"

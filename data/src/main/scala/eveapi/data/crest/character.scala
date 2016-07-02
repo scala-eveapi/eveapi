@@ -20,7 +20,7 @@ case class Race[L]()
 
 case class Character[L](
   // standings: GetLinkI[L],
-  bloodLine: Identifier[L, BloodLine],
+  bloodLine: ShortIdentifier[L, BloodLine],
   // waypoints: Href,
   // channels: Href,
   href: GetLinkI[L, Character[L]],
@@ -36,12 +36,12 @@ case class Character[L](
   // notifications: Href,
   name: String,
   gender: Long,
-  race: Identifier[L, Race]
+  race: ShortIdentifier[L, Race]
 )
 
 case class Location[L](
-  solarSystem: Option[Identifier[L, SolarSystem]],
-  station: Option[Identifier[L, Station]]
+  solarSystem: Option[StandardIdentifier[L, SolarSystem]],
+  station: Option[StandardIdentifier[L, Station]]
 )
 
 case class Alliance[L]()
@@ -74,7 +74,7 @@ sealed trait ContactsListItem {
 
 case class AllianceContact[L](
   standing: Double,
-  alliance: Identifier[L, Alliance],
+  alliance: StandardIdentifier[L, Alliance],
   contact: Contact,
   href: String,
   contactType: String,
