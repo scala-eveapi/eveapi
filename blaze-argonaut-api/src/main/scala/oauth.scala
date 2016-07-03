@@ -139,11 +139,11 @@ case class OAuth2(client: Client,
 
   val callbackPath = settings.callbackUri.path.toString
 
-  def oauthService[R](
+  def oauthService(
     storeToken: OAuth2Token => Task[Response]): PartialFunction[Request, Task[Response]] = {
     case r @ GET -> Root / clientSettings.loginPath =>
       EffInterpretation.detach[Task, Response](
-          redirectoToProvider[Task |: NoEffect]()
+          redirectoToProvider[Task |: NoEffect]
       )
     case r @ GET -> callbackPath => {
         val token = for {
