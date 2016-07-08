@@ -30,7 +30,7 @@ val globalSettings =
       )
     )
 
-lazy val Version = "0.1"
+lazy val Version = "0.1-SNAPSHOT"
 lazy val http4sVersion = "0.14.1a"
 
 lazy val root = file(".")
