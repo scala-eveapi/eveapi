@@ -1,4 +1,4 @@
-package eveapi.execute
+package eveapi
 import scalaz._, Scalaz._
 import eveapi.data.crest._
 import argonaut._

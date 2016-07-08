@@ -5,7 +5,7 @@ import scalaz.concurrent._
 import org.http4s._
 import org.http4s.argonaut._
 
-import eveapi.execute._
+import eveapi._
 import eveapi.oauth._
 import eveapi.utils.TaskEffect._
 
