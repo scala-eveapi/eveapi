@@ -11,16 +11,15 @@ import eveapi.utils.TaskEffect._
 
 object Execute {
   import OAuth2._
-  def OAuthInterpreter(oauth: OAuth2) = new (Lift.Link ~> Api) {
+  val OAuthInterpreter = new (Lift.Link ~> Api) {
     def apply[T](l: Lift.Link[T]) = l match {
-      case Lift.Get(link, dec) => oauth.fetch(Request(uri = link.href, method = Method.GET))(dec)
+      case Lift.Get(link, dec) => fetch(Request(uri = link.href, method = Method.GET))(dec)
       case Lift.Put(link, value, dec, enc) =>
-        oauth.fetch(Request(uri = link.href, method = Method.PUT).withBody(enc.encode(value)))(dec)
+        fetch(Request(uri = link.href, method = Method.PUT).withBody(enc.encode(value)))(dec)
       case Lift.Post(link, value, dec, enc) =>
-        oauth
-          .fetch(Request(uri = link.href, method = Method.POST).withBody(enc.encode(value)))(dec)
+        fetch(Request(uri = link.href, method = Method.POST).withBody(enc.encode(value)))(dec)
       case Lift.Delete(link, dec) =>
-        oauth.fetch(Request(uri = link.href, method = Method.DELETE))(dec)
+        fetch(Request(uri = link.href, method = Method.DELETE))(dec)
     }
   }
 }
