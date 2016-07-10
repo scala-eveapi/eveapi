@@ -20,13 +20,13 @@ object Lift {
   case class Delete(link: DeleteLink[Uri], decoder: DecodeJson[DeletionResponse])
       extends Link[DeletionResponse]
 
-  def get[T](l: GetLink[Uri, T])(implicit dec: DecodeJson[T]) = Free.liftF(Get(l, dec))
+  def get[T](l: GetLink[Uri, T])(implicit dec: DecodeJson[T]) = Free.liftF[Link, T](Get(l, dec))
   def put[T](l: PutLink[Uri, T], value: T)(
     implicit dec: DecodeJson[UpdateResponse], enc: EncodeJson[T]) =
-    Free.liftF(Put(l, value, dec, enc))
+    Free.liftF[Link, UpdateResponse](Put(l, value, dec, enc))
   def post[T](l: PostLink[Uri, T], value: T)(
     implicit dec: DecodeJson[CreationResponse], enc: EncodeJson[T]) =
-    Free.liftF(Post(l, value, dec, enc))
+    Free.liftF[Link, CreationResponse](Post(l, value, dec, enc))
   def delete(l: DeleteLink[Uri])(implicit dec: DecodeJson[DeletionResponse]) =
-    Free.liftF(Delete(l, dec))
+    Free.liftF[Link, DeletionResponse](Delete(l, dec))
 }
