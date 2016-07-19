@@ -23,7 +23,7 @@ object TaskEffect {
   def innocentTask[R, A](a: Task[A])(implicit m: Task <= R): Eff[R, A] =
     send[Task, R, A](a)
 
-  def runTask[R <: Effects, U <: Effects, A, B](atMost: Duration)(effects: Eff[R, A])(
+  def runTask[R, U, A, B](atMost: Duration)(effects: Eff[R, A])(
     implicit m: Member.Aux[Task, R, U]): Eff[U, A] = {
     val recurse = new Recurse[Task, U, A] {
       def apply[X](m: Task[X]): X \/ Eff[U, A] =
