@@ -77,4 +77,4 @@ lazy val blazeArgonautApi = (project in file("blaze-argonaut-api")).settings(glo
   ),
   addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.7.1"),
   addCompilerPlugin("com.milessabin" % "si2712fix-plugin_2.11.8" % "1.1.0")
-).dependsOn(data, argonautCodecs)
+).dependsOn(data, argonautCodecs, compress)
