@@ -5,7 +5,7 @@ import java.time._
 
 import eveapi.data.crest._
 
-case class Compress[L]()(implicit val lens: PathLens[L]) {
+case class Compress[L](implicit val lens: PathLens[L]) {
   trait CompressLink[T[_], IdType] {
     def compress(href: T[L]): IdType
     def decompress(id: IdType): Reader[EveServer, T[L]]
@@ -66,10 +66,9 @@ case class Compress[L]()(implicit val lens: PathLens[L]) {
       }
     }
   implicit def compressMember(
-    implicit compressCharacter: CompressLink[Lambda[Lin => StandardIdentifier[Lin, Character]],
-                                             CompressedStandardIdentifier[Character]],
-    compressShip: CompressLink[
-        Lambda[Lin => StandardIdentifier[Lin, Ship]], CompressedStandardIdentifier[Ship]],
+    implicit compressCharacter: CompressLink[
+        Lambda[Lin => StandardIdentifier[Lin, Character]], CompressedCharacter],
+    compressShip: CompressLink[Lambda[Lin => StandardIdentifier[Lin, Ship]], CompressedShip],
     compressSolarSystem: CompressLink[Lambda[Lin => StandardIdentifier[Lin, SolarSystem]],
                                       CompressedStandardIdentifier[SolarSystem]],
     compressStation: CompressLink[
@@ -154,17 +153,19 @@ case class CompressedWing(
   fleetId: Long, wingId: Long, name: String, squadsList: List[CompressedSquad])
 case class CompressedMember(fleetId: Long,
                             boosterID: Short,
-                            character: CompressedStandardIdentifier[Character],
+                            character: CompressedCharacter,
                             joinTime: Instant,
                             roleID: Short,
-                            ship: CompressedStandardIdentifier[Ship],
-                            solarSystem: CompressedStandardIdentifier[SolarSystem],
+                            ship: CompressedShip,
+                            solarSystem: CompressedSolarSystem,
                             squadID: Long,
-                            station: Option[CompressedStandardIdentifier[Station]],
+                            station: Option[CompressedStation],
                             takesFleetWarp: Boolean,
                             wingID: Long)
 case class CompressedFleet(
   fleetId: Long, isFreeMove: Boolean, isRegistered: Boolean, isVoiceEnabled: Boolean, motd: String)
+case class CompressedLocation(
+  solarSystem: Option[CompressedSolarSystem], station: Option[CompressedStation])
 
 case class EveServer(server: String)
 
