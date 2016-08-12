@@ -1,11 +1,10 @@
-package eveapi.blazeClient
+package eveapi
 
 import scalaz._, Scalaz._
 import scalaz.concurrent._
 import org.http4s._
 import org.http4s.argonaut._
 
-import eveapi._
 import eveapi.oauth._
 import eveapi.utils.TaskEffect._
 
