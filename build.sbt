@@ -31,7 +31,7 @@ val globalSettings =
     )
 
 lazy val Version = "0.1-SNAPSHOT"
-lazy val http4sVersion = "0.14.1a"
+lazy val http4sVersion = "0.14.2a"
 
 lazy val root = file(".")
 lazy val data = (project in file("data")).settings(globalSettings)
