@@ -115,14 +115,15 @@ case class OAuth2(client: Client,
                                .apply(settings.accessTokenUri,
                                       UrlForm("grant_type" -> "authorization_code",
                                               "code" -> exchange.code))
-                               .putHeaders(encodeAuth(settings)))(jsonOf[OAuth2Token])
+                               .putHeaders(encodeAuth(settings)))(
+                             jsonOf[OAuth2Token](oauth2Decoder))
                          .map(_.copy(generatedAt = Instant.now(clock)))
                      }.attempt.map(_.leftMap(ThrownException.apply)))
                  })
       result <- fromDisjunction(response)
     } yield result
 
-  val callbackPath = settings.callbackUri.path.toString
+  val callbackPath = settings.callbackUri.path.toString.tail
 
   def oauthService(
     storeToken: OAuth2Token => Task[Response]): PartialFunction[Request, Task[Response]] = {
@@ -130,7 +131,7 @@ case class OAuth2(client: Client,
       EffInterpretation.detach[Task, Response](
           redirectoToProvider[Task |: NoEffect]
       )
-    case r @ GET -> callbackPath => {
+    case r @ GET -> Root / callbackPath => {
         val token = for {
           code <- r.params.get("code")
           state <- r.params.get("state")
