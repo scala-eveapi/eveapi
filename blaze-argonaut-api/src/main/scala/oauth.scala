@@ -131,7 +131,7 @@ case class OAuth2(client: Client,
       EffInterpretation.detach[Task, Response](
           redirectoToProvider[Task |: NoEffect]
       )
-    case r @ GET -> Root / callbackPath => {
+    case r @ GET -> Root / `callbackPath` => {
         val token = for {
           code <- r.params.get("code")
           state <- r.params.get("state")
