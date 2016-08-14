@@ -184,7 +184,7 @@ object OAuth2 {
                            .putHeaders(oauth.encodeAuth(oauth.settings)))(jsonOf[OAuth2Token])
                      .map(_.copy(generatedAt = Instant.now(oauth.clock)))
                  })
-      _ <- StateEffect.put[A, OAuth2Token](token)
+      _ <- StateEffect.put[A, OAuth2Token](newToken)
     } yield ()
 
   def executeOAuth[T](request: Request, decoder: Response => Task[T]): Api[T] = {
@@ -192,17 +192,23 @@ object OAuth2 {
       oauth <- ask[A, OAuth2]
       token <- StateEffect.get[A, OAuth2Token]
       _ <- if (token.expired(oauth.clock)) refresh else EffMonad[A].point(())
-      fetch = oauth.client.fetch[(Status, String) \/ T](bearer(request, token.access_token))({
-        response =>
-          response.status match {
-            case Status.Ok => decoder(response).map(\/-.apply)
-            case _ => response.as[String].map(body => -\/((response.status, body)))
-          }
+      fetch = ({ token: OAuth2Token =>
+        oauth.client.fetch[(Status, String) \/ T](bearer(request, token.access_token))({
+          response =>
+            response.status match {
+              case Status.Ok => decoder(response).map(\/-.apply)
+              case _ => response.as[String].map(body => -\/((response.status, body)))
+            }
+        })
       })
-      maybeResponse <- task[A, (Status, String) \/ T](fetch)
+      maybeResponse <- task[A, (Status, String) \/ T](fetch(token))
       result <- maybeResponse match {
                  case -\/((Status.Unauthorized, _)) =>
-                   refresh >> task[A, (Status, String) \/ T](fetch)
+                   refresh >> StateEffect
+                     .get[A, OAuth2Token]
+                     .flatMap({ token =>
+                       task[A, (Status, String) \/ T](fetch(token))
+                     })
                      .map(_.leftMap[EveApiError]((EveApiStatusFailed.apply _).tupled))
                      .flatMap(fromDisjunction[A, EveApiError, T])
                  case \/-(resp) => task[A, T](Task.now(resp))
