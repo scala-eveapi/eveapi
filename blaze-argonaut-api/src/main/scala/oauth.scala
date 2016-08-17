@@ -1,7 +1,7 @@
 package eveapi.oauth
 
 import org.atnos.eff._, org.atnos.eff.syntax.all._, org.atnos.eff.all._
-import argonaut._, Argonaut._, Shapeless._
+import argonaut._, Argonaut._, ArgonautShapeless._
 import scalaz._, Scalaz._
 import scalaz.concurrent._
 import scala.util.Random
@@ -12,6 +12,7 @@ org.http4s.util.{CaseInsensitiveString => CIS}
 import java.time._
 import java.time.temporal.ChronoUnit._
 import org.log4s.getLogger
+import eveapi.data.crest.{EveException, UnauthorizedError}
 
 import eveapi.utils._
 import TaskEffect._
@@ -193,29 +194,39 @@ object OAuth2 {
       token <- StateEffect.get[A, OAuth2Token]
       _ <- if (token.expired(oauth.clock)) refresh else EffMonad[A].point(())
       fetch = ({ token: OAuth2Token =>
-        oauth.client.fetch[(Status, String) \/ T](bearer(request, token.access_token))({
+        task[A, (Status, String) \/ T](
+            oauth.client.fetch[(Status, String) \/ T](bearer(request, token.access_token))({
           response =>
             response.status match {
               case Status.Ok => decoder(response).map(\/-.apply)
               case _ => response.as[String].map(body => -\/((response.status, body)))
             }
-        })
+        }))
       })
-      maybeResponse <- task[A, (Status, String) \/ T](fetch(token))
-      result <- maybeResponse match {
-                 case -\/((Status.Unauthorized, _)) =>
-                   refresh >> StateEffect
-                     .get[A, OAuth2Token]
-                     .flatMap({ token =>
-                       task[A, (Status, String) \/ T](fetch(token))
-                     })
-                     .map(_.leftMap[EveApiError]((EveApiStatusFailed.apply _).tupled))
-                     .flatMap(fromDisjunction[A, EveApiError, T])
-                 case \/-(resp) => task[A, T](Task.now(resp))
-                 case -\/((status, body)) =>
-                   fromDisjunction[A, EveApiError, T](-\/(EveApiStatusFailed(status, body)))
-               }
+      result <- maybeRetry(fetch)
     } yield result
+  }
+
+  def maybeRetry[T](fetch: OAuth2Token => Api[(Status, String) \/ T], retries: Int = 3): Api[T] = {
+    if (retries < 1) {
+      fromDisjunction[A, EveApiError, T](-\/(OutOfRetries()))
+    } else {
+      for {
+        token <- StateEffect.get[A, OAuth2Token]
+        response <- fetch(token)
+        result <- response match {
+                   case -\/((status, body)) =>
+                     val error = Parse.decode[EveException](body).leftMap(_ => body)
+                     error match {
+                       case \/-(UnauthorizedError(_, _, _)) =>
+                         refresh >> maybeRetry(fetch, retries - 1)
+                       case _ =>
+                         fromDisjunction[A, EveApiError, T](-\/(EveApiStatusFailed(status, error)))
+                     }
+                   case \/-(resp) => task[A, T](Task.now(resp))
+                 }
+      } yield result
+    }
   }
 
   def fetch[T: DecodeJson](request: Request): Api[T] =

@@ -1,25 +1,5 @@
 package eveapi.data.crest
 
-// TODO add more
-sealed trait EveException {
-  def exceptionType: String
-  def key: String
-}
-case class ForbiddenError(
-  exceptionType: String,
-  isLocalized: Boolean,
-  key: String,
-  message: String,
-  title: Option[String]
-)
-    extends EveException
-case class UnsupportedMediaTypeError(
-  exceptionType: String,
-  key: String,
-  message: String
-)
-    extends EveException
-
 sealed trait Response {
   def code: Int
   def error: Option[EveException]

@@ -1,8 +1,10 @@
 package eveapi.errors
 
 import argonaut.CursorHistory
+import argonaut.derive._
 import org.http4s._, org.http4s.dsl._, org.http4s.client._
 import scalaz._, Scalaz._
+import eveapi.data.crest._
 
 sealed trait EveApiError extends Throwable
 
@@ -18,9 +20,19 @@ case class JsonParseError(message: String \/ (String, CursorHistory)) extends Ev
 case class ParseFailure(fail: org.http4s.ParseFailure) extends EveApiError {
   override def getMessage = fail.toString
 }
-case class EveApiStatusFailed(fail: Status, body: String) extends EveApiError {
+case class EveApiStatusFailed(fail: Status, body: String \/ EveException) extends EveApiError {
   override def getMessage = s"Failed with: $fail Message: $body"
 }
 case class ThrownException(exception: Throwable) extends EveApiError {
   override def getCause = exception
+}
+case class OutOfRetries() extends EveApiError {
+  override def getMessage = "Out of retries. Check your logs."
+}
+
+object EveApiStatusFailed {
+  implicit val codec: JsonSumCodecFor[EveException] = JsonSumCodecFor(
+      new JsonSumTypeFieldCodec {
+    override def typeField = "exceptionType"
+  })
 }
