@@ -162,7 +162,7 @@ object OAuth2 {
       } yield OAuth2Token(ac, tt, ei, rt)
     })
 
-  type EveApiS = Fx.fx4[Reader[OAuth2, ?], Task, (EveApiError \/ ?), State[OAuth2Token, ?]]
+  type EveApiS = Fx.fx4[Reader[OAuth2, ?], (EveApiError \/ ?), State[OAuth2Token, ?], Task]
   type Api[T] = Eff[EveApiS, T]
   type A = EveApiS
 
