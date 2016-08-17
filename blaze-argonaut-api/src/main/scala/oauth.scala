@@ -130,7 +130,7 @@ case class OAuth2(client: Client,
     storeToken: OAuth2Token => Task[Response]): PartialFunction[Request, Task[Response]] = {
     case r @ GET -> Root / clientSettings.loginPath =>
       EffInterpretation.detach[Task, Response](
-          redirectoToProvider[Task |: NoEffect]
+          redirectoToProvider[Fx.fx1[Task]]
       )
     case r @ GET -> Root / `callbackPath` => {
         val token = for {
@@ -143,7 +143,7 @@ case class OAuth2(client: Client,
                 s"Couldn't find all parameters in the callback. Params: ${r.params}")
           }
         }.flatMap({ token =>
-          exchangeOAuthToken[(EveApiError \/ ?) |: Task |: NoEffect](token).runDisjunction.detach
+          exchangeOAuthToken[Fx.fx2[(EveApiError \/ ?), Task]](token).runDisjunction.detach
             .map(_.fold[OAuth2Token](err => throw err, x => x))
             .flatMap(storeToken)
         })
@@ -162,8 +162,7 @@ object OAuth2 {
       } yield OAuth2Token(ac, tt, ei, rt)
     })
 
-  type EveApiS =
-    Reader[OAuth2, ?] |: Task |: (EveApiError \/ ?) |: State[OAuth2Token, ?] |: NoEffect
+  type EveApiS = Fx.fx4[Reader[OAuth2, ?], Task, (EveApiError \/ ?), State[OAuth2Token, ?]]
   type Api[T] = Eff[EveApiS, T]
   type A = EveApiS
 

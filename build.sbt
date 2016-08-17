@@ -67,7 +67,7 @@ lazy val circeCodecs = (project in file("circe")).settings(globalSettings).setti
 
 lazy val blazeArgonautApi = (project in file("blaze-argonaut-api")).settings(globalSettings).settings(
   libraryDependencies ++= Seq(
-      "org.atnos" %% "eff-scalaz" % "1.7.4"
+      "org.atnos" %% "eff-scalaz" % "2.0.0-RC1"
     , "commons-codec" % "commons-codec" % "1.10"
     , "org.http4s" %% "http4s-blaze-server" % http4sVersion
     , "org.http4s" %% "http4s-dsl" % http4sVersion
