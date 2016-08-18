@@ -1,7 +1,7 @@
 package eveapi.oauth
 
 import org.atnos.eff._, org.atnos.eff.syntax.all._, org.atnos.eff.all._
-import argonaut._, Argonaut._, ArgonautShapeless._
+import argonaut._, Argonaut._, ArgonautShapeless._, derive._
 import scalaz._, Scalaz._
 import scalaz.concurrent._
 import scala.util.Random
@@ -162,7 +162,12 @@ object OAuth2 {
       } yield OAuth2Token(ac, tt, ei, rt)
     })
 
-  type EveApiS = Fx.fx4[Reader[OAuth2, ?], (EveApiError \/ ?), State[OAuth2Token, ?], Task]
+  implicit val codec: JsonSumCodecFor[EveException] = JsonSumCodecFor(
+      new JsonSumTypeFieldCodec {
+    override def typeField = "exceptionType"
+  })
+
+  type EveApiS = Fx.fx4[(EveApiError \/ ?), Reader[OAuth2, ?], State[OAuth2Token, ?], Task]
   type Api[T] = Eff[EveApiS, T]
   type A = EveApiS
 

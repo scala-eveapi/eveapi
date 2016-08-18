@@ -1,7 +1,6 @@
 package eveapi.errors
 
 import argonaut.CursorHistory
-import argonaut.derive._
 import org.http4s._, org.http4s.dsl._, org.http4s.client._
 import scalaz._, Scalaz._
 import eveapi.data.crest._
@@ -28,11 +27,4 @@ case class ThrownException(exception: Throwable) extends EveApiError {
 }
 case class OutOfRetries() extends EveApiError {
   override def getMessage = "Out of retries. Check your logs."
-}
-
-object EveApiStatusFailed {
-  implicit val codec: JsonSumCodecFor[EveException] = JsonSumCodecFor(
-      new JsonSumTypeFieldCodec {
-    override def typeField = "exceptionType"
-  })
 }
