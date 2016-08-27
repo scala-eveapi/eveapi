@@ -7,8 +7,7 @@ import scalaz.concurrent._
 import scala.util.Random
 import scala.io.Codec
 import org.apache.commons.codec.binary.Base64
-import org.http4s._, org.http4s.dsl._, org.http4s.client._, org.http4s.argonaut._,
-org.http4s.util.{CaseInsensitiveString => CIS}
+import org.http4s._, org.http4s.dsl._, org.http4s.client._, org.http4s.argonaut._
 import java.time._
 import java.time.temporal.ChronoUnit._
 import org.log4s.getLogger
