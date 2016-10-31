@@ -1,0 +1,241 @@
+<eveapi version="2">
+	<currentTime>2016-10-31 14:04:27</currentTime>
+	<result>
+		<freeSkillPoints>58025</freeSkillPoints>
+		<rowset name="skills" key="typeID" columns="typeID,typeName,skillpoints,level,published">
+			<row typeID="3300" typeName="Gunnery" skillpoints="256000" level="5" published="1"/>
+			<row typeID="3301" typeName="Small Hybrid Turret" skillpoints="256000" level="5" published="1"/>
+			<row typeID="3302" typeName="Small Projectile Turret" skillpoints="256000" level="5" published="1"/>
+			<row typeID="3303" typeName="Small Energy Turret" skillpoints="256000" level="5" published="1"/>
+			<row typeID="3304" typeName="Medium Hybrid Turret" skillpoints="768000" level="5" published="1"/>
+			<row typeID="3305" typeName="Medium Projectile Turret" skillpoints="768000" level="5" published="1"/>
+			<row typeID="3306" typeName="Medium Energy Turret" skillpoints="768000" level="5" published="1"/>
+			<row typeID="3307" typeName="Large Hybrid Turret" skillpoints="1280000" level="5" published="1"/>
+			<row typeID="3308" typeName="Large Projectile Turret" skillpoints="1280000" level="5" published="1"/>
+			<row typeID="3309" typeName="Large Energy Turret" skillpoints="1280000" level="5" published="1"/>
+			<row typeID="3310" typeName="Rapid Firing" skillpoints="512000" level="5" published="1"/>
+			<row typeID="3311" typeName="Sharpshooter" skillpoints="512000" level="5" published="1"/>
+			<row typeID="3312" typeName="Motion Prediction" skillpoints="512000" level="5" published="1"/>
+			<row typeID="3315" typeName="Surgical Strike" skillpoints="181020" level="4" published="1"/>
+			<row typeID="3316" typeName="Controlled Bursts" skillpoints="512000" level="5" published="1"/>
+			<row typeID="3317" typeName="Trajectory Analysis" skillpoints="226275" level="4" published="1"/>
+			<row typeID="3318" typeName="Weapon Upgrades" skillpoints="512000" level="5" published="1"/>
+			<row typeID="3319" typeName="Missile Launcher Operation" skillpoints="256000" level="5" published="1"/>
+			<row typeID="3320" typeName="Rockets" skillpoints="256000" level="5" published="1"/>
+			<row typeID="3321" typeName="Light Missiles" skillpoints="512000" level="5" published="1"/>
+			<row typeID="3323" typeName="Defender Missiles" skillpoints="16000" level="3" published="1"/>
+			<row typeID="3324" typeName="Heavy Missiles" skillpoints="768000" level="5" published="1"/>
+			<row typeID="3325" typeName="Torpedoes" skillpoints="1024000" level="5" published="1"/>
+			<row typeID="3326" typeName="Cruise Missiles" skillpoints="1280000" level="5" published="1"/>
+			<row typeID="3327" typeName="Spaceship Command" skillpoints="256000" level="5" published="1"/>
+			<row typeID="3328" typeName="Gallente Frigate" skillpoints="512000" level="5" published="1"/>
+			<row typeID="3329" typeName="Minmatar Frigate" skillpoints="512000" level="5" published="1"/>
+			<row typeID="3330" typeName="Caldari Frigate" skillpoints="512000" level="5" published="1"/>
+			<row typeID="3331" typeName="Amarr Frigate" skillpoints="512000" level="5" published="1"/>
+			<row typeID="3332" typeName="Gallente Cruiser" skillpoints="1280000" level="5" published="1"/>
+			<row typeID="3333" typeName="Minmatar Cruiser" skillpoints="1280000" level="5" published="1"/>
+			<row typeID="3334" typeName="Caldari Cruiser" skillpoints="1280000" level="5" published="1"/>
+			<row typeID="3335" typeName="Amarr Cruiser" skillpoints="1280000" level="5" published="1"/>
+			<row typeID="3336" typeName="Gallente Battleship" skillpoints="2048000" level="5" published="1"/>
+			<row typeID="3337" typeName="Minmatar Battleship" skillpoints="2048000" level="5" published="1"/>
+			<row typeID="3338" typeName="Caldari Battleship" skillpoints="362039" level="4" published="1"/>
+			<row typeID="3339" typeName="Amarr Battleship" skillpoints="2048000" level="5" published="1"/>
+			<row typeID="3341" typeName="Minmatar Industrial" skillpoints="1024000" level="5" published="1"/>
+			<row typeID="3343" typeName="Amarr Industrial" skillpoints="32000" level="3" published="1"/>
+			<row typeID="3348" typeName="Leadership" skillpoints="256000" level="5" published="1"/>
+			<row typeID="3354" typeName="Warfare Link Specialist" skillpoints="271530" level="4" published="1"/>
+			<row typeID="3355" typeName="Social" skillpoints="8000" level="3" published="1"/>
+			<row typeID="3357" typeName="Diplomacy" skillpoints="1415" level="2" published="1"/>
+			<row typeID="3359" typeName="Connections" skillpoints="4243" level="2" published="1"/>
+			<row typeID="3361" typeName="Criminal Connections" skillpoints="24000" level="3" published="1"/>
+			<row typeID="3363" typeName="Corporation Management" skillpoints="8000" level="3" published="1"/>
+			<row typeID="3380" typeName="Industry" skillpoints="256000" level="5" published="1"/>
+			<row typeID="3385" typeName="Reprocessing" skillpoints="8000" level="3" published="1"/>
+			<row typeID="3386" typeName="Mining" skillpoints="45255" level="4" published="1"/>
+			<row typeID="3387" typeName="Mass Production" skillpoints="2829" level="2" published="1"/>
+			<row typeID="3392" typeName="Mechanics" skillpoints="256000" level="5" published="1"/>
+			<row typeID="3393" typeName="Repair Systems" skillpoints="256000" level="5" published="1"/>
+			<row typeID="3394" typeName="Hull Upgrades" skillpoints="512000" level="5" published="1"/>
+			<row typeID="3402" typeName="Science" skillpoints="256000" level="5" published="1"/>
+			<row typeID="3405" typeName="Biology" skillpoints="45255" level="4" published="1"/>
+			<row typeID="3410" typeName="Astrogeology" skillpoints="135765" level="4" published="1"/>
+			<row typeID="3411" typeName="Cybernetics" skillpoints="768000" level="5" published="1"/>
+			<row typeID="3412" typeName="Astrometrics" skillpoints="135765" level="4" published="1"/>
+			<row typeID="3413" typeName="Power Grid Management" skillpoints="256000" level="5" published="1"/>
+			<row typeID="3416" typeName="Shield Operation" skillpoints="256000" level="5" published="1"/>
+			<row typeID="3417" typeName="Capacitor Systems Operation" skillpoints="256000" level="5" published="1"/>
+			<row typeID="3418" typeName="Capacitor Management" skillpoints="768000" level="5" published="1"/>
+			<row typeID="3419" typeName="Shield Management" skillpoints="768000" level="5" published="1"/>
+			<row typeID="3420" typeName="Tactical Shield Manipulation" skillpoints="181020" level="4" published="1"/>
+			<row typeID="3421" typeName="Energy Pulse Weapons" skillpoints="90510" level="4" published="1"/>
+			<row typeID="3422" typeName="Shield Emission Systems" skillpoints="90510" level="4" published="1"/>
+			<row typeID="3423" typeName="Capacitor Emission Systems" skillpoints="16000" level="3" published="1"/>
+			<row typeID="3424" typeName="Energy Grid Upgrades" skillpoints="512000" level="5" published="1"/>
+			<row typeID="3425" typeName="Shield Upgrades" skillpoints="512000" level="5" published="1"/>
+			<row typeID="3426" typeName="CPU Management" skillpoints="256000" level="5" published="1"/>
+			<row typeID="3427" typeName="Electronic Warfare" skillpoints="512000" level="5" published="1"/>
+			<row typeID="3428" typeName="Long Range Targeting" skillpoints="512000" level="5" published="1"/>
+			<row typeID="3429" typeName="Target Management" skillpoints="256000" level="5" published="1"/>
+			<row typeID="3431" typeName="Signature Analysis" skillpoints="256000" level="5" published="1"/>
+			<row typeID="3432" typeName="Electronics Upgrades" skillpoints="512000" level="5" published="1"/>
+			<row typeID="3433" typeName="Sensor Linking" skillpoints="135765" level="4" published="1"/>
+			<row typeID="3434" typeName="Weapon Disruption" skillpoints="135765" level="4" published="1"/>
+			<row typeID="3435" typeName="Propulsion Jamming" skillpoints="768000" level="5" published="1"/>
+			<row typeID="3436" typeName="Drones" skillpoints="256000" level="5" published="1"/>
+			<row typeID="3437" typeName="Drone Avionics" skillpoints="256000" level="5" published="1"/>
+			<row typeID="3438" typeName="Mining Drone Operation" skillpoints="2829" level="2" published="1"/>
+			<row typeID="3439" typeName="Repair Drone Operation" skillpoints="24000" level="3" published="1"/>
+			<row typeID="3441" typeName="Heavy Drone Operation" skillpoints="1280000" level="5" published="1"/>
+			<row typeID="3442" typeName="Drone Interfacing" skillpoints="226275" level="4" published="1"/>
+			<row typeID="3449" typeName="Navigation" skillpoints="256000" level="5" published="1"/>
+			<row typeID="3450" typeName="Afterburner" skillpoints="256000" level="5" published="1"/>
+			<row typeID="3451" typeName="Fuel Conservation" skillpoints="512000" level="5" published="1"/>
+			<row typeID="3452" typeName="Acceleration Control" skillpoints="181020" level="4" published="1"/>
+			<row typeID="3453" typeName="Evasive Maneuvering" skillpoints="512000" level="5" published="1"/>
+			<row typeID="3454" typeName="High Speed Maneuvering" skillpoints="226275" level="4" published="1"/>
+			<row typeID="3455" typeName="Warp Drive Operation" skillpoints="256000" level="5" published="1"/>
+			<row typeID="3456" typeName="Jump Drive Operation" skillpoints="1280000" level="5" published="1"/>
+			<row typeID="3551" typeName="Survey" skillpoints="8000" level="3" published="1"/>
+			<row typeID="3895" typeName="Security Connections" skillpoints="90510" level="4" published="1"/>
+			<row typeID="4385" typeName="Micro Jump Drive Operation" skillpoints="226275" level="4" published="1"/>
+			<row typeID="11082" typeName="Small Railgun Specialization" skillpoints="135765" level="4" published="1"/>
+			<row typeID="11083" typeName="Small Beam Laser Specialization" skillpoints="24000" level="3" published="1"/>
+			<row typeID="11084" typeName="Small Autocannon Specialization" skillpoints="135765" level="4" published="1"/>
+			<row typeID="11207" typeName="Advanced Weapon Upgrades" skillpoints="1536000" level="5" published="1"/>
+			<row typeID="11446" typeName="Graviton Physics" skillpoints="226275" level="4" published="1"/>
+			<row typeID="11579" typeName="Cloaking" skillpoints="271530" level="4" published="1"/>
+			<row typeID="11584" typeName="Anchoring" skillpoints="24000" level="3" published="1"/>
+			<row typeID="12092" typeName="Interceptors" skillpoints="1024000" level="5" published="1"/>
+			<row typeID="12093" typeName="Covert Ops" skillpoints="1024000" level="5" published="1"/>
+			<row typeID="12095" typeName="Assault Frigates" skillpoints="181020" level="4" published="1"/>
+			<row typeID="12098" typeName="Interdictors" skillpoints="1280000" level="5" published="1"/>
+			<row typeID="12201" typeName="Small Artillery Specialization" skillpoints="135765" level="4" published="1"/>
+			<row typeID="12202" typeName="Medium Artillery Specialization" skillpoints="40000" level="3" published="1"/>
+			<row typeID="12203" typeName="Large Artillery Specialization" skillpoints="64000" level="3" published="1"/>
+			<row typeID="12204" typeName="Medium Beam Laser Specialization" skillpoints="40000" level="3" published="1"/>
+			<row typeID="12206" typeName="Medium Railgun Specialization" skillpoints="40000" level="3" published="1"/>
+			<row typeID="12208" typeName="Medium Autocannon Specialization" skillpoints="40000" level="3" published="1"/>
+			<row typeID="12209" typeName="Large Autocannon Specialization" skillpoints="64000" level="3" published="1"/>
+			<row typeID="12210" typeName="Small Blaster Specialization" skillpoints="135765" level="4" published="1"/>
+			<row typeID="12211" typeName="Medium Blaster Specialization" skillpoints="226275" level="4" published="1"/>
+			<row typeID="12212" typeName="Large Blaster Specialization" skillpoints="64000" level="3" published="1"/>
+			<row typeID="12213" typeName="Small Pulse Laser Specialization" skillpoints="135765" level="4" published="1"/>
+			<row typeID="12214" typeName="Medium Pulse Laser Specialization" skillpoints="40000" level="3" published="1"/>
+			<row typeID="12215" typeName="Large Pulse Laser Specialization" skillpoints="64000" level="3" published="1"/>
+			<row typeID="12305" typeName="Drone Navigation" skillpoints="256000" level="5" published="1"/>
+			<row typeID="12441" typeName="Missile Bombardment" skillpoints="512000" level="5" published="1"/>
+			<row typeID="12442" typeName="Missile Projection" skillpoints="1024000" level="5" published="1"/>
+			<row typeID="12484" typeName="Amarr Drone Specialization" skillpoints="40000" level="3" published="1"/>
+			<row typeID="12485" typeName="Minmatar Drone Specialization" skillpoints="40000" level="3" published="1"/>
+			<row typeID="12486" typeName="Gallente Drone Specialization" skillpoints="40000" level="3" published="1"/>
+			<row typeID="13278" typeName="Archaeology" skillpoints="750" level="1" published="1"/>
+			<row typeID="13279" typeName="Remote Sensing" skillpoints="250" level="1" published="1"/>
+			<row typeID="16069" typeName="Remote Armor Repair Systems" skillpoints="90510" level="4" published="1"/>
+			<row typeID="16591" typeName="Heavy Assault Cruisers" skillpoints="1536000" level="5" published="1"/>
+			<row typeID="17940" typeName="Mining Barge" skillpoints="32000" level="3" published="1"/>
+			<row typeID="19719" typeName="Transport Ships" skillpoints="271530" level="4" published="1"/>
+			<row typeID="19759" typeName="Long Distance Jamming" skillpoints="181020" level="4" published="1"/>
+			<row typeID="19760" typeName="Frequency Modulation" skillpoints="768000" level="5" published="1"/>
+			<row typeID="19761" typeName="Signal Dispersion" skillpoints="226275" level="4" published="1"/>
+			<row typeID="19766" typeName="Signal Suppression" skillpoints="226275" level="4" published="1"/>
+			<row typeID="19921" typeName="Target Painting" skillpoints="135765" level="4" published="1"/>
+			<row typeID="20209" typeName="Rocket Specialization" skillpoints="24000" level="3" published="1"/>
+			<row typeID="20210" typeName="Light Missile Specialization" skillpoints="135765" level="4" published="1"/>
+			<row typeID="20211" typeName="Heavy Missile Specialization" skillpoints="40000" level="3" published="1"/>
+			<row typeID="20212" typeName="Cruise Missile Specialization" skillpoints="64000" level="3" published="1"/>
+			<row typeID="20213" typeName="Torpedo Specialization" skillpoints="64000" level="3" published="1"/>
+			<row typeID="20312" typeName="Guided Missile Precision" skillpoints="1280000" level="5" published="1"/>
+			<row typeID="20314" typeName="Target Navigation Prediction" skillpoints="512000" level="5" published="1"/>
+			<row typeID="20315" typeName="Warhead Upgrades" skillpoints="226275" level="4" published="1"/>
+			<row typeID="20342" typeName="Advanced Spaceship Command" skillpoints="1280000" level="5" published="1"/>
+			<row typeID="20530" typeName="Caldari Dreadnought" skillpoints="96000" level="3" published="1"/>
+			<row typeID="20533" typeName="Capital Ships" skillpoints="633568" level="4" published="1"/>
+			<row typeID="21059" typeName="Shield Compensation" skillpoints="512000" level="5" published="1"/>
+			<row typeID="21071" typeName="Rapid Launch" skillpoints="512000" level="5" published="1"/>
+			<row typeID="21603" typeName="Cynosural Field Theory" skillpoints="226275" level="4" published="1"/>
+			<row typeID="21610" typeName="Jump Fuel Conservation" skillpoints="362039" level="4" published="1"/>
+			<row typeID="21611" typeName="Jump Drive Calibration" skillpoints="2304000" level="5" published="1"/>
+			<row typeID="21718" typeName="Hacking" skillpoints="750" level="1" published="1"/>
+			<row typeID="21802" typeName="Capital Shield Operation" skillpoints="64000" level="3" published="1"/>
+			<row typeID="22043" typeName="Tactical Weapon Reconfiguration" skillpoints="64000" level="3" published="1"/>
+			<row typeID="22761" typeName="Recon Ships" skillpoints="1536000" level="5" published="1"/>
+			<row typeID="22806" typeName="EM Armor Compensation" skillpoints="90510" level="4" published="1"/>
+			<row typeID="22807" typeName="Explosive Armor Compensation" skillpoints="90510" level="4" published="1"/>
+			<row typeID="22808" typeName="Kinetic Armor Compensation" skillpoints="90510" level="4" published="1"/>
+			<row typeID="22809" typeName="Thermal Armor Compensation" skillpoints="90510" level="4" published="1"/>
+			<row typeID="23566" typeName="Advanced Drone Avionics" skillpoints="40000" level="3" published="1"/>
+			<row typeID="23594" typeName="Sentry Drone Interfacing" skillpoints="1280000" level="5" published="1"/>
+			<row typeID="23606" typeName="Drone Sharpshooting" skillpoints="256000" level="5" published="1"/>
+			<row typeID="23618" typeName="Drone Durability" skillpoints="226275" level="4" published="1"/>
+			<row typeID="23950" typeName="Command Ships" skillpoints="2048000" level="5" published="1"/>
+			<row typeID="24241" typeName="Light Drone Operation" skillpoints="256000" level="5" published="1"/>
+			<row typeID="24242" typeName="Infomorph Psychology" skillpoints="256000" level="5" published="1"/>
+			<row typeID="25530" typeName="Neurotoxin Recovery" skillpoints="40000" level="3" published="1"/>
+			<row typeID="25538" typeName="Neurotoxin Control" skillpoints="16000" level="3" published="1"/>
+			<row typeID="25544" typeName="Gas Cloud Harvesting" skillpoints="45255" level="4" published="1"/>
+			<row typeID="25718" typeName="Heavy Assault Missile Specialization" skillpoints="40000" level="3" published="1"/>
+			<row typeID="25719" typeName="Heavy Assault Missiles" skillpoints="768000" level="5" published="1"/>
+			<row typeID="25863" typeName="Salvaging" skillpoints="4243" level="2" published="1"/>
+			<row typeID="26252" typeName="Jury Rigging" skillpoints="16000" level="3" published="1"/>
+			<row typeID="26253" typeName="Armor Rigging" skillpoints="24000" level="3" published="1"/>
+			<row typeID="26254" typeName="Astronautics Rigging" skillpoints="24000" level="3" published="1"/>
+			<row typeID="26256" typeName="Electronic Superiority Rigging" skillpoints="4243" level="2" published="1"/>
+			<row typeID="26257" typeName="Projectile Weapon Rigging" skillpoints="24000" level="3" published="1"/>
+			<row typeID="26258" typeName="Energy Weapon Rigging" skillpoints="24000" level="3" published="1"/>
+			<row typeID="26259" typeName="Hybrid Weapon Rigging" skillpoints="24000" level="3" published="1"/>
+			<row typeID="26260" typeName="Launcher Rigging" skillpoints="24000" level="3" published="1"/>
+			<row typeID="26261" typeName="Shield Rigging" skillpoints="24000" level="3" published="1"/>
+			<row typeID="27902" typeName="Remote Hull Repair Systems" skillpoints="16000" level="3" published="1"/>
+			<row typeID="28073" typeName="Bomb Deployment" skillpoints="181020" level="4" published="1"/>
+			<row typeID="28164" typeName="Thermodynamics" skillpoints="768000" level="5" published="1"/>
+			<row typeID="28609" typeName="Heavy Interdiction Cruisers" skillpoints="1536000" level="5" published="1"/>
+			<row typeID="28615" typeName="Electronic Attack Ships" skillpoints="1024000" level="5" published="1"/>
+			<row typeID="28667" typeName="Marauders" skillpoints="452549" level="4" published="1"/>
+			<row typeID="28879" typeName="Nanite Operation" skillpoints="90510" level="4" published="1"/>
+			<row typeID="30532" typeName="Amarr Defensive Systems" skillpoints="256000" level="5" published="1"/>
+			<row typeID="30536" typeName="Amarr Electronic Systems" skillpoints="256000" level="5" published="1"/>
+			<row typeID="30537" typeName="Amarr Offensive Systems" skillpoints="256000" level="5" published="1"/>
+			<row typeID="30538" typeName="Amarr Propulsion Systems" skillpoints="256000" level="5" published="1"/>
+			<row typeID="30539" typeName="Amarr Engineering Systems" skillpoints="256000" level="5" published="1"/>
+			<row typeID="30542" typeName="Caldari Electronic Systems" skillpoints="256000" level="5" published="1"/>
+			<row typeID="30543" typeName="Minmatar Electronic Systems" skillpoints="256000" level="5" published="1"/>
+			<row typeID="30544" typeName="Caldari Defensive Systems" skillpoints="256000" level="5" published="1"/>
+			<row typeID="30545" typeName="Minmatar Defensive Systems" skillpoints="256000" level="5" published="1"/>
+			<row typeID="30547" typeName="Minmatar Engineering Systems" skillpoints="256000" level="5" published="1"/>
+			<row typeID="30548" typeName="Caldari Engineering Systems" skillpoints="256000" level="5" published="1"/>
+			<row typeID="30549" typeName="Caldari Offensive Systems" skillpoints="256000" level="5" published="1"/>
+			<row typeID="30550" typeName="Gallente Offensive Systems" skillpoints="45255" level="4" published="1"/>
+			<row typeID="30551" typeName="Minmatar Offensive Systems" skillpoints="256000" level="5" published="1"/>
+			<row typeID="30552" typeName="Caldari Propulsion Systems" skillpoints="256000" level="5" published="1"/>
+			<row typeID="30554" typeName="Minmatar Propulsion Systems" skillpoints="256000" level="5" published="1"/>
+			<row typeID="30650" typeName="Amarr Strategic Cruiser" skillpoints="226275" level="4" published="1"/>
+			<row typeID="30651" typeName="Caldari Strategic Cruiser" skillpoints="226275" level="4" published="1"/>
+			<row typeID="30653" typeName="Minmatar Strategic Cruiser" skillpoints="226275" level="4" published="1"/>
+			<row typeID="32918" typeName="Mining Frigate" skillpoints="90510" level="4" published="1"/>
+			<row typeID="32999" typeName="Magnetometric Sensor Compensation" skillpoints="16000" level="3" published="1"/>
+			<row typeID="33000" typeName="Gravimetric Sensor Compensation" skillpoints="16000" level="3" published="1"/>
+			<row typeID="33002" typeName="Radar Sensor Compensation" skillpoints="16000" level="3" published="1"/>
+			<row typeID="33078" typeName="Armor Layering" skillpoints="135765" level="4" published="1"/>
+			<row typeID="33091" typeName="Amarr Destroyer" skillpoints="512000" level="5" published="1"/>
+			<row typeID="33092" typeName="Caldari Destroyer" skillpoints="512000" level="5" published="1"/>
+			<row typeID="33093" typeName="Gallente Destroyer" skillpoints="512000" level="5" published="1"/>
+			<row typeID="33094" typeName="Minmatar Destroyer" skillpoints="512000" level="5" published="1"/>
+			<row typeID="33095" typeName="Amarr Battlecruiser" skillpoints="1536000" level="5" published="1"/>
+			<row typeID="33096" typeName="Caldari Battlecruiser" skillpoints="1536000" level="5" published="1"/>
+			<row typeID="33097" typeName="Gallente Battlecruiser" skillpoints="1536000" level="5" published="1"/>
+			<row typeID="33098" typeName="Minmatar Battlecruiser" skillpoints="1536000" level="5" published="1"/>
+			<row typeID="33699" typeName="Medium Drone Operation" skillpoints="512000" level="5" published="1"/>
+			<row typeID="34390" typeName="Amarr Tactical Destroyer" skillpoints="135765" level="4" published="1"/>
+			<row typeID="34533" typeName="Minmatar Tactical Destroyer" skillpoints="135765" level="4" published="1"/>
+			<row typeID="35685" typeName="Gallente Tactical Destroyer" skillpoints="135765" level="4" published="1"/>
+			<row typeID="37615" typeName="Command Destroyers" skillpoints="48000" level="3" published="1"/>
+			<row typeID="40328" typeName="Logistics Frigates" skillpoints="1024000" level="5" published="1"/>
+			<row typeID="3430" typeName="Advanced Target Management" skillpoints="750" level="1" published="1"/>
+			<row typeID="3349" typeName="Skirmish Warfare" skillpoints="0" level="0" published="1"/>
+			<row typeID="20495" typeName="Information Warfare" skillpoints="0" level="0" published="1"/>
+			<row typeID="20494" typeName="Armored Warfare" skillpoints="0" level="0" published="1"/>
+			<row typeID="3350" typeName="Siege Warfare" skillpoints="0" level="0" published="1"/>
+		</rowset>
+	</result>
+	<cachedUntil>2016-10-31 14:37:49</cachedUntil>
+</eveapi>
