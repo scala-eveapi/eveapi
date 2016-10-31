@@ -3,267 +3,506 @@ package eveapi.xml.account.char.CharacterInfo
 
 import scala.concurrent.Future
 
-
 /**
 usage:
 val obj = scalaxb.fromXML[eveapi.xml.account.char.CharacterInfo.Foo](node)
 val document = scalaxb.toXML[eveapi.xml.account.char.CharacterInfo.Foo](obj, "foo", eveapi.xml.account.char.CharacterInfo.defaultScope)
-**/
-object `package` extends XMLProtocol { }
+  **/
+object `package` extends XMLProtocol {}
 
 trait XMLProtocol extends scalaxb.XMLStandardTypes {
   implicit lazy val executionContext = scala.concurrent.ExecutionContext.Implicits.global
 
   val defaultScope = scalaxb.toScope(Some("xs") -> "http://www.w3.org/2001/XMLSchema",
-    Some("xsi") -> "http://www.w3.org/2001/XMLSchema-instance")
-  implicit lazy val CharacterInfoEveapiFormat: scalaxb.XMLFormat[eveapi.xml.account.char.CharacterInfo.Eveapi] = new DefaultCharacterInfoEveapiFormat {}
-  implicit lazy val CharacterInfoResultFormat: scalaxb.XMLFormat[eveapi.xml.account.char.CharacterInfo.Result] = new DefaultCharacterInfoResultFormat {}
-  implicit lazy val CharacterInfoFactionNameFormat: scalaxb.XMLFormat[eveapi.xml.account.char.CharacterInfo.FactionName] = new DefaultCharacterInfoFactionNameFormat {}
-  implicit lazy val CharacterInfoAttributesTypeFormat: scalaxb.XMLFormat[eveapi.xml.account.char.CharacterInfo.AttributesType] = new DefaultCharacterInfoAttributesTypeFormat {}
-  implicit lazy val CharacterInfoRowsetFormat: scalaxb.XMLFormat[eveapi.xml.account.char.CharacterInfo.Rowset] = new DefaultCharacterInfoRowsetFormat {}
-  implicit lazy val CharacterInfoRowFormat: scalaxb.XMLFormat[eveapi.xml.account.char.CharacterInfo.Row] = new DefaultCharacterInfoRowFormat {}
+                                     Some("xsi") -> "http://www.w3.org/2001/XMLSchema-instance")
+  implicit lazy val CharacterInfoEveapiFormat: scalaxb.XMLFormat[
+      eveapi.xml.account.char.CharacterInfo.Eveapi] = new DefaultCharacterInfoEveapiFormat {}
+  implicit lazy val CharacterInfoResultFormat: scalaxb.XMLFormat[
+      eveapi.xml.account.char.CharacterInfo.Result] = new DefaultCharacterInfoResultFormat {}
+  implicit lazy val CharacterInfoFactionNameFormat: scalaxb.XMLFormat[
+      eveapi.xml.account.char.CharacterInfo.FactionName] =
+    new DefaultCharacterInfoFactionNameFormat {}
+  implicit lazy val CharacterInfoAttributesTypeFormat: scalaxb.XMLFormat[
+      eveapi.xml.account.char.CharacterInfo.AttributesType] =
+    new DefaultCharacterInfoAttributesTypeFormat {}
+  implicit lazy val CharacterInfoRowsetFormat: scalaxb.XMLFormat[
+      eveapi.xml.account.char.CharacterInfo.Rowset] = new DefaultCharacterInfoRowsetFormat {}
+  implicit lazy val CharacterInfoRowFormat: scalaxb.XMLFormat[
+      eveapi.xml.account.char.CharacterInfo.Row] = new DefaultCharacterInfoRowFormat {}
 
-  trait DefaultCharacterInfoEveapiFormat extends scalaxb.ElemNameParser[eveapi.xml.account.char.CharacterInfo.Eveapi] {
+  trait DefaultCharacterInfoEveapiFormat
+      extends scalaxb.ElemNameParser[eveapi.xml.account.char.CharacterInfo.Eveapi] {
     val targetNamespace: Option[String] = None
-    
-    def parser(node: scala.xml.Node, stack: List[scalaxb.ElemName]): Parser[eveapi.xml.account.char.CharacterInfo.Eveapi] =
-      phrase((scalaxb.ElemName(None, "currentTime")) ~ 
-      (scalaxb.ElemName(None, "result")) ~ 
-      (scalaxb.ElemName(None, "cachedUntil")) ^^
-      { case p1 ~ p2 ~ p3 =>
-      eveapi.xml.account.char.CharacterInfo.Eveapi(scalaxb.fromXML[String](p1, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[eveapi.xml.account.char.CharacterInfo.Result](p2, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[String](p3, scalaxb.ElemName(node) :: stack),
-        scala.collection.immutable.ListMap(List(
-        (node \ "@version").headOption map { x => scalaxb.DataRecord(x, node, scalaxb.fromXML[BigInt](x, scalaxb.ElemName(node) :: stack)) } map { "@version" -> _ }
-        ).flatten[(String, scalaxb.DataRecord[Any])]: _*)) })
-    
-    override def writesAttribute(__obj: eveapi.xml.account.char.CharacterInfo.Eveapi, __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
-      var attr: scala.xml.MetaData  = scala.xml.Null
+
+    def parser(
+      node: scala.xml.Node,
+      stack: List[scalaxb.ElemName]): Parser[eveapi.xml.account.char.CharacterInfo.Eveapi] =
+      phrase(
+          (scalaxb.ElemName(None, "currentTime")) ~
+          (scalaxb.ElemName(None, "result")) ~
+          (scalaxb.ElemName(None, "cachedUntil")) ^^ {
+        case p1 ~ p2 ~ p3 =>
+          eveapi.xml.account.char.CharacterInfo.Eveapi(
+              scalaxb.fromXML[String](p1, scalaxb.ElemName(node) :: stack),
+              scalaxb.fromXML[eveapi.xml.account.char.CharacterInfo.Result](
+                  p2, scalaxb.ElemName(node) :: stack),
+              scalaxb.fromXML[String](p3, scalaxb.ElemName(node) :: stack),
+              scala.collection.immutable.ListMap(List(
+                      (node \ "@version").headOption map { x =>
+                    scalaxb.DataRecord(
+                        x, node, scalaxb.fromXML[BigInt](x, scalaxb.ElemName(node) :: stack))
+                  } map { "@version" -> _ }
+                  ).flatten[(String, scalaxb.DataRecord[Any])]: _*))
+      })
+
+    override def writesAttribute(__obj: eveapi.xml.account.char.CharacterInfo.Eveapi,
+                                 __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
+      var attr: scala.xml.MetaData = scala.xml.Null
       __obj.attributes.toList map {
-        case ("@version", _) => attr = scala.xml.Attribute(null, "version", __obj.version.toString, attr)
-        case (key, x) => attr = scala.xml.Attribute((x.namespace map { __scope.getPrefix(_) }).orNull, x.key.orNull, x.value.toString, attr)
+        case ("@version", _) =>
+          attr = scala.xml.Attribute(null, "version", __obj.version.toString, attr)
+        case (key, x) =>
+          attr = scala.xml.Attribute((x.namespace map { __scope.getPrefix(_) }).orNull,
+                                     x.key.orNull,
+                                     x.value.toString,
+                                     attr)
       }
       attr
     }
 
-    def writesChildNodes(__obj: eveapi.xml.account.char.CharacterInfo.Eveapi, __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
-      Seq.concat(scalaxb.toXML[String](__obj.currentTime, None, Some("currentTime"), __scope, false),
-        scalaxb.toXML[eveapi.xml.account.char.CharacterInfo.Result](__obj.result, None, Some("result"), __scope, false),
-        scalaxb.toXML[String](__obj.cachedUntil, None, Some("cachedUntil"), __scope, false))
-
+    def writesChildNodes(__obj: eveapi.xml.account.char.CharacterInfo.Eveapi,
+                         __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+      Seq.concat(
+          scalaxb.toXML[String](__obj.currentTime, None, Some("currentTime"), __scope, false),
+          scalaxb.toXML[eveapi.xml.account.char.CharacterInfo.Result](
+              __obj.result, None, Some("result"), __scope, false),
+          scalaxb.toXML[String](__obj.cachedUntil, None, Some("cachedUntil"), __scope, false))
   }
 
-  trait DefaultCharacterInfoResultFormat extends scalaxb.ElemNameParser[eveapi.xml.account.char.CharacterInfo.Result] {
+  trait DefaultCharacterInfoResultFormat
+      extends scalaxb.ElemNameParser[eveapi.xml.account.char.CharacterInfo.Result] {
     val targetNamespace: Option[String] = None
-    
-    def parser(node: scala.xml.Node, stack: List[scalaxb.ElemName]): Parser[eveapi.xml.account.char.CharacterInfo.Result] =
-      phrase((scalaxb.ElemName(None, "characterID")) ~ 
-      (scalaxb.ElemName(None, "name")) ~ 
-      (scalaxb.ElemName(None, "homeStationID")) ~ 
-      (scalaxb.ElemName(None, "DoB")) ~ 
-      (scalaxb.ElemName(None, "race")) ~ 
-      (scalaxb.ElemName(None, "bloodLine")) ~ 
-      (scalaxb.ElemName(None, "ancestry")) ~ 
-      (scalaxb.ElemName(None, "gender")) ~ 
-      (scalaxb.ElemName(None, "corporationName")) ~ 
-      (scalaxb.ElemName(None, "corporationID")) ~ 
-      (scalaxb.ElemName(None, "allianceName")) ~ 
-      (scalaxb.ElemName(None, "allianceID")) ~ 
-      (scalaxb.ElemName(None, "factionName")) ~ 
-      (scalaxb.ElemName(None, "factionID")) ~ 
-      (scalaxb.ElemName(None, "cloneTypeID")) ~ 
-      (scalaxb.ElemName(None, "cloneName")) ~ 
-      (scalaxb.ElemName(None, "cloneSkillPoints")) ~ 
-      (scalaxb.ElemName(None, "freeSkillPoints")) ~ 
-      (scalaxb.ElemName(None, "freeRespecs")) ~ 
-      (scalaxb.ElemName(None, "cloneJumpDate")) ~ 
-      (scalaxb.ElemName(None, "lastRespecDate")) ~ 
-      (scalaxb.ElemName(None, "lastTimedRespec")) ~ 
-      (scalaxb.ElemName(None, "remoteStationDate")) ~ 
-      safeRep(((scalaxb.ElemName(None, "attributes")) ^^ 
-      (x => scalaxb.DataRecord(x.namespace, Some(x.name), scalaxb.fromXML[eveapi.xml.account.char.CharacterInfo.AttributesType](x, scalaxb.ElemName(node) :: stack)))) | 
-      ((scalaxb.ElemName(None, "balance")) ^^ 
-      (x => scalaxb.DataRecord(x.namespace, Some(x.name), scalaxb.fromXML[BigDecimal](x, scalaxb.ElemName(node) :: stack)))) | 
-      ((scalaxb.ElemName(None, "jumpActivation")) ^^ 
-      (x => scalaxb.DataRecord(x.namespace, Some(x.name), scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack)))) | 
-      ((scalaxb.ElemName(None, "jumpFatigue")) ^^ 
-      (x => scalaxb.DataRecord(x.namespace, Some(x.name), scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack)))) | 
-      ((scalaxb.ElemName(None, "jumpLastUpdate")) ^^ 
-      (x => scalaxb.DataRecord(x.namespace, Some(x.name), scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack)))) | 
-      ((scalaxb.ElemName(None, "rowset")) ^^ 
-      (x => scalaxb.DataRecord(x.namespace, Some(x.name), scalaxb.fromXML[eveapi.xml.account.char.CharacterInfo.Rowset](x, scalaxb.ElemName(node) :: stack))))) ^^
-      { case p1 ~ p2 ~ p3 ~ p4 ~ p5 ~ p6 ~ p7 ~ p8 ~ p9 ~ p10 ~ p11 ~ p12 ~ p13 ~ p14 ~ p15 ~ p16 ~ p17 ~ p18 ~ p19 ~ p20 ~ p21 ~ p22 ~ p23 ~ p24 =>
-      eveapi.xml.account.char.CharacterInfo.Result(scalaxb.fromXML[BigInt](p1, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[String](p2, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[BigInt](p3, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[String](p4, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[String](p5, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[String](p6, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[String](p7, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[String](p8, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[String](p9, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[BigInt](p10, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[String](p11, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[BigInt](p12, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[eveapi.xml.account.char.CharacterInfo.FactionName](p13, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[BigInt](p14, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[BigInt](p15, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[String](p16, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[BigInt](p17, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[BigInt](p18, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[BigInt](p19, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[String](p20, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[String](p21, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[String](p22, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[String](p23, scalaxb.ElemName(node) :: stack),
-        p24.toSeq) })
-    
-    def writesChildNodes(__obj: eveapi.xml.account.char.CharacterInfo.Result, __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
-      Seq.concat(scalaxb.toXML[BigInt](__obj.characterID, None, Some("characterID"), __scope, false),
-        scalaxb.toXML[String](__obj.name, None, Some("name"), __scope, false),
-        scalaxb.toXML[BigInt](__obj.homeStationID, None, Some("homeStationID"), __scope, false),
-        scalaxb.toXML[String](__obj.DoB, None, Some("DoB"), __scope, false),
-        scalaxb.toXML[String](__obj.race, None, Some("race"), __scope, false),
-        scalaxb.toXML[String](__obj.bloodLine, None, Some("bloodLine"), __scope, false),
-        scalaxb.toXML[String](__obj.ancestry, None, Some("ancestry"), __scope, false),
-        scalaxb.toXML[String](__obj.gender, None, Some("gender"), __scope, false),
-        scalaxb.toXML[String](__obj.corporationName, None, Some("corporationName"), __scope, false),
-        scalaxb.toXML[BigInt](__obj.corporationID, None, Some("corporationID"), __scope, false),
-        scalaxb.toXML[String](__obj.allianceName, None, Some("allianceName"), __scope, false),
-        scalaxb.toXML[BigInt](__obj.allianceID, None, Some("allianceID"), __scope, false),
-        scalaxb.toXML[eveapi.xml.account.char.CharacterInfo.FactionName](__obj.factionName, None, Some("factionName"), __scope, false),
-        scalaxb.toXML[BigInt](__obj.factionID, None, Some("factionID"), __scope, false),
-        scalaxb.toXML[BigInt](__obj.cloneTypeID, None, Some("cloneTypeID"), __scope, false),
-        scalaxb.toXML[String](__obj.cloneName, None, Some("cloneName"), __scope, false),
-        scalaxb.toXML[BigInt](__obj.cloneSkillPoints, None, Some("cloneSkillPoints"), __scope, false),
-        scalaxb.toXML[BigInt](__obj.freeSkillPoints, None, Some("freeSkillPoints"), __scope, false),
-        scalaxb.toXML[BigInt](__obj.freeRespecs, None, Some("freeRespecs"), __scope, false),
-        scalaxb.toXML[String](__obj.cloneJumpDate, None, Some("cloneJumpDate"), __scope, false),
-        scalaxb.toXML[String](__obj.lastRespecDate, None, Some("lastRespecDate"), __scope, false),
-        scalaxb.toXML[String](__obj.lastTimedRespec, None, Some("lastTimedRespec"), __scope, false),
-        scalaxb.toXML[String](__obj.remoteStationDate, None, Some("remoteStationDate"), __scope, false),
-        __obj.resultoption flatMap { x => scalaxb.toXML[scalaxb.DataRecord[Any]](x, x.namespace, x.key, __scope, false) })
 
+    def parser(
+      node: scala.xml.Node,
+      stack: List[scalaxb.ElemName]): Parser[eveapi.xml.account.char.CharacterInfo.Result] =
+      phrase(
+          (scalaxb.ElemName(None, "characterID")) ~
+          (scalaxb.ElemName(None, "name")) ~
+          (scalaxb.ElemName(None, "homeStationID")) ~
+          (scalaxb.ElemName(None, "DoB")) ~
+          (scalaxb.ElemName(None, "race")) ~
+          (scalaxb.ElemName(None, "bloodLine")) ~
+          (scalaxb.ElemName(None, "ancestry")) ~
+          (scalaxb.ElemName(None, "gender")) ~
+          (scalaxb.ElemName(None, "corporationName")) ~
+          (scalaxb.ElemName(None, "corporationID")) ~
+          (scalaxb.ElemName(None, "allianceName")) ~
+          (scalaxb.ElemName(None, "allianceID")) ~
+          (scalaxb.ElemName(None, "factionName")) ~
+          (scalaxb.ElemName(None, "factionID")) ~
+          (scalaxb.ElemName(None, "cloneTypeID")) ~
+          (scalaxb.ElemName(None, "cloneName")) ~
+          (scalaxb.ElemName(None, "cloneSkillPoints")) ~
+          (scalaxb.ElemName(None, "freeSkillPoints")) ~
+          (scalaxb.ElemName(None, "freeRespecs")) ~
+          (scalaxb.ElemName(None, "cloneJumpDate")) ~
+          (scalaxb.ElemName(None, "lastRespecDate")) ~
+          (scalaxb.ElemName(None, "lastTimedRespec")) ~
+          (scalaxb.ElemName(None, "remoteStationDate")) ~
+          safeRep(((scalaxb.ElemName(None, "attributes")) ^^
+                  (x =>
+                        scalaxb.DataRecord(
+                            x.namespace,
+                            Some(x.name),
+                            scalaxb.fromXML[eveapi.xml.account.char.CharacterInfo.AttributesType](
+                                x, scalaxb.ElemName(node) :: stack)))) |
+              ((scalaxb.ElemName(None, "balance")) ^^
+                  (x =>
+                        scalaxb.DataRecord(
+                            x.namespace,
+                            Some(x.name),
+                            scalaxb.fromXML[BigDecimal](x, scalaxb.ElemName(node) :: stack)))) |
+              ((scalaxb.ElemName(None, "jumpActivation")) ^^
+                  (x =>
+                        scalaxb
+                          .DataRecord(x.namespace,
+                                      Some(x.name),
+                                      scalaxb.fromXML[String](x,
+                                                              scalaxb.ElemName(node) :: stack)))) |
+              ((scalaxb.ElemName(None, "jumpFatigue")) ^^
+                  (x =>
+                        scalaxb.DataRecord(x.namespace,
+                                           Some(x.name),
+                                           scalaxb.fromXML[String](
+                                               x,
+                                               scalaxb.ElemName(node) :: stack)))) |
+              ((scalaxb.ElemName(None, "jumpLastUpdate")) ^^
+                  (x =>
+                        scalaxb.DataRecord(x.namespace,
+                                           Some(x.name),
+                                           scalaxb.fromXML[String](
+                                               x,
+                                               scalaxb.ElemName(node) :: stack)))) |
+              ((scalaxb.ElemName(None, "rowset")) ^^
+                  (x =>
+                        scalaxb.DataRecord(
+                            x.namespace,
+                            Some(x.name),
+                            scalaxb.fromXML[eveapi.xml.account.char.CharacterInfo.Rowset](
+                                x, scalaxb.ElemName(node) :: stack))))) ^^ {
+        case p1 ~ p2 ~ p3 ~ p4 ~ p5 ~ p6 ~ p7 ~ p8 ~ p9 ~ p10 ~ p11 ~ p12 ~ p13 ~ p14 ~ p15 ~ p16 ~ p17 ~ p18 ~ p19 ~ p20 ~ p21 ~ p22 ~ p23 ~ p24 =>
+          eveapi.xml.account.char.CharacterInfo.Result(scalaxb.fromXML[BigInt](
+                                                           p1, scalaxb.ElemName(node) :: stack),
+                                                       scalaxb
+                                                         .fromXML[String](
+                                                           p2, scalaxb.ElemName(node) :: stack),
+                                                       scalaxb
+                                                         .fromXML[BigInt](
+                                                           p3, scalaxb.ElemName(node) :: stack),
+                                                       scalaxb
+                                                         .fromXML[String](
+                                                           p4, scalaxb.ElemName(node) :: stack),
+                                                       scalaxb.fromXML[String](p5,
+                                                                               scalaxb.ElemName(
+                                                                                   node) :: stack),
+                                                       scalaxb.fromXML[String](
+                                                           p6, scalaxb.ElemName(node) :: stack),
+                                                       scalaxb
+                                                         .fromXML[String](
+                                                           p7, scalaxb.ElemName(node) :: stack),
+                                                       scalaxb.fromXML[String](p8,
+                                                                               scalaxb.ElemName(
+                                                                                   node) :: stack),
+                                                       scalaxb.fromXML[String](
+                                                           p9, scalaxb.ElemName(node) :: stack),
+                                                       scalaxb.fromXML[BigInt](p10,
+                                                                               scalaxb.ElemName(
+                                                                                   node) :: stack),
+                                                       scalaxb
+                                                         .fromXML[String](
+                                                           p11, scalaxb.ElemName(node) :: stack),
+                                                       scalaxb.fromXML[BigInt](
+                                                           p12, scalaxb.ElemName(node) :: stack),
+                                                       scalaxb
+                                                         .fromXML[
+                                                           eveapi.xml.account.char.CharacterInfo.FactionName](
+                                                           p13, scalaxb.ElemName(node) :: stack),
+                                                       scalaxb.fromXML[BigInt](
+                                                           p14, scalaxb.ElemName(node) :: stack),
+                                                       scalaxb
+                                                         .fromXML[BigInt](
+                                                           p15,
+                                                           scalaxb.ElemName(node) :: stack),
+                                                       scalaxb.fromXML[String](
+                                                           p16, scalaxb.ElemName(node) :: stack),
+                                                       scalaxb.fromXML[BigInt](p17, scalaxb.ElemName(node) :: stack),
+                                                       scalaxb
+                                                         .fromXML[BigInt](
+                                                           p18, scalaxb.ElemName(node) :: stack),
+                                                       scalaxb.fromXML[BigInt](p19,
+                                                                               scalaxb.ElemName(
+                                                                                   node) :: stack),
+                                                       scalaxb.fromXML[String](
+                                                           p20, scalaxb.ElemName(node) :: stack),
+                                                       scalaxb.fromXML[String](
+                                                           p21, scalaxb.ElemName(node) :: stack),
+                                                       scalaxb.fromXML[String](
+                                                           p22, scalaxb.ElemName(node) :: stack),
+                                                       scalaxb.fromXML[String](
+                                                           p23, scalaxb.ElemName(node) :: stack),
+                                                       p24.toSeq)
+      })
+
+    def writesChildNodes(__obj: eveapi.xml.account.char.CharacterInfo.Result,
+                         __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+      Seq.concat(scalaxb.toXML[BigInt](
+                     __obj.characterID, None, Some("characterID"), __scope, false),
+                 scalaxb.toXML[String](__obj.name, None, Some("name"), __scope, false),
+                 scalaxb
+                   .toXML[BigInt](
+                     __obj.homeStationID, None, Some("homeStationID"), __scope, false),
+                 scalaxb.toXML[String](__obj.DoB, None, Some("DoB"), __scope, false),
+                 scalaxb.toXML[String](__obj.race, None, Some("race"), __scope, false),
+                 scalaxb.toXML[String](__obj.bloodLine, None, Some("bloodLine"), __scope, false),
+                 scalaxb.toXML[String](__obj.ancestry, None, Some("ancestry"), __scope, false),
+                 scalaxb.toXML[String](__obj.gender, None, Some("gender"), __scope, false),
+                 scalaxb
+                   .toXML[String](__obj.corporationName, None, Some("corporationName"), __scope, false),
+                 scalaxb.toXML[BigInt](
+                     __obj.corporationID,
+                     None,
+                     Some("corporationID"),
+                     __scope,
+                     false),
+                 scalaxb
+                   .toXML[String](__obj.allianceName, None, Some("allianceName"), __scope, false),
+                 scalaxb.toXML[BigInt](__obj.allianceID, None, Some("allianceID"), __scope, false),
+                 scalaxb
+                   .toXML[eveapi.xml.account.char.CharacterInfo.FactionName](
+                     __obj.factionName, None, Some("factionName"), __scope, false),
+                 scalaxb.toXML[BigInt](__obj.factionID, None, Some("factionID"), __scope, false),
+                 scalaxb.toXML[BigInt](__obj.cloneTypeID,
+                                       None,
+                                       Some("cloneTypeID"),
+                                       __scope,
+                                       false),
+                 scalaxb.toXML[String](__obj.cloneName, None, Some("cloneName"), __scope, false),
+                 scalaxb.toXML[BigInt](
+                     __obj.cloneSkillPoints,
+                     None,
+                     Some("cloneSkillPoints"),
+                     __scope,
+                     false),
+                 scalaxb
+                   .toXML[BigInt](__obj.freeSkillPoints, None, Some("freeSkillPoints"), __scope, false),
+                 scalaxb.toXML[BigInt](
+                     __obj.freeRespecs, None, Some("freeRespecs"), __scope, false),
+                 scalaxb
+                   .toXML[String](
+                     __obj.cloneJumpDate,
+                     None,
+                     Some("cloneJumpDate"),
+                     __scope,
+                     false),
+                 scalaxb
+                   .toXML[String](__obj.lastRespecDate, None, Some("lastRespecDate"), __scope, false),
+                 scalaxb.toXML[String](
+                     __obj.lastTimedRespec, None, Some("lastTimedRespec"), __scope, false),
+                 scalaxb.toXML[String](
+                     __obj.remoteStationDate, None, Some("remoteStationDate"), __scope, false),
+                 __obj.resultoption flatMap { x =>
+                   scalaxb.toXML[scalaxb.DataRecord[Any]](x, x.namespace, x.key, __scope, false)
+                 })
   }
 
-  trait DefaultCharacterInfoFactionNameFormat extends scalaxb.XMLFormat[eveapi.xml.account.char.CharacterInfo.FactionName] with scalaxb.CanWriteChildNodes[eveapi.xml.account.char.CharacterInfo.FactionName] {
+  trait DefaultCharacterInfoFactionNameFormat
+      extends scalaxb.XMLFormat[eveapi.xml.account.char.CharacterInfo.FactionName]
+      with scalaxb.CanWriteChildNodes[eveapi.xml.account.char.CharacterInfo.FactionName] {
     val targetNamespace: Option[String] = None
     import scalaxb.ElemName._
-    
-    def reads(seq: scala.xml.NodeSeq, stack: List[scalaxb.ElemName]): Either[String, eveapi.xml.account.char.CharacterInfo.FactionName] = seq match {
+
+    def reads(seq: scala.xml.NodeSeq, stack: List[scalaxb.ElemName])
+      : Either[String, eveapi.xml.account.char.CharacterInfo.FactionName] = seq match {
       case node: scala.xml.Node => Right(eveapi.xml.account.char.CharacterInfo.FactionName())
       case _ => Left("reads failed: seq must be scala.xml.Node")
     }
-    
-    def writesChildNodes(__obj: eveapi.xml.account.char.CharacterInfo.FactionName, __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+
+    def writesChildNodes(__obj: eveapi.xml.account.char.CharacterInfo.FactionName,
+                         __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
       Nil
-
-
   }
 
-  trait DefaultCharacterInfoAttributesTypeFormat extends scalaxb.ElemNameParser[eveapi.xml.account.char.CharacterInfo.AttributesType] {
+  trait DefaultCharacterInfoAttributesTypeFormat
+      extends scalaxb.ElemNameParser[eveapi.xml.account.char.CharacterInfo.AttributesType] {
     val targetNamespace: Option[String] = None
-    
-    def parser(node: scala.xml.Node, stack: List[scalaxb.ElemName]): Parser[eveapi.xml.account.char.CharacterInfo.AttributesType] =
-      phrase((scalaxb.ElemName(None, "intelligence")) ~ 
-      (scalaxb.ElemName(None, "memory")) ~ 
-      (scalaxb.ElemName(None, "charisma")) ~ 
-      (scalaxb.ElemName(None, "perception")) ~ 
-      (scalaxb.ElemName(None, "willpower")) ^^
-      { case p1 ~ p2 ~ p3 ~ p4 ~ p5 =>
-      eveapi.xml.account.char.CharacterInfo.AttributesType(scalaxb.fromXML[BigInt](p1, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[BigInt](p2, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[BigInt](p3, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[BigInt](p4, scalaxb.ElemName(node) :: stack),
-        scalaxb.fromXML[BigInt](p5, scalaxb.ElemName(node) :: stack)) })
-    
-    def writesChildNodes(__obj: eveapi.xml.account.char.CharacterInfo.AttributesType, __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
-      Seq.concat(scalaxb.toXML[BigInt](__obj.intelligence, None, Some("intelligence"), __scope, false),
-        scalaxb.toXML[BigInt](__obj.memory, None, Some("memory"), __scope, false),
-        scalaxb.toXML[BigInt](__obj.charisma, None, Some("charisma"), __scope, false),
-        scalaxb.toXML[BigInt](__obj.perception, None, Some("perception"), __scope, false),
-        scalaxb.toXML[BigInt](__obj.willpower, None, Some("willpower"), __scope, false))
 
+    def parser(node: scala.xml.Node, stack: List[scalaxb.ElemName])
+      : Parser[eveapi.xml.account.char.CharacterInfo.AttributesType] =
+      phrase(
+          (scalaxb.ElemName(None, "intelligence")) ~
+          (scalaxb.ElemName(None, "memory")) ~
+          (scalaxb.ElemName(None, "charisma")) ~
+          (scalaxb.ElemName(None, "perception")) ~
+          (scalaxb.ElemName(None, "willpower")) ^^ {
+        case p1 ~ p2 ~ p3 ~ p4 ~ p5 =>
+          eveapi.xml.account.char.CharacterInfo.AttributesType(
+              scalaxb.fromXML[BigInt](p1, scalaxb.ElemName(node) :: stack),
+              scalaxb.fromXML[BigInt](p2, scalaxb.ElemName(node) :: stack),
+              scalaxb.fromXML[BigInt](p3, scalaxb.ElemName(node) :: stack),
+              scalaxb.fromXML[BigInt](p4, scalaxb.ElemName(node) :: stack),
+              scalaxb.fromXML[BigInt](p5, scalaxb.ElemName(node) :: stack))
+      })
+
+    def writesChildNodes(__obj: eveapi.xml.account.char.CharacterInfo.AttributesType,
+                         __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+      Seq.concat(
+          scalaxb.toXML[BigInt](__obj.intelligence, None, Some("intelligence"), __scope, false),
+          scalaxb.toXML[BigInt](__obj.memory, None, Some("memory"), __scope, false),
+          scalaxb.toXML[BigInt](__obj.charisma, None, Some("charisma"), __scope, false),
+          scalaxb.toXML[BigInt](__obj.perception, None, Some("perception"), __scope, false),
+          scalaxb.toXML[BigInt](__obj.willpower, None, Some("willpower"), __scope, false))
   }
 
-  trait DefaultCharacterInfoRowsetFormat extends scalaxb.ElemNameParser[eveapi.xml.account.char.CharacterInfo.Rowset] {
+  trait DefaultCharacterInfoRowsetFormat
+      extends scalaxb.ElemNameParser[eveapi.xml.account.char.CharacterInfo.Rowset] {
     val targetNamespace: Option[String] = None
-    
-    def parser(node: scala.xml.Node, stack: List[scalaxb.ElemName]): Parser[eveapi.xml.account.char.CharacterInfo.Rowset] =
-      phrase(safeRep(scalaxb.ElemName(None, "row")) ^^
-      { case p1 =>
-      eveapi.xml.account.char.CharacterInfo.Rowset(p1.toSeq map { scalaxb.fromXML[eveapi.xml.account.char.CharacterInfo.Row](_, scalaxb.ElemName(node) :: stack) },
+
+    def parser(
+      node: scala.xml.Node, stack: List[scalaxb.ElemName]): Parser[eveapi.xml.account.char.CharacterInfo.Rowset] =
+      phrase(safeRep(scalaxb.ElemName(None, "row")) ^^ {
+        case p1 =>
+          eveapi.xml.account.char.CharacterInfo.Rowset(p1.toSeq map {
+            scalaxb.fromXML[eveapi.xml.account.char.CharacterInfo.Row](
+                _, scalaxb.ElemName(node) :: stack) },
         scala.collection.immutable.ListMap(List(
-        (node \ "@columns").headOption map { x => scalaxb.DataRecord(x, node, scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack)) } map { "@columns" -> _ },
-        (node \ "@key").headOption map { x => scalaxb.DataRecord(x, node, scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack)) } map { "@key" -> _ },
-        (node \ "@name").headOption map { x => scalaxb.DataRecord(x, node, scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack)) } map { "@name" -> _ }
-        ).flatten[(String, scalaxb.DataRecord[Any])]: _*)) })
-    
-    override def writesAttribute(__obj: eveapi.xml.account.char.CharacterInfo.Rowset, __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
-      var attr: scala.xml.MetaData  = scala.xml.Null
+        (node \ "@columns").headOption map { x =>
+                  scalaxb.DataRecord(
+                      x, node, scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack))
+              } map { "@columns" -> _ }, (node \ "@key").headOption map { x =>
+            scalaxb.DataRecord(
+                x, node, scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack))
+          } map { "@key" -> _ }, (node \ "@name").headOption map { x =>
+            scalaxb.DataRecord(
+                x, node, scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack))
+          } map { "@name" -> _ }).flatten[(String, scalaxb.DataRecord[Any])]: _*))
+      })
+
+    override def writesAttribute(__obj: eveapi.xml.account.char.CharacterInfo.Rowset,
+                                 __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
+      var attr: scala.xml.MetaData = scala.xml.Null
       __obj.attributes.toList map {
-        case ("@columns", _) => attr = scala.xml.Attribute(null, "columns", __obj.columns.toString, attr)
+        case ("@columns", _) =>
+          attr = scala.xml.Attribute(null, "columns", __obj.columns.toString, attr)
         case ("@key", _) => attr = scala.xml.Attribute(null, "key", __obj.key.toString, attr)
         case ("@name", _) => attr = scala.xml.Attribute(null, "name", __obj.name.toString, attr)
-        case (key, x) => attr = scala.xml.Attribute((x.namespace map { __scope.getPrefix(_) }).orNull, x.key.orNull, x.value.toString, attr)
+        case (key, x) =>
+          attr = scala.xml.Attribute((x.namespace map { __scope.getPrefix(_) }).orNull,
+                                     x.key.orNull,
+                                     x.value.toString,
+                                     attr)
       }
       attr
     }
 
-    def writesChildNodes(__obj: eveapi.xml.account.char.CharacterInfo.Rowset, __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
-      (__obj.row flatMap { scalaxb.toXML[eveapi.xml.account.char.CharacterInfo.Row](_, None, Some("row"), __scope, false) })
-
+    def writesChildNodes(__obj: eveapi.xml.account.char.CharacterInfo.Rowset,
+                         __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+      (__obj.row flatMap {
+            scalaxb.toXML[eveapi.xml.account.char.CharacterInfo.Row](
+                _, None, Some("row"), __scope, false)
+          })
   }
 
-  trait DefaultCharacterInfoRowFormat extends scalaxb.XMLFormat[eveapi.xml.account.char.CharacterInfo.Row] with scalaxb.CanWriteChildNodes[eveapi.xml.account.char.CharacterInfo.Row] {
+  trait DefaultCharacterInfoRowFormat
+      extends scalaxb.XMLFormat[eveapi.xml.account.char.CharacterInfo.Row]
+      with scalaxb.CanWriteChildNodes[eveapi.xml.account.char.CharacterInfo.Row] {
     val targetNamespace: Option[String] = None
     import scalaxb.ElemName._
-    
-    def reads(seq: scala.xml.NodeSeq, stack: List[scalaxb.ElemName]): Either[String, eveapi.xml.account.char.CharacterInfo.Row] = seq match {
-      case node: scala.xml.Node => Right(eveapi.xml.account.char.CharacterInfo.Row(scala.collection.immutable.ListMap(List(
-        (node \ "@cloneName").headOption map { x => scalaxb.DataRecord(x, node, scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack)) } map { "@cloneName" -> _ },
-        (node \ "@jumpCloneID").headOption map { x => scalaxb.DataRecord(x, node, scalaxb.fromXML[BigInt](x, scalaxb.ElemName(node) :: stack)) } map { "@jumpCloneID" -> _ },
-        (node \ "@level").headOption map { x => scalaxb.DataRecord(x, node, scalaxb.fromXML[BigInt](x, scalaxb.ElemName(node) :: stack)) } map { "@level" -> _ },
-        (node \ "@locationID").headOption map { x => scalaxb.DataRecord(x, node, scalaxb.fromXML[BigInt](x, scalaxb.ElemName(node) :: stack)) } map { "@locationID" -> _ },
-        (node \ "@published").headOption map { x => scalaxb.DataRecord(x, node, scalaxb.fromXML[BigInt](x, scalaxb.ElemName(node) :: stack)) } map { "@published" -> _ },
-        (node \ "@roleID").headOption map { x => scalaxb.DataRecord(x, node, scalaxb.fromXML[BigInt](x, scalaxb.ElemName(node) :: stack)) } map { "@roleID" -> _ },
-        (node \ "@roleName").headOption map { x => scalaxb.DataRecord(x, node, scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack)) } map { "@roleName" -> _ },
-        (node \ "@skillpoints").headOption map { x => scalaxb.DataRecord(x, node, scalaxb.fromXML[BigInt](x, scalaxb.ElemName(node) :: stack)) } map { "@skillpoints" -> _ },
-        (node \ "@titleID").headOption map { x => scalaxb.DataRecord(x, node, scalaxb.fromXML[BigInt](x, scalaxb.ElemName(node) :: stack)) } map { "@titleID" -> _ },
-        (node \ "@titleName").headOption map { x => scalaxb.DataRecord(x, node, scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack)) } map { "@titleName" -> _ },
-        (node \ "@typeID").headOption map { x => scalaxb.DataRecord(x, node, scalaxb.fromXML[BigInt](x, scalaxb.ElemName(node) :: stack)) } map { "@typeID" -> _ },
-        (node \ "@typeName").headOption map { x => scalaxb.DataRecord(x, node, scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack)) } map { "@typeName" -> _ }
-        ).flatten[(String, scalaxb.DataRecord[Any])]: _*)))
-      case _ => Left("reads failed: seq must be scala.xml.Node")
-    }
-    
-    override def writesAttribute(__obj: eveapi.xml.account.char.CharacterInfo.Row, __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
-      var attr: scala.xml.MetaData  = scala.xml.Null
+
+    def reads(
+      seq: scala.xml.NodeSeq,
+      stack: List[scalaxb.ElemName]): Either[String, eveapi.xml.account.char.CharacterInfo.Row] =
+      seq match {
+        case node: scala.xml.Node =>
+          Right(eveapi.xml.account.char.CharacterInfo.Row(scala.collection.immutable
+                    .ListMap(
+                      List(
+                          (node \ "@cloneName").headOption map { x =>
+                scalaxb.DataRecord(x, node, scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack))
+              } map { "@cloneName" -> _ },
+                          (node \ "@jumpCloneID").headOption map { x =>
+                scalaxb.DataRecord(x,
+                                   node,
+                                   scalaxb.fromXML[BigInt](x, scalaxb.ElemName(node) :: stack))
+              } map { "@jumpCloneID" -> _ },
+                          (node \ "@level").headOption map { x =>
+                scalaxb.DataRecord(x,
+                                   node,
+                                   scalaxb.fromXML[BigInt](x, scalaxb.ElemName(node) :: stack))
+              } map { "@level" -> _ },
+                          (node \ "@locationID").headOption map { x =>
+                scalaxb.DataRecord(
+                    x, node, scalaxb.fromXML[BigInt](x, scalaxb.ElemName(node) :: stack))
+              } map { "@locationID" -> _ },
+                          (node \ "@published").headOption map { x =>
+                scalaxb.DataRecord(x, node, scalaxb.fromXML[BigInt](x, scalaxb.ElemName(node) :: stack))
+              } map { "@published" -> _ },
+                          (node \ "@roleID").headOption map { x =>
+                scalaxb.DataRecord(x,
+                                   node,
+                                   scalaxb.fromXML[BigInt](x, scalaxb.ElemName(node) :: stack))
+              } map { "@roleID" -> _ },
+                          (node \ "@roleName").headOption map { x =>
+                scalaxb.DataRecord(x,
+                                   node,
+                                   scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack))
+              } map { "@roleName" -> _ },
+                          (node \ "@skillpoints").headOption map { x =>
+                scalaxb.DataRecord(
+                    x, node, scalaxb.fromXML[BigInt](x, scalaxb.ElemName(node) :: stack))
+              } map { "@skillpoints" -> _ },
+                          (node \ "@titleID").headOption map { x =>
+                scalaxb.DataRecord(x, node, scalaxb.fromXML[BigInt](x, scalaxb.ElemName(node) :: stack))
+              } map { "@titleID" -> _ },
+                          (node \ "@titleName").headOption map { x =>
+                scalaxb.DataRecord(
+                    x, node, scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack))
+              } map { "@titleName" -> _ },
+                          (node \ "@typeID").headOption map { x =>
+                scalaxb.DataRecord(
+                    x, node, scalaxb.fromXML[BigInt](x, scalaxb.ElemName(node) :: stack))
+              } map { "@typeID" -> _ },
+                          (node \ "@typeName").headOption map { x =>
+                scalaxb.DataRecord(
+                    x, node, scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack))
+              } map { "@typeName" -> _ }
+                      ).flatten[(String, scalaxb.DataRecord[Any])]: _*)))
+        case _ => Left("reads failed: seq must be scala.xml.Node")
+      }
+
+    override def writesAttribute(__obj: eveapi.xml.account.char.CharacterInfo.Row,
+                                 __scope: scala.xml.NamespaceBinding): scala.xml.MetaData = {
+      var attr: scala.xml.MetaData = scala.xml.Null
       __obj.attributes.toList map {
-        case ("@cloneName", _) => __obj.cloneName foreach { x => attr = scala.xml.Attribute(null, "cloneName", x.toString, attr) }
-        case ("@jumpCloneID", _) => __obj.jumpCloneID foreach { x => attr = scala.xml.Attribute(null, "jumpCloneID", x.toString, attr) }
-        case ("@level", _) => __obj.level foreach { x => attr = scala.xml.Attribute(null, "level", x.toString, attr) }
-        case ("@locationID", _) => __obj.locationID foreach { x => attr = scala.xml.Attribute(null, "locationID", x.toString, attr) }
-        case ("@published", _) => __obj.published foreach { x => attr = scala.xml.Attribute(null, "published", x.toString, attr) }
-        case ("@roleID", _) => __obj.roleID foreach { x => attr = scala.xml.Attribute(null, "roleID", x.toString, attr) }
-        case ("@roleName", _) => __obj.roleName foreach { x => attr = scala.xml.Attribute(null, "roleName", x.toString, attr) }
-        case ("@skillpoints", _) => __obj.skillpoints foreach { x => attr = scala.xml.Attribute(null, "skillpoints", x.toString, attr) }
-        case ("@titleID", _) => __obj.titleID foreach { x => attr = scala.xml.Attribute(null, "titleID", x.toString, attr) }
-        case ("@titleName", _) => __obj.titleName foreach { x => attr = scala.xml.Attribute(null, "titleName", x.toString, attr) }
-        case ("@typeID", _) => __obj.typeID foreach { x => attr = scala.xml.Attribute(null, "typeID", x.toString, attr) }
-        case ("@typeName", _) => __obj.typeName foreach { x => attr = scala.xml.Attribute(null, "typeName", x.toString, attr) }
-        case (key, x) => attr = scala.xml.Attribute((x.namespace map { __scope.getPrefix(_) }).orNull, x.key.orNull, x.value.toString, attr)
+        case ("@cloneName", _) =>
+          __obj.cloneName foreach { x =>
+            attr = scala.xml.Attribute(null, "cloneName", x.toString, attr)
+          }
+        case ("@jumpCloneID", _) =>
+          __obj.jumpCloneID foreach { x =>
+            attr = scala.xml.Attribute(null, "jumpCloneID", x.toString, attr)
+          }
+        case ("@level", _) =>
+          __obj.level foreach { x =>
+            attr = scala.xml.Attribute(null, "level", x.toString, attr)
+          }
+        case ("@locationID", _) =>
+          __obj.locationID foreach { x =>
+            attr = scala.xml.Attribute(null, "locationID", x.toString, attr)
+          }
+        case ("@published", _) =>
+          __obj.published foreach { x =>
+            attr = scala.xml.Attribute(null, "published", x.toString, attr)
+          }
+        case ("@roleID", _) =>
+          __obj.roleID foreach { x =>
+            attr = scala.xml.Attribute(null, "roleID", x.toString, attr)
+          }
+        case ("@roleName", _) =>
+          __obj.roleName foreach { x =>
+            attr = scala.xml.Attribute(null, "roleName", x.toString, attr)
+          }
+        case ("@skillpoints", _) =>
+          __obj.skillpoints foreach { x =>
+            attr = scala.xml.Attribute(null, "skillpoints", x.toString, attr)
+          }
+        case ("@titleID", _) =>
+          __obj.titleID foreach { x =>
+            attr = scala.xml.Attribute(null, "titleID", x.toString, attr)
+          }
+        case ("@titleName", _) =>
+          __obj.titleName foreach { x =>
+            attr = scala.xml.Attribute(null, "titleName", x.toString, attr)
+          }
+        case ("@typeID", _) =>
+          __obj.typeID foreach { x =>
+            attr = scala.xml.Attribute(null, "typeID", x.toString, attr)
+          }
+        case ("@typeName", _) =>
+          __obj.typeName foreach { x =>
+            attr = scala.xml.Attribute(null, "typeName", x.toString, attr)
+          }
+        case (key, x) =>
+          attr = scala.xml.Attribute((x.namespace map { __scope.getPrefix(_) }).orNull,
+                                     x.key.orNull,
+                                     x.value.toString,
+                                     attr)
       }
       attr
     }
 
-    def writesChildNodes(__obj: eveapi.xml.account.char.CharacterInfo.Row, __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
+    def writesChildNodes(__obj: eveapi.xml.account.char.CharacterInfo.Row,
+                         __scope: scala.xml.NamespaceBinding): Seq[scala.xml.Node] =
       Nil
-
-
   }
-
-
 }
-
