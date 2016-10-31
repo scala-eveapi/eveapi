@@ -1,5 +1,6 @@
 package eveapi.oauth
 
+import org.atnos.eff.StateEffect
 import org.atnos.eff._, org.atnos.eff.syntax.all._, org.atnos.eff.all._
 import argonaut._, Argonaut._, ArgonautShapeless._, derive._
 import scalaz._, Scalaz._
@@ -12,6 +13,7 @@ import java.time._
 import java.time.temporal.ChronoUnit._
 import org.log4s.getLogger
 import eveapi.data.crest.{EveException, UnauthorizedError}
+import scala.xml.XML
 
 import eveapi.utils._
 import TaskEffect._
@@ -232,14 +234,25 @@ object OAuth2 {
     }
   }
 
-  def fetch[T: DecodeJson](request: Request): Api[T] =
+  // Deposit the error in the Task.
+  def fetch[T](request: Request, decode: String => T): Api[T] =
     executeOAuth(request, _.as[String].map({ str =>
       logger.debug(s"Received body: $str")
-      Parse.decode[T](str).fold(err => throw JsonParseError(err), x => x)
+      decode(str)
     }))
+  def fetch[T: DecodeJson](request: Request): Api[T] =
+    fetch(request, str => Parse.decode[T](str).fold(err => throw JsonParseError(err), x => x))
   def fetch[T: DecodeJson](request: Task[Request]): Api[T] =
     innocentTask[EveApiS, Request](request).flatMap(r => fetch(r))
   def fetch[T: DecodeJson](uri: Uri): Api[T] = fetch[T](Request(method = Method.GET, uri = uri))
+  def fetchXML[T: scalaxb.XMLFormat](uri: Uri): Api[T] =
+    for {
+      token <- StateEffect.get[OAuth2.EveApiS, OAuth2Token]
+      result <- fetch(Request(method = Method.GET,
+                              uri = uri.withQueryParam("accessToken", token.access_token)),
+                      str => scalaxb.fromXML[T](XML.loadString(str)))
+    } yield result
+
   def verify: Api[VerifyAnswer] =
     for {
       oauth <- ask[A, OAuth2]

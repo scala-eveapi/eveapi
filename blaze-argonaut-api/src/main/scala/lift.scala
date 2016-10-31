@@ -5,9 +5,7 @@ import argonaut._
 import org.http4s._
 
 object Lift {
-  sealed abstract class Link[T] extends Serializable with Product {
-    def decoder: DecodeJson[T]
-  }
+  sealed abstract class Link[T] extends Serializable with Product
   case class Get[T](link: GetLink[Uri, T], decoder: DecodeJson[T]) extends Link[T]
   case class Put[T](
     link: PutLink[Uri, T], value: T, decoder: DecodeJson[UpdateResponse], encoder: EncodeJson[T])
@@ -19,6 +17,7 @@ object Lift {
       extends Link[CreationResponse]
   case class Delete(link: DeleteLink[Uri], decoder: DecodeJson[DeletionResponse])
       extends Link[DeletionResponse]
+  case class GetXML[T](link: XMLLink[Uri, T], decoder: scalaxb.XMLFormat[T]) extends Link[T]
 
   def get[T](l: GetLink[Uri, T])(implicit dec: DecodeJson[T]) = Free.liftF[Link, T](Get(l, dec))
   def put[T](l: PutLink[Uri, T], value: T)(
@@ -29,4 +28,6 @@ object Lift {
     Free.liftF[Link, CreationResponse](Post(l, value, dec, enc))
   def delete(l: DeleteLink[Uri])(implicit dec: DecodeJson[DeletionResponse]) =
     Free.liftF[Link, DeletionResponse](Delete(l, dec))
+  def get[T](l: XMLLink[Uri, T])(implicit dec: scalaxb.XMLFormat[T]) =
+    Free.liftF[Link, T](GetXML(l, dec))
 }

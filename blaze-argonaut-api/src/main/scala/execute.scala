@@ -1,10 +1,12 @@
 package eveapi
 
 import argonaut.{CursorHistory, Parse}
+import org.atnos.eff.StateEffect
 import scalaz._, Scalaz._
 import scalaz.concurrent._
 import org.http4s._
 import org.http4s.argonaut._
+import scala.xml.XML
 
 import eveapi.oauth._
 import eveapi.utils.TaskEffect._
@@ -20,6 +22,8 @@ object Execute {
         fetch(Request(uri = link.href, method = Method.POST).withBody(enc.encode(value)))(dec)
       case Lift.Delete(link, dec) =>
         fetch(Request(uri = link.href, method = Method.DELETE))(dec)
+      case Lift.GetXML(link, dec) =>
+        fetchXML(link.href)(dec)
     }
   }
 
@@ -34,6 +38,8 @@ object Execute {
         case Lift.Put(link, _, dec, _) => Parse.decode(values(link.href))(dec)
         case Lift.Post(link, _, dec, _) => Parse.decode(values(link.href))(dec)
         case Lift.Delete(link, dec) => Parse.decode(values(link.href))(dec)
+        case Lift.GetXML(link, dec) =>
+          \/-(scalaxb.fromXML[T](XML.loadString(values(link.href)))(dec))
       }
     }
 }
