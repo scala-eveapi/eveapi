@@ -20,16 +20,13 @@ object Decoders {
       (instant: Instant) => Json.jString(instant.toString),
       c =>
         c.as[String]
-          .flatMap(
-              str =>
+          .flatMap(str =>
                 \/.fromTryCatchNonFatal(Instant.parse(str))
                   .orElse(
                       \/.fromTryCatchNonFatal(LocalDateTime.parse(str).toInstant(ZoneOffset.UTC)))
-                  .fold(err =>
-                          err match {
-                        case e: DateTimeParseException => DecodeResult.fail(e.toString, c.history)
-                        case e => throw e
-                    },
-                        DecodeResult.ok))
+                  .fold({
+                case e: DateTimeParseException => DecodeResult.fail(e.toString, c.history)
+                case e => throw e
+              }, DecodeResult.ok))
   )
 }

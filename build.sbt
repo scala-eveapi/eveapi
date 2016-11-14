@@ -67,7 +67,7 @@ lazy val circeCodecs = (project in file("circe")).settings(globalSettings).setti
 
 lazy val blazeArgonautApi = (project in file("blaze-argonaut-api")).settings(globalSettings).settings(
   libraryDependencies ++= Seq(
-      "org.atnos" %% "eff-scalaz" % "2.0.0-RC1"
+      "org.atnos" %% "eff-scalaz" % "2.0.0-RC7"
     , "commons-codec" % "commons-codec" % "1.10"
     , "org.http4s" %% "http4s-blaze-server" % http4sVersion
     , "org.http4s" %% "http4s-dsl" % http4sVersion
@@ -78,3 +78,11 @@ lazy val blazeArgonautApi = (project in file("blaze-argonaut-api")).settings(glo
   addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.7.1"),
   addCompilerPlugin("com.milessabin" % "si2712fix-plugin_2.11.8" % "1.1.0")
 ).dependsOn(data, argonautCodecs, compress, xml)
+
+lazy val yolo = (project in file("yolo")).settings(globalSettings).dependsOn(blazeArgonautApi, argonautCodecs).settings(
+    addCompilerPlugin("com.milessabin" % "si2712fix-plugin_2.11.8" % "1.1.0")
+  , initialCommands in console := """
+import argonaut._, Argonaut._, ArgonautShapeless._
+import org.http4s._, eveapi._, eveapi.data.crest._
+"""
+)

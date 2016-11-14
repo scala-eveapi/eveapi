@@ -114,19 +114,16 @@ trait XMLProtocol extends scalaxb.XMLStandardTypes {
     def reads(seq: scala.xml.NodeSeq, stack: List[scalaxb.ElemName])
       : Either[String, eveapi.xml.account.account.AccountStatus.Rowset] = seq match {
       case node: scala.xml.Node =>
-        Right(
-            eveapi.xml.account.account.AccountStatus
+        Right(eveapi.xml.account.account.AccountStatus
               .Rowset(
-                scala.collection.immutable
-                  .ListMap(
-                    List(
+                scala.collection.immutable.ListMap(List(
                         (node \ "@columns").headOption map { x =>
-              scalaxb
-                .DataRecord(x, node, scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack))
+              scalaxb.DataRecord(
+                  x, node, scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack))
             } map { "@columns" -> _ },
                         (node \ "@key").headOption map { x =>
-              scalaxb.DataRecord(x, node, scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack)) } map { "@key" -> _
-                        },
+              scalaxb.DataRecord(x, node, scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack))
+            } map { "@key" -> _ },
                         (node \ "@name").headOption map { x =>
               scalaxb.DataRecord(
                   x, node, scalaxb.fromXML[String](x, scalaxb.ElemName(node) :: stack))

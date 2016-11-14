@@ -1,6 +1,5 @@
 package eveapi.oauth
 
-import org.atnos.eff.StateEffect
 import org.atnos.eff._, org.atnos.eff.syntax.all._, org.atnos.eff.all._
 import argonaut._, Argonaut._, ArgonautShapeless._, derive._
 import scalaz._, Scalaz._
@@ -81,20 +80,14 @@ case class OAuth2(client: Client,
                   clientSettings: OAuth2ClientSettings) {
   import OAuth2._
 
-  def redirectoToProvider[R]()(
-    implicit t: Task <= R
-  ): Eff[R, Response] =
-    for {
-      result <- innocentTask({
-                 Found(
-                     settings.authorizationUri
-                       .withQueryParam("response_type", "code")
-                       .withQueryParam("redirect_uri", settings.callbackUri.toString)
-                       .withQueryParam("client_id", settings.clientID)
-                       .withQueryParam("scope", settings.scope.getOrElse(""))
-                       .withQueryParam("state", state.token))
-               })
-    } yield result
+  def redirectoToProvider(scope: Option[String]): Task[Response] =
+    Found(
+        settings.authorizationUri
+          .withQueryParam("response_type", "code")
+          .withQueryParam("redirect_uri", settings.callbackUri.toString)
+          .withQueryParam("client_id", settings.clientID)
+          .withQueryParam("scope", scope.getOrElse(""))
+          .withQueryParam("state", state.token))
 
   def encodeAuth(settings: OAuth2Settings): Header = {
     val encodedAuth = Base64
@@ -130,9 +123,7 @@ case class OAuth2(client: Client,
   def oauthService(
     storeToken: OAuth2Token => Task[Response]): PartialFunction[Request, Task[Response]] = {
     case r @ GET -> Root / clientSettings.loginPath =>
-      EffInterpretation.detach[Task, Response](
-          redirectoToProvider[Fx.fx1[Task]]
-      )
+      redirectoToProvider(settings.scope)
     case r @ GET -> Root / `callbackPath` => {
         val token = for {
           code <- r.params.get("code")

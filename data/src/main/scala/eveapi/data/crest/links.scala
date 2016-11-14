@@ -14,7 +14,6 @@ trait GetLink[L, T] extends Link[L]
 trait PutLink[L, T] extends Link[L]
 trait PostLink[L, T] extends Link[L]
 trait DeleteLink[L] extends Link[L]
-case class XMLLink[L, T](href: L) extends Link[L]
 
 case class GetLinkI[L, T](href: L) extends GetLink[L, T]
 case class PutLinkI[L, T](href: L) extends PutLink[L, T]
