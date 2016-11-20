@@ -36,27 +36,27 @@ case class Compress[L](implicit val lens: PathLens[L]) {
     }
   implicit def compressSquad = new CompressLink[Squad, CompressedSquad] {
     def compress(id: Squad[L]) = {
-      val Array("", "fleets", fleetId, "wings", wingId, "squads", squadId) =
+      val Array("", "fleets", fleetID, "wings", wingId, "squads", squadId) =
         lens.fromLink(id.href).split("/")
-      CompressedSquad(fleetId.toLong, wingId.toLong, squadId.toLong, id.name)
+      CompressedSquad(fleetID.toLong, wingId.toLong, squadId.toLong, id.name)
     }
     def decompress(id: CompressedSquad) = {
       lens
-        .toLink(s"/fleets/${id.fleetId}/wings/${id.wingId}/squads/${id.squadId}/")
+        .toLink(s"/fleets/${id.fleetID}/wings/${id.wingId}/squads/${id.squadId}/")
         .map(href => Squad(id.squadId, id.name, href))
     }
   }
   implicit def compressWing(implicit compressSquad: CompressLink[Squad, CompressedSquad]) =
     new CompressLink[Wing, CompressedWing] {
       def compress(id: Wing[L]) = {
-        val Array("", "fleets", fleetId, "wings", wingId) = lens.fromLink(id.href).split("/")
+        val Array("", "fleets", fleetID, "wings", wingId) = lens.fromLink(id.href).split("/")
         CompressedWing(
-            fleetId.toLong, wingId.toLong, id.name, id.squadsList.map(compressSquad.compress))
+            fleetID.toLong, wingId.toLong, id.name, id.squadsList.map(compressSquad.compress))
       }
       def decompress(id: CompressedWing) = {
         for {
-          squads <- lens.toLink(s"/fleets/${id.fleetId}/wings/${id.wingId}/squads/")
-          href <- lens.toLink(s"/fleets/${id.fleetId}/wings/${id.wingId}/")
+          squads <- lens.toLink(s"/fleets/${id.fleetID}/wings/${id.wingId}/squads/")
+          href <- lens.toLink(s"/fleets/${id.fleetID}/wings/${id.wingId}/")
           squadsList <- id.squadsList
                          .map(compressSquad.decompress)
                          .sequence[Reader[EveServer, ?], Squad[L]]
@@ -75,9 +75,9 @@ case class Compress[L](implicit val lens: PathLens[L]) {
         Lambda[Lin => StandardIdentifier[Lin, Station]], CompressedStandardIdentifier[Station]]) =
     new CompressLink[Member, CompressedMember] {
       def compress(member: Member[L]) = {
-        val Array("", "fleets", fleetId, "members", characterId) =
+        val Array("", "fleets", fleetID, "members", characterId) =
           lens.fromLink(member.href).split("/")
-        CompressedMember(fleetId.toLong,
+        CompressedMember(fleetID.toLong,
                          member.boosterID,
                          compressCharacter.compress(member.character),
                          member.joinTime,
@@ -97,7 +97,7 @@ case class Compress[L](implicit val lens: PathLens[L]) {
           station <- id.station
                       .map(compressStation.decompress)
                       .sequence[Reader[EveServer, ?], StandardIdentifier[L, Station]]
-          href <- lens.toLink(s"/fleets/${id.fleetId}/members/${character.id}/")
+          href <- lens.toLink(s"/fleets/${id.fleetID}/members/${character.id}/")
         } yield {
           Member(id.boosterID,
                  character,
@@ -117,14 +117,14 @@ case class Compress[L](implicit val lens: PathLens[L]) {
                              compressWing: CompressLink[Wing, CompressedWing]) =
     new CompressLink[Fleet, CompressedFleet] {
       def compress(fleet: Fleet[L]) = {
-        val Array("", "fleets", fleetId, "members") = lens.fromLink(fleet.members.href).split("/")
+        val Array("", "fleets", fleetID, "members") = lens.fromLink(fleet.members.href).split("/")
         CompressedFleet(
-            fleetId.toLong, fleet.isFreeMove, fleet.isRegistered, fleet.isVoiceEnabled, fleet.motd)
+            fleetID.toLong, fleet.isFreeMove, fleet.isRegistered, fleet.isVoiceEnabled, fleet.motd)
       }
       def decompress(id: CompressedFleet) = {
         for {
-          members <- lens.toLink(s"/fleets/${id.fleetId}/members/")
-          wings <- lens.toLink(s"/fleets/${id.fleetId}/wings/")
+          members <- lens.toLink(s"/fleets/${id.fleetID}/members/")
+          wings <- lens.toLink(s"/fleets/${id.fleetID}/wings/")
         } yield {
           Fleet(id.isFreeMove,
                 id.isRegistered,
@@ -148,10 +148,10 @@ case class CompressedShortIdentifier[T[_]](id: Long)
 case class CompressedStandardIdentifier[T[_]](id: Long, name: String)
 case class CompressedContactIdentifier[T[_]](id: Long, name: String, isNPC: Boolean)
 
-case class CompressedSquad(fleetId: Long, wingId: Long, squadId: Long, name: String)
+case class CompressedSquad(fleetID: Long, wingId: Long, squadId: Long, name: String)
 case class CompressedWing(
-  fleetId: Long, wingId: Long, name: String, squadsList: List[CompressedSquad])
-case class CompressedMember(fleetId: Long,
+  fleetID: Long, wingId: Long, name: String, squadsList: List[CompressedSquad])
+case class CompressedMember(fleetID: Long,
                             boosterID: Short,
                             character: CompressedCharacter,
                             joinTime: Instant,
@@ -163,7 +163,7 @@ case class CompressedMember(fleetId: Long,
                             takesFleetWarp: Boolean,
                             wingID: Long)
 case class CompressedFleet(
-  fleetId: Long, isFreeMove: Boolean, isRegistered: Boolean, isVoiceEnabled: Boolean, motd: String)
+  fleetID: Long, isFreeMove: Boolean, isRegistered: Boolean, isVoiceEnabled: Boolean, motd: String)
 case class CompressedLocation(
   solarSystem: Option[CompressedSolarSystem], station: Option[CompressedStation])
 
