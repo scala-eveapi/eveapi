@@ -18,14 +18,10 @@ Contains the code to interact with the case classes.
 
 Lets you play around with the API.
 
-    implicit val oauth2 = Yolo.oauth2(Uri.uri(...), id, secret, scope)
-    implicit val token = Yolo.genToken.unsafePerformSync // and ignore the errors
+    val oauth2 = Yolo.oauth2(Uri.uri(...), id, secret, scope)
+    val yolo = Yolo.genToken(oauth2).unsafePerformSync // and ignore the errors
 
-Ctrl+R oauth2 - somehow you have to bring it into implicit scope again. Same for
-the `import Yolo._`
-
-    eveapi.oauth.Oauth2.verify.yolo
-    Lift.get(uri.Skills).foldMap(Execute.OAuthInterpreter).yolo
+    yolo.run(Lift.get(uri.Skills))
 
 Somehow
 

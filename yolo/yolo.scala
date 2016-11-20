@@ -12,18 +12,17 @@ import org.atnos.eff._, org.atnos.eff.syntax.all._, org.atnos.eff.all._
 import java.time.Clock
 import java.util.concurrent.CountDownLatch
 
-
-case class Yolo[T](api: Api[T]) {
-  def deeff: Reader[(OAuth2, OAuth2Token), Task[\/[EveApiError, T]]] =
-    Reader({case (oauth, token) =>
-      Eff.detach[Task, \/[EveApiError, T]](api.runReader[OAuth2](oauth).runState(token).map(_._1).runDisjunction)
-    })
-  def yolo(implicit oauth: OAuth2, token: OAuth2Token): T =
-    deeff.run((oauth, token)).unsafePerformSync.leftMap(err => throw err).merge
+case class Yolo(oauth: OAuth2, token: OAuth2Token) {
+  def run[T](api: Api[T]): T = Yolo.deeff(api).run((oauth, token)).unsafePerformSync.leftMap(err => throw err).merge
+  def run[T](free: Free[Lift.Link, T]): T = Yolo.deeff(free.foldMap(Execute.OAuthInterpreter)).run((oauth, token)).unsafePerformSync.leftMap(err => throw err).merge
 }
 
 object Yolo {
-  implicit def ApiOps[T](api: Api[T]) = Yolo(api)
+  def deeff[T](api: Api[T]): Reader[(OAuth2, OAuth2Token), Task[\/[EveApiError, T]]] =
+    Reader({case (oauth, token) =>
+      Eff.detach[Task, \/[EveApiError, T]](api.runReader[OAuth2](oauth).runState(token).map(_._1).runDisjunction)
+    })
+
   val client = org.http4s.client.blaze.PooledHttp1Client()
   val seed = new java.security.SecureRandom().nextLong
   val clock = Clock.systemUTC()
@@ -41,11 +40,11 @@ object Yolo {
     ), OAuth2State(seed), clock, OAuth2ClientSettings("login"))
 
   // Thanks to @rossabaker
-  def genToken(implicit oauth: OAuth2): Task[OAuth2Token] =
-    Task.async[OAuth2Token]({ k =>
+  def genToken(oauth: OAuth2): Task[Yolo] =
+    Task.async[Yolo]({ k =>
       val latch = new CountDownLatch(1)
       val service = oauth.oauthService({
-        token => k(\/-(token)); Ok("Done.").map({x =>latch.countDown(); x})
+        token => k(\/-(Yolo(oauth, token))); Ok("Done.").map({x =>latch.countDown(); x})
       })
       val port = oauth.settings.callbackUri.port.getOrElse(80)
       val server: Server = BlazeBuilder.mountService(Kleisli(service).local({x => println(x); x})).bindHttp(port, "localhost").run
