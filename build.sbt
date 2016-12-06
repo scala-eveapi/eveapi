@@ -5,7 +5,7 @@ scalafmtConfig in ThisBuild := Some((baseDirectory in root).value / ".scalafmt")
 bintrayVcsUrl in ThisBuild := Some("git@github.com:scala-eveapi/eveapi.git")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayReleaseOnPublish in ThisBuild := false
-publishTo := Some(Resolver.bintrayRepo("andimiller", "maven"))
+publishTo in ThisBuild := Some(Resolver.bintrayRepo("andimiller", "maven"))
 resolvers in ThisBuild ++= Seq(
     Resolver.sonatypeRepo("releases")
   , Resolver.sonatypeRepo("snapshots")
