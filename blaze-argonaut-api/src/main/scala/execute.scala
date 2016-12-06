@@ -32,14 +32,14 @@ object Execute {
    * A simple decoder, mostly for testing purposes. Pass in a href => result.
    */
   def localInterpreter(values: Uri => String) =
-    new (Lift.Link ~> ((String \/ (String, CursorHistory)) \/ ?)) {
+    new (Lift.Link ~> Either[Either[String, (String, CursorHistory)], ?]) {
       def apply[T](l: Lift.Link[T]) = l match {
         case Lift.Get(link, dec) => Parse.decode(values(link.href))(dec)
         case Lift.Put(link, _, dec, _) => Parse.decode(values(link.href))(dec)
         case Lift.Post(link, _, dec, _) => Parse.decode(values(link.href))(dec)
         case Lift.Delete(link, dec) => Parse.decode(values(link.href))(dec)
         case Lift.GetXML(link, dec) =>
-          \/-(scalaxb.fromXML[T](XML.loadString(values(link.href)))(dec))
+          Right(scalaxb.fromXML[T](XML.loadString(values(link.href)))(dec))
       }
     }
 }

@@ -1,7 +1,7 @@
 package eveapi.argonautCodecs
 
 import eveapi.data.crest._
-import argonaut._, Argonaut._, Shapeless._
+import argonaut._, Argonaut._, ArgonautShapeless._
 
 object codecs {
   def inviteEncode[L: EncodeJson]: EncodeJson[InviteMember[L]] = EncodeJson { inv =>

@@ -214,10 +214,11 @@ object OAuth2 {
                    case -\/((status, body)) =>
                      val error = Parse.decode[EveException](body).leftMap(_ => body)
                      error match {
-                       case \/-(UnauthorizedError(_, _, _)) =>
+                       case Right(UnauthorizedError(_, _, _)) =>
                          refresh >> maybeRetry(fetch, retries - 1)
                        case _ =>
-                         fromDisjunction[A, EveApiError, T](-\/(EveApiStatusFailed(status, error)))
+                         fromDisjunction[A, EveApiError, T](
+                             -\/(EveApiStatusFailed(status, error.disjunction)))
                      }
                    case \/-(resp) => task[A, T](Task.now(resp))
                  }
@@ -232,7 +233,8 @@ object OAuth2 {
       decode(str)
     }))
   def fetch[T: DecodeJson](request: Request): Api[T] =
-    fetch(request, str => Parse.decode[T](str).fold(err => throw JsonParseError(err), x => x))
+    fetch(request,
+          str => Parse.decode[T](str).fold(err => throw JsonParseError(err.disjunction), x => x))
   def fetch[T: DecodeJson](request: Task[Request]): Api[T] =
     innocentTask[EveApiS, Request](request).flatMap(r => fetch(r))
   def fetch[T: DecodeJson](uri: Uri): Api[T] = fetch[T](Request(method = Method.GET, uri = uri))

@@ -50,7 +50,7 @@ lazy val xml = (project in file("xml")).settings(globalSettings).settings(
 lazy val argonautCodecs = (project in file("argonaut")).settings(globalSettings).settings(
   libraryDependencies ++= Seq(
     "io.argonaut" %% "argonaut" % "6.1a",
-    "com.github.alexarchambault" %% "argonaut-shapeless_6.2" % "1.1.1"
+    "com.github.alexarchambault" %% "argonaut-shapeless_6.2" % "1.2.0-M4"
   ),
   dependencyOverrides += "io.argonaut" %% "argonaut" % "6.1a"
 ).dependsOn(data)
