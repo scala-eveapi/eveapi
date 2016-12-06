@@ -1,7 +1,6 @@
 organization in ThisBuild := "eveapi"
 name := "eveapi"
 scalaVersion in ThisBuild := "2.11.8"
-version in ThisBuild := Version
 scalafmtConfig in ThisBuild := Some((baseDirectory in root).value / ".scalafmt")
 resolvers in ThisBuild ++= Seq(
     Resolver.sonatypeRepo("releases")
@@ -30,13 +29,11 @@ val globalSettings =
       )
     )
 
-lazy val Version = "0.1-SNAPSHOT"
 lazy val http4sVersion = "0.14.2a"
 
 lazy val root = file(".")
 lazy val data = (project in file("data")).settings(globalSettings)
 lazy val compress = (project in file("compress")).settings(globalSettings).settings(
-  version := Version,
   scalaVersion := "2.11.8",
   libraryDependencies ++= Seq(
       "org.scalaz" %% "scalaz-core" % "7.2.4"
@@ -53,7 +50,7 @@ lazy val xml = (project in file("xml")).settings(globalSettings).settings(
 lazy val argonautCodecs = (project in file("argonaut")).settings(globalSettings).settings(
   libraryDependencies ++= Seq(
     "io.argonaut" %% "argonaut" % "6.1a",
-    "com.github.alexarchambault" %% "argonaut-shapeless_6.1" % "1.1.1"
+    "com.github.alexarchambault" %% "argonaut-shapeless_6.2" % "1.1.1"
   ),
   dependencyOverrides += "io.argonaut" %% "argonaut" % "6.1a"
 ).dependsOn(data)
