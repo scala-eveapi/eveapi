@@ -2,6 +2,8 @@ organization in ThisBuild := "eveapi"
 name := "eveapi"
 scalaVersion in ThisBuild := "2.11.8"
 scalafmtConfig in ThisBuild := Some((baseDirectory in root).value / ".scalafmt")
+bintrayVcsUrl in ThisBuild := Some("git@github.com:scala-eveapi/eveapi.git")
+licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 resolvers in ThisBuild ++= Seq(
     Resolver.sonatypeRepo("releases")
   , Resolver.sonatypeRepo("snapshots")
