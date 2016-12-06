@@ -9,3 +9,6 @@ sbt compile
 
 # publish
 sbt publish
+
+# and push to bintrya
+sbt bintrayRelease
