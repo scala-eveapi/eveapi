@@ -86,4 +86,5 @@ lazy val yolo = (project in file("yolo")).settings(globalSettings).dependsOn(bla
 import argonaut._, Argonaut._, ArgonautShapeless._
 import org.http4s._, eveapi._, eveapi.data.crest._
 """
+  , publish := {}
 )
